@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import './signup.dart';
-import './login.dart';
+import 'login.dart';
+import 'signup.dart';
 import './profile.dart';
 
 void main() {
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.white,
       ),
       home: Scaffold(
-        body: Profile(),
+        body: LoginForm(),
       ),
     );
   }
