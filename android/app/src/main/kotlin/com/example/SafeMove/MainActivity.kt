@@ -1,4 +1,4 @@
-package com.example.graduation
+package com.example.SafeMove
 
 import io.flutter.embedding.android.FlutterActivity
 
