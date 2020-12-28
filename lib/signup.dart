@@ -32,8 +32,7 @@ class SignupFormSellerState extends State<SignupFormSeller> {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: SafeArea(
-            child: Scaffold(
-                body: ListView(children: [
+            child: ListView(children: [
       Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
@@ -347,6 +346,6 @@ class SignupFormSellerState extends State<SignupFormSeller> {
           ],
         ),
       ),
-    ]))));
+    ])));
   }
 }
