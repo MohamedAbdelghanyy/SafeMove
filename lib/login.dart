@@ -1,4 +1,7 @@
+import 'package:SafeMove/services/perference_manager.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import './services/auth.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -10,9 +13,22 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
 
+  var authHandler = new Auth();
+
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+
+  @override
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     final emailField = TextField(
+      controller: emailController,
       obscureText: false,
       style: style,
       decoration: InputDecoration(
@@ -24,6 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
               OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
     );
     final passwordField = TextField(
+      controller: passwordController,
       obscureText: true,
       style: style,
       decoration: InputDecoration(
@@ -41,7 +58,41 @@ class _MyHomePageState extends State<MyHomePage> {
       child: MaterialButton(
         minWidth: MediaQuery.of(context).size.width,
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-        onPressed: () {},
+        onPressed: () {
+          var email = emailController.text;
+          var password = passwordController.text;
+          if (_formKey.currentState.validate()) {
+            authHandler
+                .handleSignInEmail(
+                    emailController.text, passwordController.text)
+                .then((FirebaseUser user) {
+              Navigator.push(context, new MaterialPageRoute(
+                builder: (context) {
+                  PrefManager myPrefManager = new PrefManager();
+                  myPrefManager.setEmail(email);
+                  myPrefManager.setPassword(password);
+                  myPrefManager.setPermission(3);
+                  myPrefManager.saveDataToLocalMemory();
+                  return new TabsScreen();
+                },
+              ));
+            }).catchError((e) {
+              print(e);
+              if (e.toString().contains("ERROR_USER_NOT_FOUND") ||
+                  e.toString().contains("ERROR_WRONG_PASSWORD")) {
+                Fluttertoast.showToast(
+                  msg: "Invalid email or password",
+                  toastLength: Toast.LENGTH_SHORT,
+                );
+              } else {
+                Fluttertoast.showToast(
+                  msg: "Please check your internet connection",
+                  toastLength: Toast.LENGTH_SHORT,
+                );
+              }
+            });
+          }
+        },
         child: Text("Login",
             textAlign: TextAlign.center,
             style: style.copyWith(
