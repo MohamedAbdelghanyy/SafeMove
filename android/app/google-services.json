@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:397008259250:android:e20c908cc69d0d0b0221ab",
         "android_client_info": {
-          "package_name": "app.safemove.application"
+          "package_name": "com.example.SafeMove"
         }
       },
       "oauth_client": [
