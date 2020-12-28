@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+import 'package:flutter/material.dart';
+
+class SignUp extends StatefulWidget {
+  SignUp({Key key, this.title}) : super(key: key);
   final String title;
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _SignUp createState() => _SignUp();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _SignUp extends State<SignUp> {
   TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
 
   @override
@@ -34,6 +36,43 @@ class _MyHomePageState extends State<MyHomePage> {
           border:
               OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
     );
+
+    final passwordFieldConf = TextField(
+      obscureText: true,
+      style: style,
+      decoration: InputDecoration(
+          filled: true,
+          fillColor: Colors.white,
+          contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+          hintText: "Confirm Password",
+          border:
+              OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
+    );
+
+    final userName = TextField(
+      obscureText: true,
+      style: style,
+      decoration: InputDecoration(
+          filled: true,
+          fillColor: Colors.white,
+          contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+          hintText: "Username",
+          border:
+              OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
+    );
+
+    final phoneNumber = TextField(
+      obscureText: true,
+      style: style,
+      decoration: InputDecoration(
+          filled: true,
+          fillColor: Colors.white,
+          contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+          hintText: "Phone Number",
+          border:
+              OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
+    );
+
     final loginButon = Material(
       elevation: 5.0,
       borderRadius: BorderRadius.circular(30.0),
@@ -42,7 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
         minWidth: MediaQuery.of(context).size.width,
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
         onPressed: () {},
-        child: Text("Login",
+        child: Text("Signup",
             textAlign: TextAlign.center,
             style: style.copyWith(
                 color: Colors.white, fontWeight: FontWeight.bold)),
@@ -86,19 +125,20 @@ class _MyHomePageState extends State<MyHomePage> {
                     SizedBox(height: 45.0),
                     emailField,
                     SizedBox(height: 25.0),
+                    phoneNumber,
+                    SizedBox(height: 25.0),
+                    userName,
+                    SizedBox(height: 25.0),
                     passwordField,
                     SizedBox(
-                      height: 35.0,
+                      height: 25.0,
                     ),
+                    passwordFieldConf,
+                    SizedBox(height: 25.0),
                     loginButon,
                     SizedBox(
                       height: 15.0,
                     ),
-                    signUp,
-                    SizedBox(
-                      height: 10,
-                    ),
-                    forgotPass,
                   ],
                 ),
               ),
