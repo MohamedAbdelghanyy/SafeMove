@@ -23,7 +23,6 @@ class SignupFormSellerState extends State<SignupFormSeller> {
 
   @override
   void dispose() {
-    // Clean up the controller when the widget is disposed.
     emailController.dispose();
     passwordController.dispose();
     super.dispose();
@@ -327,10 +326,17 @@ class SignupFormSellerState extends State<SignupFormSeller> {
                                             msg: "This email already exists",
                                             toastLength: Toast.LENGTH_SHORT,
                                           );
+                                        } else if (e.toString().contains(
+                                            "ERROR_NETWORK_REQUEST_FAILED")) {
+                                          Fluttertoast.showToast(
+                                            msg:
+                                                "Please check your internet connection.",
+                                            toastLength: Toast.LENGTH_SHORT,
+                                          );
                                         } else {
                                           Fluttertoast.showToast(
                                             msg:
-                                                "Please check your internet connection",
+                                                "An error occurred, please try again later.",
                                             toastLength: Toast.LENGTH_SHORT,
                                           );
                                         }

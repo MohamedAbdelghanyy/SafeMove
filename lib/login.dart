@@ -185,10 +185,17 @@ class LoginFormState extends State<LoginForm> {
                                             msg: "Invalid email or password",
                                             toastLength: Toast.LENGTH_SHORT,
                                           );
+                                        } else if (e.toString().contains(
+                                            "ERROR_NETWORK_REQUEST_FAILED")) {
+                                          Fluttertoast.showToast(
+                                            msg:
+                                                "Please check your internet connection.",
+                                            toastLength: Toast.LENGTH_SHORT,
+                                          );
                                         } else {
                                           Fluttertoast.showToast(
                                             msg:
-                                                "Please check your internet connection",
+                                                "An error occurred, please try again later.",
                                             toastLength: Toast.LENGTH_SHORT,
                                           );
                                         }
