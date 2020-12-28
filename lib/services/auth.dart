@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import '../services/perference_manager.dart';
 
 class Auth {
   final FirebaseAuth auth = FirebaseAuth.instance;
@@ -16,6 +17,8 @@ class Auth {
 
     print('signInEmail succeeded: $user');
 
+    new PrefManager().setLoggedInData(email, password);
+
     return user;
   }
 
@@ -28,6 +31,8 @@ class Auth {
     assert(await user.getIdToken() != null);
 
     print('signUP succeeded: $user');
+
+    new PrefManager().setLoggedInData(email, password);
 
     return user;
   }

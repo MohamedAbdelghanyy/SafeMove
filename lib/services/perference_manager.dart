@@ -11,6 +11,14 @@ class PrefManager {
     loadDataFromLocalMemory();
   }
 
+  void setLoggedInData(String email, String password) {
+    this.username = email;
+    this.email = email;
+    this.password = password;
+    this.permission = 1;
+    saveDataToLocalMemory();
+  }
+
   Future<void> loadDataFromLocalMemory() async {
     var pref = await SharedPreferences.getInstance();
     username = pref.getString("username") ?? "Guest";
