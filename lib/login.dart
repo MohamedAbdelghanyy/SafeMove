@@ -1,3 +1,4 @@
+import 'package:SafeMove/home.dart';
 import 'package:SafeMove/profile.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -171,7 +172,7 @@ class LoginFormState extends State<LoginForm> {
                                         Navigator.push(context,
                                             new MaterialPageRoute(
                                           builder: (context) {
-                                            return new Profile();
+                                            return new HomePage();
                                           },
                                         ));
                                       }).catchError((e) {
