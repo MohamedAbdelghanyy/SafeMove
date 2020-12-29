@@ -4,6 +4,7 @@ import './home.dart';
 import './wifi_screen.dart';
 import './profile.dart';
 import './admin-panel.dart';
+import './rooms_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         ProfileScreen.routeName: (context) => ProfileScreen(),
         WifiScreen.routeName: (context) => WifiScreen(),
         AdminPanel.routeName: (context) => AdminPanel(),
+        RoomsScreen.routeName: (context) => RoomsScreen(),
       },
     );
   }

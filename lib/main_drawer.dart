@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import './profile.dart';
 import './wifi_screen.dart';
 import './admin-panel.dart';
+import './rooms_screen.dart';
 
 class MainDrawer extends StatelessWidget {
   Widget buildListTitle(String title, IconData icon, Function tapHandler) {
@@ -71,7 +72,9 @@ class MainDrawer extends StatelessWidget {
           buildListTitle(
             'View Rooms',
             Icons.business,
-            () {},
+            () {
+              Navigator.of(context).pushNamed(RoomsScreen.routeName);
+            },
           ),
           buildListTitle(
             'Admin Panel',
