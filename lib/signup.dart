@@ -38,7 +38,7 @@ class SignupFormSellerState extends State<SignupFormSeller> {
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("images/Background.png"),
+            image: AssetImage("assets/background.png"),
             fit: BoxFit.cover,
           ),
         ),
@@ -50,7 +50,7 @@ class SignupFormSellerState extends State<SignupFormSeller> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Image(
-                  image: AssetImage("images/Logo.png"),
+                  image: AssetImage("assets/logo.png"),
                   width: 350,
                   height: 150,
                 )

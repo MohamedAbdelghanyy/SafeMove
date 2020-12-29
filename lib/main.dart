@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'login.dart';
-import 'signup.dart';
+import './login.dart';
+import './signup.dart';
 import './profile.dart';
 import './home.dart';
+import './main_drawer.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.white,
       ),
       home: Scaffold(
-        body: SignupFormSeller(),
+        drawer: MainDrawer(),
+        body: Profile(),
       ),
     );
   }
