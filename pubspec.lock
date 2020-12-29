@@ -134,6 +134,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.1.1+2"
+  firebase_database:
+    dependency: "direct main"
+    description:
+      name: firebase_database
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.1.6"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -372,7 +379,7 @@ packages:
     source: hosted
     version: "0.1.0+1"
   wifi_iot:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       path: "other/wifi_iot"
       relative: true

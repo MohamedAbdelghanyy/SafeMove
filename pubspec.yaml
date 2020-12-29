@@ -34,12 +34,14 @@ dependencies:
   fluttertoast: ^7.1.6
   shared_preferences: ^0.5.12+4
   wifi_flutter: ^0.1.0+1
+  wifi_iot:
+    path: ./other/wifi_iot/
+  
+  firebase_database: ^3.1.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  wifi_iot:
-    path: ./other/wifi_iot/
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
