@@ -11,6 +11,7 @@ class RoomsScreen extends StatefulWidget {
 }
 
 class _RoomsScreenState extends State<RoomsScreen> {
+  var roomsData = "";
   List<ListTile> roomsDataList = List();
   final dbRef = FirebaseDatabase.instance.reference();
 
@@ -18,7 +19,9 @@ class _RoomsScreenState extends State<RoomsScreen> {
     while (true) {
       dbRef.reference().child('counter').once().then((DataSnapshot snapshot) {
         print('Connected to second database and read ${snapshot.value}');
-        setState(() {});
+        setState(() {
+          roomsData = snapshot.value;
+        });
       });
       sleep(Duration(seconds: 5));
     }
@@ -32,7 +35,7 @@ class _RoomsScreenState extends State<RoomsScreen> {
         title: Text("Rooms"),
       ),
       drawer: MainDrawer(),
-      body: Center(child: Text("Rooms")),
+      body: Center(child: Text(roomsData)),
     );
   }
 }

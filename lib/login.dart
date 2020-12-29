@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import './services/auth.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import './signup.dart';
+import 'services/perference_manager.dart';
 
 class LoginForm extends StatefulWidget {
   static const routeName = '/login-screen';
@@ -163,12 +164,14 @@ class LoginFormState extends State<LoginForm> {
                                       style: TextStyle(
                                           fontSize: 20.0, color: Colors.white)),
                                   onPressed: () {
+                                    var email = emailController.text;
+                                    var password = passwordController.text;
                                     if (_formKey.currentState.validate()) {
                                       authHandler
-                                          .handleSignInEmail(
-                                              emailController.text,
-                                              passwordController.text)
+                                          .handleSignInEmail(email, password)
                                           .then((FirebaseUser user) {
+                                        new PrefManager()
+                                            .setLoggedInData(email, password);
                                         Navigator.push(context,
                                             new MaterialPageRoute(
                                           builder: (context) {

@@ -1,4 +1,5 @@
 import 'package:SafeMove/home.dart';
+import 'package:SafeMove/services/perference_manager.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import './services/auth.dart';
@@ -304,12 +305,15 @@ class SignupFormSellerState extends State<SignupFormSeller> {
                                       style: TextStyle(
                                           fontSize: 20.0, color: Colors.white)),
                                   onPressed: () {
+                                    var email = emailController.text;
+                                    var password = passwordController.text;
                                     if (_formKeysignupS.currentState
                                         .validate()) {
                                       authHandler
-                                          .handleSignUp(emailController.text,
-                                              passwordController.text)
+                                          .handleSignUp(email, password)
                                           .then((FirebaseUser user) {
+                                        new PrefManager()
+                                            .setLoggedInData(email, password);
                                         Navigator.push(context,
                                             new MaterialPageRoute(
                                           builder: (context) {
