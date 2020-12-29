@@ -1,62 +1,23 @@
 import 'package:flutter/material.dart';
-import './main_drawer.dart';
 
-class Profile extends StatelessWidget {
+class ProfileScreen extends StatelessWidget {
+  static const routeName = '/profile-screen';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Profile"),
-      ),
-      drawer: MainDrawer(),
-      body: ListView(
-        children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SizedBox(
-                height: 20,
+      body: Column(
+        children: <Widget>[
+          Text("PlaceHolder Value"),
+          Row(
+            children: <Widget>[
+              const FlutterLogo(),
+              const Text(
+                '',
+                overflow: TextOverflow.ellipsis,
               ),
-              Text(
-                "Profile",
-                style: TextStyle(fontSize: 25),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Container(
-                width: 200,
-                height: 200,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  image: DecorationImage(
-                      image: AssetImage('assets/profile.jpg'),
-                      fit: BoxFit.fill),
-                ),
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              Text("First Name: Ahmed"),
-              SizedBox(
-                height: 15,
-              ),
-              Text("Last Name: Mohamed"),
-              SizedBox(
-                height: 15,
-              ),
-              Text("Age: 22"),
-              SizedBox(
-                height: 15,
-              ),
-              Text("Gender: Male"),
-              SizedBox(
-                height: 15,
-              ),
-              Text("Ahmed1705293@miuegypt.edu.eg"),
+              const Icon(Icons.sentiment_very_satisfied),
             ],
-          ),
+          )
         ],
       ),
     );

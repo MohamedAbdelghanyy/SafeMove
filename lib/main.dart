@@ -1,10 +1,10 @@
+import 'package:SafeMove/wifi_screen.dart';
 import 'package:flutter/material.dart';
 
 import './login.dart';
-import './signup.dart';
-import './profile.dart';
 import './home.dart';
-import './main_drawer.dart';
+import './wifi_screen.dart';
+import './profile.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,10 +19,13 @@ class MyApp extends StatelessWidget {
         buttonTheme: ButtonThemeData(buttonColor: Colors.white),
         primaryColor: Colors.white,
       ),
-      home: Scaffold(
-        drawer: MainDrawer(),
-        body: Profile(),
-      ),
+      initialRoute: '/',
+      routes: {
+        '/': (ctx) => WifiScreen(),
+        ProfileScreen.routeName: (ctx) => ProfileScreen(),
+        LoginFormState.routeName: (ctx) => LoginForm(),
+        WifiScreen.routeName: (ctx) => WifiScreen(),
+      },
     );
   }
 }

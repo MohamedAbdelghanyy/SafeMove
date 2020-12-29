@@ -1,5 +1,7 @@
+import 'package:SafeMove/main_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:wifi_flutter/wifi_flutter.dart';
+import './main_drawer.dart';
 
 void main() => runApp(HomePage());
 
@@ -20,6 +22,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        drawer: MainDrawer(),
         appBar: AppBar(
           title: const Text('Plugin example app'),
         ),

@@ -1,4 +1,8 @@
+import 'package:SafeMove/profile.dart';
+import 'package:SafeMove/wifi_screen.dart';
 import 'package:flutter/material.dart';
+import './profile.dart';
+import './wifi_screen.dart';
 
 class MainDrawer extends StatelessWidget {
   Widget buildListTitle(String title, IconData icon, Function tapHandler) {
@@ -31,7 +35,7 @@ class MainDrawer extends StatelessWidget {
             alignment: Alignment.centerLeft,
             color: Theme.of(context).accentColor,
             child: Text(
-              'Safe-Move',
+              'MyCart',
               style: TextStyle(
                 fontWeight: FontWeight.w900,
                 fontSize: 30,
@@ -43,14 +47,25 @@ class MainDrawer extends StatelessWidget {
             height: 20,
           ),
           buildListTitle(
+            'Categories',
+            Icons.shop,
+            () {
+              Navigator.of(context).pushNamed('/');
+            },
+          ),
+          buildListTitle(
             'Profile',
             Icons.person,
-            () {},
+            () {
+              Navigator.of(context).pushNamed(ProfileScreen.routeName);
+            },
           ),
           buildListTitle(
             'Scan WIFI',
             Icons.wifi,
-            () {},
+            () {
+              Navigator.of(context).pushNamed(WifiScreen.routeName);
+            },
           ),
           buildListTitle(
             'View Rooms',
