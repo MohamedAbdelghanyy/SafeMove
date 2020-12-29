@@ -3,6 +3,7 @@ import 'package:SafeMove/wifi_screen.dart';
 import 'package:flutter/material.dart';
 import './profile.dart';
 import './wifi_screen.dart';
+import './admin-panel.dart';
 
 class MainDrawer extends StatelessWidget {
   Widget buildListTitle(String title, IconData icon, Function tapHandler) {
@@ -35,7 +36,7 @@ class MainDrawer extends StatelessWidget {
             alignment: Alignment.centerLeft,
             color: Theme.of(context).accentColor,
             child: Text(
-              'MyCart',
+              'SafeMove',
               style: TextStyle(
                 fontWeight: FontWeight.w900,
                 fontSize: 30,
@@ -71,6 +72,13 @@ class MainDrawer extends StatelessWidget {
             'View Rooms',
             Icons.business,
             () {},
+          ),
+          buildListTitle(
+            'Admin Panel',
+            Icons.admin_panel_settings_outlined,
+            () {
+              Navigator.of(context).pushNamed(AdminPanel.routeName);
+            },
           ),
         ],
       ),

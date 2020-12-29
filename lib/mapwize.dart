@@ -1,10 +1,10 @@
-import 'package:flutter/material.dart';
-import 'dart:async';
+//import 'package:flutter/material.dart';
+//import 'dart:async';
 
-import 'package:flutter/services.dart';
+//import 'package:flutter/services.dart';
 //import 'package:mapwize/mapwize.dart';
 
-import 'dart:typed_data';
+//import 'dart:typed_data';
 
 /*void main() => runApp(MaterialApp(home: MapViewExample()));
 

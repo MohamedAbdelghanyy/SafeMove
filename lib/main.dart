@@ -1,10 +1,9 @@
-import 'package:SafeMove/wifi_screen.dart';
 import 'package:flutter/material.dart';
 
-import './login.dart';
 import './home.dart';
 import './wifi_screen.dart';
 import './profile.dart';
+import './admin-panel.dart';
 
 void main() {
   runApp(MyApp());
@@ -21,10 +20,10 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (ctx) => WifiScreen(),
-        ProfileScreen.routeName: (ctx) => ProfileScreen(),
-        LoginFormState.routeName: (ctx) => LoginForm(),
-        WifiScreen.routeName: (ctx) => WifiScreen(),
+        '/': (context) => HomePage(),
+        ProfileScreen.routeName: (context) => ProfileScreen(),
+        WifiScreen.routeName: (context) => WifiScreen(),
+        AdminPanel.routeName: (context) => AdminPanel(),
       },
     );
   }
