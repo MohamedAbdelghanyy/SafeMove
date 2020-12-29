@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.white,
       ),
       home: Scaffold(
-        body: HomePage(),
+        body: SignupFormSeller(),
       ),
     );
   }
