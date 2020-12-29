@@ -99,6 +99,7 @@ class _WifiScreenState extends State<WifiScreen> {
     checkWifi();
     return MaterialApp(
       home: Scaffold(
+        drawer: MainDrawer(),
         appBar: AppBar(
           title: Text('Wifi Scanner'),
         ),
