@@ -5,6 +5,7 @@ import './services/auth.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import './signup.dart';
 import 'services/perference_manager.dart';
+import './home.dart';
 
 class LoginForm extends StatefulWidget {
   static const routeName = '/login-screen';
@@ -172,12 +173,7 @@ class LoginFormState extends State<LoginForm> {
                                           .then((FirebaseUser user) {
                                         new PrefManager()
                                             .setLoggedInData(email, password);
-                                        Navigator.push(context,
-                                            new MaterialPageRoute(
-                                          builder: (context) {
-                                            return new HomePage();
-                                          },
-                                        ));
+                                        Navigator.popAndPushNamed(context, '/');
                                       }).catchError((e) {
                                         print(e);
                                         if (e.toString().contains(

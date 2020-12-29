@@ -314,12 +314,7 @@ class SignupFormSellerState extends State<SignupFormSeller> {
                                           .then((FirebaseUser user) {
                                         new PrefManager()
                                             .setLoggedInData(email, password);
-                                        Navigator.push(context,
-                                            new MaterialPageRoute(
-                                          builder: (context) {
-                                            return new HomePage();
-                                          },
-                                        ));
+                                        Navigator.popAndPushNamed(context, '/');
                                       }).catchError((e) {
                                         print(e);
                                         if (e.toString().contains(
