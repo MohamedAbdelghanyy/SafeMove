@@ -5,6 +5,7 @@ import './services/auth.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class SignupFormSeller extends StatefulWidget {
+  static const routeName = '/signup';
   @override
   SignupFormSellerState createState() {
     return SignupFormSellerState();
@@ -13,8 +14,6 @@ class SignupFormSeller extends StatefulWidget {
 
 class SignupFormSellerState extends State<SignupFormSeller> {
   final _formKeysignupS = GlobalKey<FormState>();
-  static const routeName = '/signup';
-
   var authHandler = new Auth();
 
   final emailController = TextEditingController();
@@ -29,8 +28,8 @@ class SignupFormSellerState extends State<SignupFormSeller> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: SafeArea(
+    return Scaffold(
+        body: SafeArea(
             child: ListView(children: [
       Container(
         height: MediaQuery.of(context).size.height,

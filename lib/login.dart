@@ -3,8 +3,10 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import './services/auth.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import './signup.dart';
 
 class LoginForm extends StatefulWidget {
+  static const routeName = '/login-screen';
   @override
   LoginFormState createState() {
     return LoginFormState();
@@ -13,7 +15,6 @@ class LoginForm extends StatefulWidget {
 
 class LoginFormState extends State<LoginForm> {
   final _formKey = GlobalKey<FormState>();
-  static const routeName = '/login-screen';
   var authHandler = new Auth();
 
   final emailController = TextEditingController();
@@ -29,8 +30,8 @@ class LoginFormState extends State<LoginForm> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: SafeArea(
+    return Scaffold(
+        body: SafeArea(
             child: ListView(children: [
       Container(
         height: MediaQuery.of(context).size.height,
@@ -219,25 +220,31 @@ class LoginFormState extends State<LoginForm> {
                               child: GestureDetector(
                                   child: RichText(
                                 text: TextSpan(
-                                    text: "Don't have an account? ",
-                                    style: TextStyle(
-                                      fontSize: 20.0,
-                                      color: Colors.white,
-                                    ),
-                                    children: [
-                                      TextSpan(
-                                        text: "Signup",
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            decoration:
-                                                TextDecoration.underline),
-                                      ),
-                                    ]),
+                                  text: "Don't have an account? ",
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Colors.white,
+                                  ),
+                                ),
                               )),
                             ),
                           ),
                         ],
                       ),
+                      Center(
+                        child: Column(
+                          children: [
+                            RaisedButton(
+                              onPressed: () {
+                                onPressed:
+                                Navigator.of(context)
+                                    .pushNamed(SignupFormSeller.routeName);
+                              },
+                              child: Text("Signup"),
+                            ),
+                          ],
+                        ),
+                      )
                     ])),
           ],
         ),
