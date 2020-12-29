@@ -97,14 +97,12 @@ class _WifiScreenState extends State<WifiScreen> {
   @override
   Widget build(BuildContext poContext) {
     checkWifi();
-    return MaterialApp(
-      home: Scaffold(
-        drawer: MainDrawer(),
-        appBar: AppBar(
-          title: Text('Wifi Scanner'),
-        ),
-        body: getWidgets(),
+    return Scaffold(
+      drawer: MainDrawer(),
+      appBar: AppBar(
+        title: Text('Wifi Scanner'),
       ),
+      body: getWidgets(),
     );
   }
 }
