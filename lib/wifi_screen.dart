@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import './main_drawer.dart';
 import 'package:flutter/services.dart';
 import 'package:wifi_iot/wifi_iot.dart';
-import 'dart:io';
 import 'package:firebase_database/firebase_database.dart';
-import 'package:firebase_core/firebase_core.dart';
+import 'dart:io';
+import './main_drawer.dart';
 
 void main() async {
   runApp(WifiScreen());
