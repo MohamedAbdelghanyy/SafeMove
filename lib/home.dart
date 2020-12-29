@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
         drawer: MainDrawer(),
         appBar: AppBar(
-          title: const Text('Plugin example app'),
+          title: const Text('Home'),
         ),
         body: Center(child: Text("Home")));
   }
