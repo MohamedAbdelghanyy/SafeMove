@@ -102,6 +102,7 @@ class MainDrawer extends StatelessWidget {
               Navigator.of(context).pushNamed(Symptoms.routeName);
             },
           ),
+          /*
           buildListTitle(
             'MapView',
             Icons.info,
@@ -109,6 +110,7 @@ class MainDrawer extends StatelessWidget {
               Navigator.of(context).pushNamed(MapView.routeName);
             },
           ),
+          */
           buildListTitle(
             'Logout',
             Icons.exit_to_app,
