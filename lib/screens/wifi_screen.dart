@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:SafeMove/services/data_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -23,8 +25,8 @@ class _WifiScreenState extends State<WifiScreen> {
   @override
   void initState() {
     // TODO: implement initState
-    super.initState();
     startScanning();
+    super.initState();
   }
 
   Future<void> startScanning() async {
@@ -51,6 +53,9 @@ class _WifiScreenState extends State<WifiScreen> {
               );
             });
             setState(() {
+              mWList.clear();
+            });
+            setState(() {
               mWList = wifiWList;
             });
           }
@@ -61,6 +66,45 @@ class _WifiScreenState extends State<WifiScreen> {
       } else {
         print("Wifi is disabled!");
       }
+    });
+    Timer.periodic(Duration(seconds: 5), (Timer t) {
+      WiFiForIoTPlugin.isEnabled().then((val) async {
+        if (val) {
+          List<WifiNetwork> _scanResult;
+          print("Rescanning...");
+          try {
+            _scanResult = await WiFiForIoTPlugin.loadWifiList();
+            print("Loaded!");
+            if (_scanResult != null && _scanResult.length > 0) {
+              List<ListTile> wifiWList = List();
+              _scanResult.forEach((wifiNetwork) {
+                wifiWList.add(
+                  ListTile(
+                    title: Text(wifiNetwork.ssid +
+                        ", " +
+                        wifiNetwork.bssid +
+                        ", " +
+                        wifiNetwork.level.toString() +
+                        ", " +
+                        wifiNetwork.frequency.toString()),
+                  ),
+                );
+              });
+              setState(() {
+                mWList.clear();
+              });
+              setState(() {
+                mWList = wifiWList;
+              });
+            }
+            print("Initialized!");
+          } on PlatformException {
+            print("Error");
+          }
+        } else {
+          print("Wifi is disabled!");
+        }
+      });
     });
   }
 
