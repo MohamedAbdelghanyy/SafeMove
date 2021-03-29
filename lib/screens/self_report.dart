@@ -1,3 +1,4 @@
+import 'package:SafeMove/services/data_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -129,7 +130,12 @@ class _SelfReportState extends State<SelfReport> {
                   minimumSize: const Size(150, 50),
                   padding: EdgeInsets.all(12),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  if (this.valuefirst) {
+                    DataManager.setSelfReportData(1)
+                        .then((value) => Navigator.of(context).pop());
+                  }
+                },
                 icon: Icon(Icons.bluetooth),
                 label: Text(
                   "Self Report",
