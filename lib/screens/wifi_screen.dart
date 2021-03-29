@@ -1,3 +1,4 @@
+import 'package:SafeMove/services/data_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:wifi_iot/wifi_iot.dart';
@@ -16,88 +17,51 @@ class WifiScreen extends StatefulWidget {
 }
 
 class _WifiScreenState extends State<WifiScreen> {
-  List<WifiNetwork> _scanResult;
   final dbRef = FirebaseDatabase.instance.reference();
+  List<Widget> mWList = new List();
 
   @override
   void initState() {
     // TODO: implement initState
-    checkWifi();
     super.initState();
+    startScanning();
   }
 
-  void checkWifi() {
-    WiFiForIoTPlugin.isEnabled().then((val) {
+  Future<void> startScanning() async {
+    WiFiForIoTPlugin.isEnabled().then((val) async {
       if (val) {
-        startScanning();
+        List<WifiNetwork> _scanResult;
+        print("Rescanning...");
+        try {
+          _scanResult = await WiFiForIoTPlugin.loadWifiList();
+          print("Loaded!");
+          if (_scanResult != null && _scanResult.length > 0) {
+            List<ListTile> wifiWList = List();
+            _scanResult.forEach((wifiNetwork) {
+              wifiWList.add(
+                ListTile(
+                  title: Text(wifiNetwork.ssid +
+                      ", " +
+                      wifiNetwork.bssid +
+                      ", " +
+                      wifiNetwork.level.toString() +
+                      ", " +
+                      wifiNetwork.frequency.toString()),
+                ),
+              );
+            });
+            setState(() {
+              mWList = wifiWList;
+            });
+          }
+          print("Initialized!");
+        } on PlatformException {
+          print("Error");
+        }
       } else {
         print("Wifi is disabled!");
       }
     });
-  }
-
-  Future<void> startScanning() async {
-    while (true) {
-      print("rescanning...");
-      _scanResult = await loadWifiList();
-      setState(() {});
-      sleep(Duration(seconds: 5));
-    }
-  }
-
-  Future<List<WifiNetwork>> loadWifiList() async {
-    print("Loading wifi list");
-    List<WifiNetwork> htResultNetwork;
-    try {
-      htResultNetwork = await WiFiForIoTPlugin.loadWifiList();
-    } on PlatformException {
-      htResultNetwork = List<WifiNetwork>();
-    }
-
-    return htResultNetwork;
-  }
-
-  Widget getWidgets() {
-    if (_scanResult != null && _scanResult.length > 0) {
-      List<ListTile> wifiWList = List();
-
-      _scanResult.forEach((wifiNetwork) {
-        dbRef
-            .child("data")
-            .child("users")
-            .child("wifi-data")
-            .child("abdelghany")
-            .child(wifiNetwork.bssid)
-            .set({
-          'bssid': wifiNetwork.bssid,
-          'frequency': wifiNetwork.frequency,
-          'rssi': wifiNetwork.level,
-          "ssid": wifiNetwork.ssid,
-          "timestamp": DateTime.now().millisecondsSinceEpoch
-        });
-
-        setState(() {
-          wifiWList.add(
-            ListTile(
-              title: Text(wifiNetwork.ssid +
-                  ", " +
-                  wifiNetwork.bssid +
-                  ", " +
-                  wifiNetwork.level.toString() +
-                  ", " +
-                  wifiNetwork.frequency.toString()),
-            ),
-          );
-        });
-      });
-
-      return ListView(
-        padding: kMaterialListPadding,
-        children: wifiWList,
-      );
-    } else {
-      return Text("Checking WiFi!");
-    }
   }
 
   @override
@@ -105,9 +69,14 @@ class _WifiScreenState extends State<WifiScreen> {
     return Scaffold(
       drawer: MainDrawer(),
       appBar: AppBar(
-        title: Text('Wifi Scanner'),
+        title: Text('Wifi Data'),
       ),
-      body: getWidgets(),
+      body: ListView(
+        padding: kMaterialListPadding,
+        children: mWList != null || mWList.length > 0
+            ? mWList
+            : Text('Scanning Wifi...'),
+      ),
     );
   }
 }

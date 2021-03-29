@@ -69,7 +69,7 @@ class MainDrawer extends StatelessWidget {
             },
           ),
           buildListTitle(
-            'Scan WIFI',
+            'Wifi Scan',
             Icons.wifi,
             () {
               Navigator.of(context).pushNamed(WifiScreen.routeName);
