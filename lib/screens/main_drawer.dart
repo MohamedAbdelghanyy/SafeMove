@@ -1,6 +1,4 @@
-import 'package:SafeMove/screens/map_screen.dart';
 import 'package:SafeMove/screens/profile.dart';
-import 'package:SafeMove/screens/admin_view.dart';
 import 'package:SafeMove/screens/self_report.dart';
 import 'package:SafeMove/screens/sign_in.dart';
 import 'package:SafeMove/screens/symptoms.dart';
