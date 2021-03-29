@@ -11,105 +11,107 @@ class _SymptomsState extends State<Symptoms> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            ClipPath(
-              clipper: MyClipper(),
-              child: Container(
-                height: 350,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topRight,
-                    end: Alignment.bottomLeft,
-                    colors: [Color(0xFF91b3fa), Color(0xFF4f52ff)],
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              ClipPath(
+                clipper: MyClipper(),
+                child: Container(
+                  height: 350,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topRight,
+                      end: Alignment.bottomLeft,
+                      colors: [Color(0xFF91b3fa), Color(0xFF4f52ff)],
+                    ),
+                    image: DecorationImage(
+                      image: AssetImage('assets/dr.png'),
+                    ),
                   ),
-                  image: DecorationImage(
-                    image: AssetImage('assets/dr.png'),
-                  ),
-                ),
-                child: Column(
-                  children: [
-                    Container(
-                      margin: EdgeInsets.all(30),
-                      child: Text(
-                        "Get Informed",
-                        style: GoogleFonts.montserrat(
-                          color: Colors.black,
-                          fontSize: 18,
-                          fontWeight: FontWeight.w700,
-                          fontStyle: FontStyle.italic,
+                  child: Column(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.all(30),
+                        child: Text(
+                          "Get Informed",
+                          style: GoogleFonts.montserrat(
+                            color: Colors.black,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w700,
+                            fontStyle: FontStyle.italic,
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    "Symptoms",
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Color(0xFF303030),
-                      fontWeight: FontWeight.bold,
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      "Symptoms",
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Color(0xFF303030),
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                  ),
-                  SizedBox(height: 20),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        SymptomCard(
-                          image: "assets/headache.png",
-                          title: "Headache",
-                          isActive: true,
-                        ),
-                        SymptomCard(
-                          image: "assets/caugh.png",
-                          title: "Coughing",
-                        ),
-                        SymptomCard(
-                          image: "assets/fever.png",
-                          title: "Fever",
-                        ),
-                      ],
+                    SizedBox(height: 20),
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          SymptomCard(
+                            image: "assets/headache.png",
+                            title: "Headache",
+                            isActive: true,
+                          ),
+                          SymptomCard(
+                            image: "assets/caugh.png",
+                            title: "Coughing",
+                          ),
+                          SymptomCard(
+                            image: "assets/fever.png",
+                            title: "Fever",
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                  SizedBox(height: 20),
-                  Text(
-                    "Prevention",
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Color(0xFF303030),
-                      fontWeight: FontWeight.bold,
+                    SizedBox(height: 20),
+                    Text(
+                      "Prevention",
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Color(0xFF303030),
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                  ),
-                  SizedBox(height: 20),
-                  PreventCard(
-                    text:
-                        "Since the start of the coronavirus outbreak some places have fully embraced wearing facemasks",
-                    image: "assets/wear_mask.png",
-                    title: "Wear face mask",
-                  ),
-                  PreventCard(
-                    text:
-                        "Washing your hands for a full 60 seconds is essential in fighting COVID",
-                    image: "assets/wash_hands.png",
-                    title: "Wash your hands",
-                  ),
-                  SizedBox(height: 50),
-                ],
-              ),
-            )
-          ],
+                    SizedBox(height: 20),
+                    PreventCard(
+                      text:
+                          "Since the start of the coronavirus outbreak some places have fully embraced wearing facemasks",
+                      image: "assets/wear_mask.png",
+                      title: "Wear face mask",
+                    ),
+                    PreventCard(
+                      text:
+                          "Washing your hands for a full 60 seconds is essential in fighting COVID",
+                      image: "assets/wash_hands.png",
+                      title: "Wash your hands",
+                    ),
+                    SizedBox(height: 50),
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
