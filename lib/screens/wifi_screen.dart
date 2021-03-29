@@ -22,7 +22,7 @@ class _WifiScreenState extends State<WifiScreen> {
   @override
   void initState() {
     // TODO: implement initState
-
+    checkWifi();
     super.initState();
   }
 
@@ -102,7 +102,6 @@ class _WifiScreenState extends State<WifiScreen> {
 
   @override
   Widget build(BuildContext poContext) {
-    checkWifi();
     return Scaffold(
       drawer: MainDrawer(),
       appBar: AppBar(
