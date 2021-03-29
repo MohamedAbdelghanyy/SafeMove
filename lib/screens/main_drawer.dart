@@ -39,15 +39,16 @@ class MainDrawer extends StatelessWidget {
             height: 120,
             width: double.infinity,
             padding: EdgeInsets.all(20),
-            alignment: Alignment.centerLeft,
+            alignment: Alignment.center,
             color: Theme.of(context).accentColor,
             child: Text(
-              'SafeMove',
+              'Safe Move',
               style: TextStyle(
                 fontWeight: FontWeight.w900,
                 fontSize: 30,
                 color: Theme.of(context).primaryColor,
               ),
+              textAlign: TextAlign.center,
             ),
           ),
           SizedBox(
