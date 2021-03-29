@@ -20,6 +20,10 @@ class DataManager {
     DataManager.roomsData = await FirebaseManager.getRoomsData();
   }
 
+  static Future<void> setSelfReportData(int selfReportStatus) async {
+    await FirebaseManager.setSelfReport(selfReportStatus);
+  }
+
   /*static Future<void> iniMainMenuCategories() async {
     DataManager.mainMenuCategories =
         await FirebaseManager.getMainMenuCategories();
