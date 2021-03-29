@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:SafeMove/screens/main_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
@@ -14,6 +15,10 @@ class _MapViewState extends State<MapView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Map"),
+      ),
+      drawer: MainDrawer(),
       body: SafeArea(
         child: Stack(
           children: [
