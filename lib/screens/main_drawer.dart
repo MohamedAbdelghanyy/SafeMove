@@ -81,6 +81,7 @@ class MainDrawer extends StatelessWidget {
               Navigator.of(context).pushNamed(RoomsScreen.routeName);
             },
           ),
+          /*
           buildListTitle(
             'Admin Area',
             Icons.admin_panel_settings_outlined,
@@ -88,6 +89,7 @@ class MainDrawer extends StatelessWidget {
               Navigator.of(context).pushNamed(AdminView.routeName);
             },
           ),
+          */
           buildListTitle(
             'Self Report',
             Icons.bluetooth,
