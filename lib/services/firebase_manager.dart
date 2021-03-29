@@ -4,6 +4,7 @@ import 'package:SafeMove/models/room.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:get_mac/get_mac.dart';
 import 'package:http/http.dart' as http;
 import 'package:SafeMove/services/data_manager.dart';
 
@@ -28,6 +29,30 @@ class FirebaseManager {
       throw (e);
     }
     return items;
+  }
+
+  static Future<bool> setSelfReport(int selfReportStatus) async {
+    try {
+      var dbRef2 = databaseRef.child('data').child('reports');
+      await dbRef2.child(DataManager.mPrefManager.getId().toString()).set({
+        'user_id': DataManager.mPrefManager.getId().toString(),
+        'address': await GetMac.macAddress,
+        'status': selfReportStatus,
+      }).then((value) {
+        Fluttertoast.showToast(
+          msg:
+              "Self report was successfully submitted, thank you for being honest.",
+          toastLength: Toast.LENGTH_LONG,
+        );
+      });
+      return true;
+    } catch (e) {
+      Fluttertoast.showToast(
+        msg: e.message.toString(),
+        toastLength: Toast.LENGTH_LONG,
+      );
+      return false;
+    }
   }
 
   /*
