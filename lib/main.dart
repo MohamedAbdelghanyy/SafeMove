@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         ),
         //initialRoute: LoginForm.routeName,
         routes: {
-          '/': (context) => SelfReport(),
+          '/': (context) => ProfileScreen(),
           ProfileScreen.routeName: (context) => ProfileScreen(),
           WifiScreen.routeName: (context) => WifiScreen(),
           AdminPanel.routeName: (context) => AdminPanel(),
