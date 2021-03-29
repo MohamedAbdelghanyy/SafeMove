@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:SafeMove/models/room.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -9,23 +10,18 @@ import 'package:SafeMove/services/data_manager.dart';
 class FirebaseManager {
   static final Future<FirebaseApp> _future = Firebase.initializeApp();
   static final databaseRef = FirebaseDatabase.instance.reference();
-  static const url = 'https://my-cart-4f654-default-rtdb.firebaseio.com/data/';
-/*
-  static Future<List> getDeliveryLocations() async {
-    var path = 'delivery_locations.json';
-    final List<DeliveryLocationsClass> items = [];
+  static const url =
+      'https://safe-move-da6ea-default-rtdb.firebaseio.com/data/';
+
+  static Future<List> loadRoomsData() async {
+    var path = 'locations/MIU/rooms.json';
+    final List<RoomClass> items = [];
     try {
       final response = await http.get(url + path);
       final dbData = json.decode(response.body) as Map<String, dynamic>;
       dbData.forEach((key, data) {
-        items.add(
-          DeliveryLocationsClass(
-            key.toString(),
-            data["name"].toString(),
-            double.parse(data["fees"].toString()),
-            int.parse(data['time'].toString()),
-          ),
-        );
+        items.add(RoomClass(
+            key, data['total'], data['violations'], data['mask-violations']));
       });
     } on Exception catch (e) {
       print(e.toString());
@@ -34,6 +30,7 @@ class FirebaseManager {
     return items;
   }
 
+  /*
   static Future<List> getUserAddresses() async {
     var path = 'addresses.json';
     final List<UserAddressesClass> items = [];

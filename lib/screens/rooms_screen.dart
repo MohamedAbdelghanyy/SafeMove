@@ -1,4 +1,5 @@
 import 'package:SafeMove/models/room.dart';
+import 'package:SafeMove/services/data_manager.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
@@ -15,36 +16,14 @@ class RoomsScreen extends StatefulWidget {
 class _RoomsScreenState extends State<RoomsScreen> {
   RoomClass currRoom;
   List roomsData = List();
-  final dbRef = FirebaseDatabase.instance.reference();
 
   @override
   void initState() {
-    loadRoomsList();
+    DataManager.loadRoomsData().then((value) {
+      roomsData = DataManager.roomsData;
+      roomChanged(roomsData[0]);
+    });
     super.initState();
-  }
-
-  Future<void> loadRoomsList() async {
-    try {
-      dbRef
-          .reference()
-          .child("data")
-          .child("locations")
-          .child("MIU")
-          .child("rooms")
-          .once()
-          .then((DataSnapshot snapshot) {
-        print('Rooms list loaded ${snapshot.value}');
-        var dbData = snapshot.value;
-        dbData.forEach((key, value) {
-          print(key + ': ' + value['masks-violations'].toString());
-          roomsData.add(new RoomClass(key, value['total'], value['violations'],
-              value['mask-violations']));
-        });
-        roomChanged(roomsData[0]);
-      });
-    } catch (e) {
-      roomsData = null;
-    }
   }
 
   void roomChanged(RoomClass newRoom) {

@@ -4,6 +4,7 @@ import 'package:SafeMove/services/perference_manager.dart';
 
 class DataManager {
   static PrefManager mPrefManager = new PrefManager();
+  static List roomsData = new List();
   /*static List deliveryLocations = new List();
   static List userAddresses = new List();
   static String mainMenuBanner = "https://miumun.org/mobileimages/banner.png";
@@ -14,29 +15,13 @@ class DataManager {
   static List lastSearchKeywords = new List();
   static List recentOrders = new List();
   static List offersItems = new List();
-  static bool isDarkMode = false;
+  static bool isDarkMode = false;*/
 
-  static Future<void> iniUserAddresses([Function callBackFunction]) async {
-    DataManager.deliveryLocations =
-        await FirebaseManager.getDeliveryLocations();
-    DataManager.userAddresses = await FirebaseManager.getUserAddresses();
-    if (DataManager.mPrefManager.getSelectedAddress() == "") {
-      if (DataManager.deliveryLocations != null &&
-          DataManager.userAddresses != null &&
-          DataManager.userAddresses.length > 0) {
-        DataManager.mPrefManager
-            .setSelectedAddress(DataManager.userAddresses[0].id.toString());
-      } else {}
-    }
-    if (DataManager.userAddresses != null) {
-      DataManager.mPrefManager.updateDeliveryFeesAndTime();
-    }
-    if (callBackFunction != null) {
-      callBackFunction();
-    }
+  static Future<void> loadRoomsData() async {
+    DataManager.roomsData = await FirebaseManager.loadRoomsData();
   }
 
-  static Future<void> iniMainMenuCategories() async {
+  /*static Future<void> iniMainMenuCategories() async {
     DataManager.mainMenuCategories =
         await FirebaseManager.getMainMenuCategories();
   }
