@@ -1,3 +1,4 @@
+import 'package:SafeMove/services/data_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -42,7 +43,7 @@ class ProfileScreen extends StatelessWidget {
                 ),
               ),
               child: Text(
-                "FirstName",
+                DataManager.mPrefManager.name,
                 style: GoogleFonts.montserrat(
                   textStyle: Theme.of(context).textTheme.headline4,
                   fontSize: 15,
@@ -67,7 +68,7 @@ class ProfileScreen extends StatelessWidget {
                 ),
               ),
               child: Text(
-                "Last Name",
+                DataManager.mPrefManager.email,
                 style: GoogleFonts.montserrat(
                   textStyle: Theme.of(context).textTheme.headline4,
                   fontSize: 15,
@@ -92,7 +93,7 @@ class ProfileScreen extends StatelessWidget {
                 ),
               ),
               child: Text(
-                "Email",
+                DataManager.mPrefManager.phone,
                 style: GoogleFonts.montserrat(
                   textStyle: Theme.of(context).textTheme.headline4,
                   fontSize: 15,
@@ -102,6 +103,7 @@ class ProfileScreen extends StatelessWidget {
               ),
             ),
           ),
+          /*
           Padding(
             padding: const EdgeInsets.symmetric(
               horizontal: 20,
@@ -127,6 +129,7 @@ class ProfileScreen extends StatelessWidget {
               ),
             ),
           )
+          */
         ],
       ),
     );
