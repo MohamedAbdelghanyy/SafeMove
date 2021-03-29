@@ -1,4 +1,5 @@
 import 'package:SafeMove/profile.dart';
+import 'package:SafeMove/screens/admin_view.dart';
 import 'package:SafeMove/wifi_screen.dart';
 import 'package:flutter/material.dart';
 import './profile.dart';
@@ -59,7 +60,7 @@ class MainDrawer extends StatelessWidget {
             'Profile',
             Icons.person,
             () {
-              Navigator.of(context).pushNamed(ProfileScreen.routeName);
+              Navigator.of(context).pushNamed(AdminView.routeName);
             },
           ),
           buildListTitle(

@@ -1,4 +1,6 @@
 import 'package:SafeMove/login.dart';
+import 'package:SafeMove/screens/admin_view.dart';
+import 'package:SafeMove/screens/self_report.dart';
 import 'package:flutter/material.dart';
 
 import './home.dart';
@@ -26,15 +28,15 @@ class MyApp extends StatelessWidget {
           buttonTheme: ButtonThemeData(buttonColor: Colors.white),
           primaryColor: Colors.white,
         ),
-        initialRoute: LoginForm.routeName,
+        //initialRoute: LoginForm.routeName,
         routes: {
-          '/': (context) => HomePage(),
+          '/': (context) => SelfReport(),
           ProfileScreen.routeName: (context) => ProfileScreen(),
           WifiScreen.routeName: (context) => WifiScreen(),
           AdminPanel.routeName: (context) => AdminPanel(),
           RoomsScreen.routeName: (context) => RoomsScreen(),
-          LoginForm.routeName: (context) => LoginForm(),
-          SignupFormSeller.routeName: (context) => SignupFormSeller(),
+          // LoginForm.routeName: (context) => LoginForm(),
+          //SignupFormSeller.routeName: (context) => SignupFormSeller(),
         },
       );
     } else {
@@ -46,13 +48,14 @@ class MyApp extends StatelessWidget {
         ),
         initialRoute: '/',
         routes: {
-          '/': (context) => HomePage(),
+          '/': (context) => AdminView(),
           ProfileScreen.routeName: (context) => ProfileScreen(),
           WifiScreen.routeName: (context) => WifiScreen(),
           AdminPanel.routeName: (context) => AdminPanel(),
           RoomsScreen.routeName: (context) => RoomsScreen(),
-          LoginForm.routeName: (context) => LoginForm(),
-          SignupFormSeller.routeName: (context) => SignupFormSeller(),
+          // LoginForm.routeName: (context) => LoginForm(),
+          // SignupFormSeller.routeName: (context) => SignupFormSeller(),
+          AdminView.routeName: (context) => AdminView(),
         },
       );
     }
