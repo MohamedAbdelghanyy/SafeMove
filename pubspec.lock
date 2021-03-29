@@ -191,13 +191,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "7.1.8"
-  get_mac:
-    dependency: "direct main"
-    description:
-      name: get_mac
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.0.1"
   google_fonts:
     dependency: "direct main"
     description:
@@ -462,6 +455,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.1.0+1"
+  wifi_info_plugin:
+    dependency: "direct main"
+    description:
+      name: wifi_info_plugin
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.1.5"
   wifi_iot:
     dependency: "direct main"
     description:

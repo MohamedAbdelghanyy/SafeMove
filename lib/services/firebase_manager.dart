@@ -4,9 +4,9 @@ import 'package:SafeMove/models/room.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:get_mac/get_mac.dart';
 import 'package:http/http.dart' as http;
 import 'package:SafeMove/services/data_manager.dart';
+import 'package:wifi_info_plugin/wifi_info_plugin.dart';
 
 class FirebaseManager {
   static final Future<FirebaseApp> _future = Firebase.initializeApp();
@@ -33,10 +33,11 @@ class FirebaseManager {
 
   static Future<bool> setSelfReport(int selfReportStatus) async {
     try {
+      WifiInfoWrapper mWifiInfo = await WifiInfoPlugin.wifiDetails;
       var dbRef2 = databaseRef.child('data').child('reports');
       await dbRef2.child(DataManager.mPrefManager.getId().toString()).set({
         'user_id': DataManager.mPrefManager.getId().toString(),
-        'address': await GetMac.macAddress,
+        'address': mWifiInfo.macAddress,
         'status': selfReportStatus,
       }).then((value) {
         Fluttertoast.showToast(
