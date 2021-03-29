@@ -1,6 +1,7 @@
 import 'package:SafeMove/login.dart';
 import 'package:SafeMove/screens/admin_view.dart';
 import 'package:SafeMove/screens/self_report.dart';
+import 'package:SafeMove/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 import './home.dart';
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
         ),
         //initialRoute: LoginForm.routeName,
         routes: {
-          '/': (context) => SignupFormSeller(),
+          '/': (context) => SplashScreen(),
           ProfileScreen.routeName: (context) => ProfileScreen(),
           WifiScreen.routeName: (context) => WifiScreen(),
           AdminPanel.routeName: (context) => AdminPanel(),
