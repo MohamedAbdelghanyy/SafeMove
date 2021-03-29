@@ -2,8 +2,10 @@ import 'package:SafeMove/screens/map_screen.dart';
 import 'package:SafeMove/screens/profile.dart';
 import 'package:SafeMove/screens/admin_view.dart';
 import 'package:SafeMove/screens/self_report.dart';
+import 'package:SafeMove/screens/sign_in.dart';
 import 'package:SafeMove/screens/symptoms.dart';
 import 'package:SafeMove/screens/wifi_screen.dart';
+import 'package:SafeMove/services/data_manager.dart';
 import 'package:flutter/material.dart';
 import './profile.dart';
 import './wifi_screen.dart';
@@ -105,6 +107,14 @@ class MainDrawer extends StatelessWidget {
             Icons.info,
             () {
               Navigator.of(context).pushNamed(MapView.routeName);
+            },
+          ),
+          buildListTitle(
+            'Logout',
+            Icons.exit_to_app,
+            () {
+              DataManager.mPrefManager.logOut();
+              Navigator.pushReplacementNamed(context, SignInScreen.routeName);
             },
           ),
         ],

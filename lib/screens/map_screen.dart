@@ -15,13 +15,17 @@ class _MapViewState extends State<MapView> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: WebView(
-          initialUrl:
-              'https://maps.mapwize.io/#/v/misr_international_university/3?u=default_universe&l=en&z=18.634',
-          javascriptMode: JavascriptMode.unrestricted,
-          onWebViewCreated: (WebViewController controller) {
-            _controller.complete(controller);
-          },
+        child: Stack(
+          children: [
+            WebView(
+              initialUrl:
+                  'https://maps.mapwize.io/#/v/misr_international_university/3?u=default_universe&l=en&z=18.634',
+              javascriptMode: JavascriptMode.unrestricted,
+              onWebViewCreated: (WebViewController controller) {
+                _controller.complete(controller);
+              },
+            ),
+          ],
         ),
       ),
     );
