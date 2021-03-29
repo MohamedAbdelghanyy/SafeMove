@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
           buttonTheme: ButtonThemeData(buttonColor: Colors.white),
           primaryColor: Colors.white,
         ),
-        initialRoute: LoginForm.routeName,
+        initialRoute: RoomsScreen.routeName, //LoginForm.routeName,
         routes: {
           '/': (context) => HomePage(),
           ProfileScreen.routeName: (context) => ProfileScreen(),

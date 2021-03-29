@@ -20,12 +20,12 @@ class PrefManager {
   }
 
   Future<void> loadDataFromLocalMemory() async {
-    var pref = await SharedPreferences.getInstance();
+    /*var pref = await SharedPreferences.getInstance();
     username = pref.getString("username") ?? "Guest";
     email = pref.getString("email") ?? "";
     password = pref.getString("password") ?? "";
     phonenumber = pref.getString("phonenumber") ?? "";
-    permission = pref.getInt("prmission") ?? 0;
+    permission = pref.getInt("prmission") ?? 0;*/
   }
 
   Future<void> saveDataToLocalMemory() async {
