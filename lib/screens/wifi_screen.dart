@@ -19,6 +19,13 @@ class _WifiScreenState extends State<WifiScreen> {
   List<WifiNetwork> _scanResult;
   final dbRef = FirebaseDatabase.instance.reference();
 
+  @override
+  void initState() {
+    // TODO: implement initState
+
+    super.initState();
+  }
+
   void checkWifi() {
     WiFiForIoTPlugin.isEnabled().then((val) {
       if (val) {
