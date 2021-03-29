@@ -33,14 +33,6 @@ class SignupFormSellerState extends State<SignupFormSeller> {
         body: SafeArea(
             child: ListView(children: [
       Container(
-        height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width,
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("assets/background.png"),
-            fit: BoxFit.cover,
-          ),
-        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -49,7 +41,7 @@ class SignupFormSellerState extends State<SignupFormSeller> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Image(
-                  image: AssetImage("assets/logo.png"),
+                  image: AssetImage("assets/covidlogo.png"),
                   width: 350,
                   height: 150,
                 )
