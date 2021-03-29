@@ -1,3 +1,4 @@
+import 'package:SafeMove/screens/map_screen.dart';
 import 'package:SafeMove/screens/sign_in.dart';
 import 'package:SafeMove/screens/admin_view.dart';
 import 'package:SafeMove/screens/self_report.dart';
@@ -40,6 +41,7 @@ class MyApp extends StatelessWidget {
         Symptoms.routeName: (context) => Symptoms(),
         SelfReport.routeName: (context) => SelfReport(),
         AdminView.routeName: (context) => AdminView(),
+        MapView.routeName: (context) => MapView(),
       },
     );
   }

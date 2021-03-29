@@ -176,6 +176,7 @@ class WiFiForIoTPlugin {
       return await _channel.invokeMethod('forceWifiUsage', htArguments);
     } on MissingPluginException catch (e) {
       print("MissingPluginException : ${e.toString()}");
+      return false;
     }
   }
 

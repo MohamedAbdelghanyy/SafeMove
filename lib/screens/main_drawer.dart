@@ -1,3 +1,4 @@
+import 'package:SafeMove/screens/map_screen.dart';
 import 'package:SafeMove/screens/profile.dart';
 import 'package:SafeMove/screens/admin_view.dart';
 import 'package:SafeMove/screens/self_report.dart';
@@ -97,6 +98,13 @@ class MainDrawer extends StatelessWidget {
             Icons.info,
             () {
               Navigator.of(context).pushNamed(Symptoms.routeName);
+            },
+          ),
+          buildListTitle(
+            'MapView',
+            Icons.info,
+            () {
+              Navigator.of(context).pushNamed(MapView.routeName);
             },
           ),
         ],
