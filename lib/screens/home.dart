@@ -2,14 +2,12 @@ import 'package:SafeMove/screens/main_drawer.dart';
 import 'package:flutter/material.dart';
 import './main_drawer.dart';
 
-class HomePage extends StatefulWidget {
+class HomeScreen extends StatefulWidget {
   @override
-  _HomePageState createState() => _HomePageState();
+  _HomeScreenState createState() => _HomeScreenState();
 }
 
-class _HomePageState extends State<HomePage> {
-  List<Widget> _platformVersion = [];
-
+class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();

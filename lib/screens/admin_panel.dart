@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './main_drawer.dart';
+import 'main_drawer.dart';
 
 class AdminPanel extends StatelessWidget {
   static const routeName = '/admin-panel';

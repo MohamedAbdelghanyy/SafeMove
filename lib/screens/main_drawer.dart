@@ -6,7 +6,6 @@ import 'package:SafeMove/screens/wifi_screen.dart';
 import 'package:flutter/material.dart';
 import './profile.dart';
 import './wifi_screen.dart';
-import './admin-panel.dart';
 import './rooms_screen.dart';
 
 class MainDrawer extends StatelessWidget {

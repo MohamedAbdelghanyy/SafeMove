@@ -1,22 +1,21 @@
-import 'package:SafeMove/screens/home.dart';
-import 'package:SafeMove/services/perference_manager.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:SafeMove/screens/sign_in.dart';
 import 'package:flutter/material.dart';
 import 'package:SafeMove/services/auth.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 
-class SignupFormSeller extends StatefulWidget {
+class SignUpScreen extends StatefulWidget {
   static const routeName = '/signup';
   @override
-  SignupFormSellerState createState() {
-    return SignupFormSellerState();
+  SignUpScreenState createState() {
+    return SignUpScreenState();
   }
 }
 
-class SignupFormSellerState extends State<SignupFormSeller> {
-  final _formKeysignupS = GlobalKey<FormState>();
-  var authHandler = new Auth();
-
+class SignUpScreenState extends State<SignUpScreen> {
+  final _formKey = GlobalKey<FormState>();
+  final _auth = Auth();
+  String _name, _phone, _email, _password;
+  final nameController = TextEditingController();
+  final phoneController = TextEditingController();
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
 
@@ -57,7 +56,7 @@ class SignupFormSellerState extends State<SignupFormSeller> {
               ),
               //Email textfield
               Form(
-                  key: _formKeysignupS,
+                  key: _formKey,
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
@@ -76,15 +75,15 @@ class SignupFormSellerState extends State<SignupFormSeller> {
                                         borderRadius:
                                             BorderRadius.circular(50)),
                                     child: TextFormField(
+                                        onSaved: (value) {
+                                          _name = value;
+                                        },
                                         validator: (value) {
                                           if (value.isEmpty) {
-                                            return 'Please enter your username';
-                                          }
-                                          if (value.contains(" ")) {
-                                            return 'Username cannot contain spaces';
+                                            return 'Please enter your full name';
                                           }
                                           if (value.length < 6) {
-                                            return 'Minimum length for username is 6 characters';
+                                            return 'Minimum length is 6 characters';
                                           }
                                           return null;
                                         },
@@ -101,7 +100,7 @@ class SignupFormSellerState extends State<SignupFormSeller> {
                                                     Radius.circular(50))),
                                             prefixIcon:
                                                 Icon(Icons.account_circle),
-                                            hintText: 'Username'),
+                                            hintText: 'Full Name'),
                                         style: TextStyle(
                                             fontSize: 20.0,
                                             color: Colors.black))),
@@ -125,6 +124,9 @@ class SignupFormSellerState extends State<SignupFormSeller> {
                                         borderRadius:
                                             BorderRadius.circular(50.0)),
                                     child: TextFormField(
+                                        onSaved: (value) {
+                                          _email = value;
+                                        },
                                         controller: emailController,
                                         validator: (value) {
                                           if (value.isEmpty) {
@@ -172,6 +174,9 @@ class SignupFormSellerState extends State<SignupFormSeller> {
                                         borderRadius:
                                             BorderRadius.circular(50.0)),
                                     child: TextFormField(
+                                        onSaved: (value) {
+                                          _phone = value;
+                                        },
                                         validator: (value) {
                                           if (value.isEmpty) {
                                             return 'Please enter your mobile number';
@@ -201,51 +206,6 @@ class SignupFormSellerState extends State<SignupFormSeller> {
                             )
                           ],
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Expanded(
-                              child: Padding(
-                                padding: EdgeInsets.only(
-                                    left: 20.0, right: 20.0, bottom: 10),
-                                child: Container(
-                                    alignment: Alignment.center,
-                                    height: 60.0,
-                                    decoration: BoxDecoration(
-                                        color: Colors.white,
-                                        borderRadius:
-                                            BorderRadius.circular(50.0)),
-                                    child: TextFormField(
-                                        validator: (value) {
-                                          if (value.isEmpty) {
-                                            return 'Please enter your National ID number';
-                                          }
-                                          if (value.length < 14) {
-                                            return 'Please enter 14 numbers';
-                                          }
-                                          return null;
-                                        },
-                                        decoration: InputDecoration(
-                                            enabledBorder: OutlineInputBorder(
-                                                borderSide: BorderSide(
-                                                    color: Colors.grey[500]),
-                                                borderRadius: BorderRadius.all(
-                                                    Radius.circular(50))),
-                                            focusedBorder: OutlineInputBorder(
-                                                borderSide: BorderSide(
-                                                    color: Colors.green[300]),
-                                                borderRadius: BorderRadius.all(
-                                                    Radius.circular(50))),
-                                            prefixIcon: Icon(Icons.badge),
-                                            hintText: 'National ID'),
-                                        style: TextStyle(
-                                            fontSize: 20.0,
-                                            color: Colors.black))),
-                              ),
-                            )
-                          ],
-                        ),
-
                         //Password textfield
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -261,6 +221,9 @@ class SignupFormSellerState extends State<SignupFormSeller> {
                                         borderRadius:
                                             BorderRadius.circular(50.0)),
                                     child: TextFormField(
+                                      onSaved: (value) {
+                                        _password = value;
+                                      },
                                       controller: passwordController,
                                       validator: (value) {
                                         if (value.isEmpty) {
@@ -317,48 +280,31 @@ class SignupFormSellerState extends State<SignupFormSeller> {
                                       borderRadius:
                                           BorderRadius.circular(50.0)),
                                   child: FlatButton(
-                                    child: Text("Signup",
-                                        style: TextStyle(
-                                            fontSize: 20.0,
-                                            color: Colors.white)),
-                                    onPressed: () {
-                                      var email = emailController.text;
-                                      var password = passwordController.text;
-                                      if (_formKeysignupS.currentState
-                                          .validate()) {
-                                        authHandler
-                                            .handleSignUp(email, password)
-                                            .then((FirebaseUser user) {
-                                          new PrefManager()
-                                              .setLoggedInData(email, password);
-                                          Navigator.popAndPushNamed(
-                                              context, '/');
-                                        }).catchError((e) {
-                                          print(e);
-                                          if (e.toString().contains(
-                                              "ERROR_EMAIL_ALREADY_IN_USE")) {
-                                            Fluttertoast.showToast(
-                                              msg: "This email already exists",
-                                              toastLength: Toast.LENGTH_SHORT,
-                                            );
-                                          } else if (e.toString().contains(
-                                              "ERROR_NETWORK_REQUEST_FAILED")) {
-                                            Fluttertoast.showToast(
-                                              msg:
-                                                  "Please check your internet connection.",
-                                              toastLength: Toast.LENGTH_SHORT,
-                                            );
-                                          } else {
-                                            Fluttertoast.showToast(
-                                              msg:
-                                                  "An error occurred, please try again later.",
-                                              toastLength: Toast.LENGTH_SHORT,
-                                            );
+                                      child: Text("Sign Up",
+                                          style: TextStyle(
+                                              fontSize: 20.0,
+                                              color: Colors.white)),
+                                      onPressed: () async {
+                                        if (_formKey.currentState.validate()) {
+                                          _formKey.currentState.save();
+                                          try {
+                                            await _auth.signUp(_name, _phone,
+                                                _email, _password);
+
+                                            ScaffoldMessenger.of(context)
+                                                .showSnackBar(SnackBar(
+                                                    content: Text(
+                                                        "Sign up success, please login")));
+                                            Navigator.pushNamed(context,
+                                                SignInScreen.routeName);
+                                          } catch (e) {
+                                            ScaffoldMessenger.of(context)
+                                                .showSnackBar(SnackBar(
+                                                    content: Text(
+                                                        e.message.toString())));
                                           }
-                                        });
-                                      }
-                                    },
-                                  ),
+                                        }
+                                      }),
                                 ),
                               ),
                             ),
