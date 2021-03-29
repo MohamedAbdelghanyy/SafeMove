@@ -19,7 +19,7 @@ class _RoomsScreenState extends State<RoomsScreen> {
 
   @override
   void initState() {
-    DataManager.loadRoomsData().then((value) {
+    DataManager.getRoomsData().then((value) {
       roomsData = DataManager.roomsData;
       roomChanged(roomsData[0]);
     });

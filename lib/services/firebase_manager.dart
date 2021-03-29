@@ -13,7 +13,7 @@ class FirebaseManager {
   static const url =
       'https://safe-move-da6ea-default-rtdb.firebaseio.com/data/';
 
-  static Future<List> loadRoomsData() async {
+  static Future<List> getRoomsData() async {
     var path = 'locations/MIU/rooms.json';
     final List<RoomClass> items = [];
     try {

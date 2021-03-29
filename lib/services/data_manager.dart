@@ -16,8 +16,8 @@ class DataManager {
   static List offersItems = new List();
   static bool isDarkMode = false;*/
 
-  static Future<void> loadRoomsData() async {
-    DataManager.roomsData = await FirebaseManager.loadRoomsData();
+  static Future<void> getRoomsData() async {
+    DataManager.roomsData = await FirebaseManager.getRoomsData();
   }
 
   /*static Future<void> iniMainMenuCategories() async {
