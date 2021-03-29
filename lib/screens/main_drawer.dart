@@ -1,8 +1,8 @@
-import 'package:SafeMove/profile.dart';
+import 'package:SafeMove/screens/profile.dart';
 import 'package:SafeMove/screens/admin_view.dart';
 import 'package:SafeMove/screens/self_report.dart';
 import 'package:SafeMove/screens/symptoms.dart';
-import 'package:SafeMove/wifi_screen.dart';
+import 'package:SafeMove/screens/wifi_screen.dart';
 import 'package:flutter/material.dart';
 import './profile.dart';
 import './wifi_screen.dart';

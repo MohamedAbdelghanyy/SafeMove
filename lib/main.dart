@@ -1,18 +1,18 @@
-import 'package:SafeMove/login.dart';
+import 'package:SafeMove/screens/login.dart';
 import 'package:SafeMove/screens/admin_view.dart';
 import 'package:SafeMove/screens/self_report.dart';
 import 'package:SafeMove/screens/splash_screen.dart';
 import 'package:SafeMove/screens/symptoms.dart';
 import 'package:flutter/material.dart';
 
-import './home.dart';
-import './wifi_screen.dart';
-import './profile.dart';
-import './admin-panel.dart';
-import './rooms_screen.dart';
-import './login.dart';
-import './signup.dart';
-import 'services/perference_manager.dart';
+import 'screens/home.dart';
+import 'screens/wifi_screen.dart';
+import 'screens/profile.dart';
+import 'screens/admin-panel.dart';
+import 'screens/rooms_screen.dart';
+import 'screens/login.dart';
+import 'screens/signup.dart';
+import 'package:SafeMove/services/perference_manager.dart';
 
 void main() {
   runApp(MyApp());

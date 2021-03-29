@@ -1,10 +1,10 @@
-import 'package:SafeMove/home.dart';
+import 'package:SafeMove/screens/home.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import './services/auth.dart';
+import 'package:SafeMove/services/auth.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import './signup.dart';
-import 'services/perference_manager.dart';
+import 'package:SafeMove/services/perference_manager.dart';
 import './home.dart';
 
 class LoginForm extends StatefulWidget {
