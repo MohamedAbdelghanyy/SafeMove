@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
         ),
         //initialRoute: LoginForm.routeName,
         routes: {
-          '/': (context) => SplashScreen(),
+          '/': (context) => AdminView(),
           ProfileScreen.routeName: (context) => ProfileScreen(),
           WifiScreen.routeName: (context) => WifiScreen(),
           AdminPanel.routeName: (context) => AdminPanel(),

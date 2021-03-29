@@ -148,8 +148,8 @@ class _AdminViewState extends State<AdminView> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
-                width: 190,
-                height: 250,
+                width: 380,
+                height: 480,
                 child: Card(
                   child: FlipCard(
                     front: Column(
