@@ -7,7 +7,6 @@ class DataManager {
   static List roomsData = new List();
   /*static List deliveryLocations = new List();
   static List userAddresses = new List();
-  static String mainMenuBanner = "https://miumun.org/mobileimages/banner.png";
   static List mainMenuCategories = new List();
   static List mainMenuItems = new List();
   static List subMenuItems = new List();
