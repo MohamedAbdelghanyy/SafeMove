@@ -5,16 +5,6 @@ import 'package:SafeMove/services/perference_manager.dart';
 class DataManager {
   static PrefManager mPrefManager = new PrefManager();
   static List roomsData = new List();
-  /*static List deliveryLocations = new List();
-  static List userAddresses = new List();
-  static List mainMenuCategories = new List();
-  static List mainMenuItems = new List();
-  static List subMenuItems = new List();
-  static List searchItems = new List();
-  static List lastSearchKeywords = new List();
-  static List recentOrders = new List();
-  static List offersItems = new List();
-  static bool isDarkMode = false;*/
 
   static Future<void> getRoomsData() async {
     DataManager.roomsData = await FirebaseManager.getRoomsData();
