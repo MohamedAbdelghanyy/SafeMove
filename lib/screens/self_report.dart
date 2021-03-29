@@ -10,7 +10,6 @@ class SelfReport extends StatefulWidget {
 
 class _SelfReportState extends State<SelfReport> {
   bool valuefirst = false;
-  bool valuesecond = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +37,7 @@ class _SelfReportState extends State<SelfReport> {
                     child: Text(
                       "Self Report",
                       style: GoogleFonts.montserrat(
-                        textStyle: Theme.of(context).textTheme.headline4,
+                        color: Colors.black,
                         fontSize: 18,
                         fontWeight: FontWeight.w700,
                         fontStyle: FontStyle.italic,
@@ -58,7 +57,7 @@ class _SelfReportState extends State<SelfReport> {
                 child: Text(
                   "Before Self Reporting, please Make sure\n that you are actually ill",
                   style: GoogleFonts.montserrat(
-                    textStyle: Theme.of(context).textTheme.headline4,
+                    color: Colors.black,
                     fontSize: 15,
                     fontWeight: FontWeight.w700,
                     fontStyle: FontStyle.italic,
@@ -71,7 +70,7 @@ class _SelfReportState extends State<SelfReport> {
                 child: Text(
                   "By Self Reporting, you acknowledge that you tested postive for COVID-19",
                   style: GoogleFonts.montserrat(
-                    textStyle: Theme.of(context).textTheme.headline4,
+                    color: Colors.black,
                     fontSize: 15,
                     fontWeight: FontWeight.w700,
                     fontStyle: FontStyle.italic,
@@ -84,7 +83,7 @@ class _SelfReportState extends State<SelfReport> {
                 child: Text(
                   "We Will warn any users that have came in close proximity with you in the past 14 days",
                   style: GoogleFonts.montserrat(
-                    textStyle: Theme.of(context).textTheme.headline4,
+                    color: Colors.black,
                     fontSize: 15,
                     fontWeight: FontWeight.w700,
                     fontStyle: FontStyle.italic,
@@ -98,7 +97,7 @@ class _SelfReportState extends State<SelfReport> {
                   Text(
                     'I Understand',
                     style: GoogleFonts.montserrat(
-                      textStyle: Theme.of(context).textTheme.headline4,
+                      color: Colors.black,
                       fontSize: 15,
                       fontWeight: FontWeight.w700,
                       fontStyle: FontStyle.italic,
@@ -135,7 +134,7 @@ class _SelfReportState extends State<SelfReport> {
                 label: Text(
                   "Self Report",
                   style: GoogleFonts.montserrat(
-                    textStyle: Theme.of(context).textTheme.headline4,
+                    color: Colors.white,
                     fontSize: 28,
                     fontWeight: FontWeight.w700,
                     fontStyle: FontStyle.italic,

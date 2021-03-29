@@ -13,13 +13,40 @@ class _AdminViewState extends State<AdminView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Admin View'),
-      ),
       body: ListView(
         children: [
-          SizedBox(
-            height: 30,
+          ClipPath(
+            clipper: MyClipper(),
+            child: Container(
+              height: 350,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomLeft,
+                  colors: [Color(0xFF91b3fa), Color(0xFF4f52ff)],
+                ),
+                image: DecorationImage(
+                  image: AssetImage('assets/admin.png'),
+                ),
+              ),
+              child: Column(
+                children: [
+                  Container(
+                    margin: EdgeInsets.all(30),
+                    child: Text(
+                      "Admin View",
+                      style: GoogleFonts.montserrat(
+                        color: Colors.black,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w700,
+                        fontStyle: FontStyle.italic,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -36,18 +63,30 @@ class _AdminViewState extends State<AdminView> {
                         Image(
                           image: AssetImage('assets/masks.png'),
                         ),
-                        Text("Masks Violation",
-                            style: GoogleFonts.montserrat(
-                              textStyle: Theme.of(context).textTheme.headline4,
-                              fontSize: 18,
-                              fontWeight: FontWeight.w700,
-                              fontStyle: FontStyle.italic,
-                            )),
+                        Text(
+                          "Masks Violation",
+                          style: GoogleFonts.montserrat(
+                            color: Colors.black,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w700,
+                            fontStyle: FontStyle.italic,
+                          ),
+                        ),
                       ],
                     ),
                     back: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [Text("Masks Violations Number")],
+                      children: [
+                        Text(
+                          "Masks Violations Number",
+                          style: GoogleFonts.montserrat(
+                            color: Colors.black,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w700,
+                            fontStyle: FontStyle.italic,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
@@ -63,18 +102,32 @@ class _AdminViewState extends State<AdminView> {
                         Image(
                           image: AssetImage('assets/masks.png'),
                         ),
-                        Text("Masks Commits",
-                            style: GoogleFonts.montserrat(
-                              textStyle: Theme.of(context).textTheme.headline4,
-                              fontSize: 18,
-                              fontWeight: FontWeight.w700,
-                              fontStyle: FontStyle.italic,
-                            )),
+                        Text(
+                          "Masks Commits",
+                          style: GoogleFonts.montserrat(
+                            color: Colors.black,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w700,
+                            fontStyle: FontStyle.italic,
+                          ),
+                        ),
                       ],
                     ),
                     back: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [Center(child: Text("92"))],
+                      children: [
+                        Center(
+                          child: Text(
+                            "92",
+                            style: GoogleFonts.montserrat(
+                              color: Colors.black,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w700,
+                              fontStyle: FontStyle.italic,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
@@ -96,18 +149,30 @@ class _AdminViewState extends State<AdminView> {
                         Image(
                           image: AssetImage('assets/distancing.png'),
                         ),
-                        Text("Distancing Violation",
-                            style: GoogleFonts.montserrat(
-                              textStyle: Theme.of(context).textTheme.headline4,
-                              fontSize: 15,
-                              fontWeight: FontWeight.w700,
-                              fontStyle: FontStyle.italic,
-                            )),
+                        Text(
+                          "Distancing Violation",
+                          style: GoogleFonts.montserrat(
+                            color: Colors.black,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w700,
+                            fontStyle: FontStyle.italic,
+                          ),
+                        ),
                       ],
                     ),
                     back: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [Text("Masks Violations Number")],
+                      children: [
+                        Text(
+                          "Masks Violations Number",
+                          style: GoogleFonts.montserrat(
+                            color: Colors.black,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w700,
+                            fontStyle: FontStyle.italic,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
@@ -126,8 +191,7 @@ class _AdminViewState extends State<AdminView> {
                         Center(
                           child: Text("Distancing Commits",
                               style: GoogleFonts.montserrat(
-                                textStyle:
-                                    Theme.of(context).textTheme.headline4,
+                                color: Colors.black,
                                 fontSize: 15,
                                 fontWeight: FontWeight.w700,
                                 fontStyle: FontStyle.italic,
@@ -137,7 +201,19 @@ class _AdminViewState extends State<AdminView> {
                     ),
                     back: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [Center(child: Text("92"))],
+                      children: [
+                        Center(
+                          child: Text(
+                            "92",
+                            style: GoogleFonts.montserrat(
+                              color: Colors.black,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w700,
+                              fontStyle: FontStyle.italic,
+                            ),
+                          ),
+                        )
+                      ],
                     ),
                   ),
                 ),
@@ -160,7 +236,7 @@ class _AdminViewState extends State<AdminView> {
                         ),
                         Text("Total Stats",
                             style: GoogleFonts.montserrat(
-                              textStyle: Theme.of(context).textTheme.headline4,
+                              color: Colors.black,
                               fontSize: 18,
                               fontWeight: FontWeight.w700,
                               fontStyle: FontStyle.italic,
@@ -172,7 +248,7 @@ class _AdminViewState extends State<AdminView> {
                       children: [
                         Text("Total Stats",
                             style: GoogleFonts.montserrat(
-                              textStyle: Theme.of(context).textTheme.headline4,
+                              color: Colors.black,
                               fontSize: 18,
                               fontWeight: FontWeight.w700,
                               fontStyle: FontStyle.italic,
@@ -190,5 +266,23 @@ class _AdminViewState extends State<AdminView> {
         ],
       ),
     );
+  }
+}
+
+class MyClipper extends CustomClipper<Path> {
+  @override
+  Path getClip(Size size) {
+    var path = Path();
+    path.lineTo(0, size.height - 80);
+    path.quadraticBezierTo(
+        size.width / 2, size.height, size.width, size.height - 80);
+    path.lineTo(size.width, 0);
+    path.close();
+    return path;
+  }
+
+  @override
+  bool shouldReclip(CustomClipper<Path> oldClipper) {
+    return false;
   }
 }

@@ -1,5 +1,7 @@
 import 'package:SafeMove/profile.dart';
 import 'package:SafeMove/screens/admin_view.dart';
+import 'package:SafeMove/screens/self_report.dart';
+import 'package:SafeMove/screens/symptoms.dart';
 import 'package:SafeMove/wifi_screen.dart';
 import 'package:flutter/material.dart';
 import './profile.dart';
@@ -50,8 +52,8 @@ class MainDrawer extends StatelessWidget {
             height: 20,
           ),
           buildListTitle(
-            'Categories',
-            Icons.shop,
+            'Home',
+            Icons.home,
             () {
               Navigator.of(context).pushNamed('/');
             },
@@ -60,7 +62,7 @@ class MainDrawer extends StatelessWidget {
             'Profile',
             Icons.person,
             () {
-              Navigator.of(context).pushNamed(AdminView.routeName);
+              Navigator.of(context).pushNamed(ProfileScreen.routeName);
             },
           ),
           buildListTitle(
@@ -78,10 +80,24 @@ class MainDrawer extends StatelessWidget {
             },
           ),
           buildListTitle(
-            'Admin Panel',
+            'Admin Area',
             Icons.admin_panel_settings_outlined,
             () {
-              Navigator.of(context).pushNamed(AdminPanel.routeName);
+              Navigator.of(context).pushNamed(AdminView.routeName);
+            },
+          ),
+          buildListTitle(
+            'Self Report',
+            Icons.bluetooth,
+            () {
+              Navigator.of(context).pushNamed(SelfReport.routeName);
+            },
+          ),
+          buildListTitle(
+            'Symptomps',
+            Icons.info,
+            () {
+              Navigator.of(context).pushNamed(Symptoms.routeName);
             },
           ),
         ],
