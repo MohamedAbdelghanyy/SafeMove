@@ -8,7 +8,17 @@ class Auth {
   final Future<FirebaseApp> _future = Firebase.initializeApp();
   final databaseRef = FirebaseDatabase.instance.reference().child('users');
 
-  
+  Future signUp(name, phone, email, password) async {
+    final authresult = await _auth.createUserWithEmailAndPassword(
+        email: email, password: password);
+    databaseRef.child(_auth.currentUser.uid).set({
+      'name': name.toString(),
+      'phone': phone.toString(),
+      'email': email.toString(),
+      'type': 'user',
+    });
+    return authresult;
+  }
 
   Future signIn(String email, String password) async {
     final authresult = await _auth.signInWithEmailAndPassword(
