@@ -14,22 +14,6 @@ class FirebaseManager {
   static const url =
       'https://safe-move-da6ea-default-rtdb.firebaseio.com/data/';
 
-  static Future<List> getRoomsData() async {
-    var path = 'locations/MIU/rooms.json';
-    final List<RoomClass> items = [];
-    try {
-      final response = await http.get(url + path);
-      final dbData = json.decode(response.body) as Map<String, dynamic>;
-      dbData.forEach((key, data) {
-        items.add(RoomClass(
-            key, data['total'], data['violations'], data['mask-violations']));
-      });
-    } on Exception catch (e) {
-      print(e.toString());
-      throw (e);
-    }
-    return items;
-  }
 
   static Future<bool> setSelfReport(int selfReportStatus) async {
     try {
