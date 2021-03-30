@@ -20,5 +20,32 @@ class Auth {
     return authresult;
   }
 
-  
+  Future signIn(String email, String password) async {
+    final authresult = await _auth.signInWithEmailAndPassword(
+        email: email, password: password);
+    var name = (await FirebaseDatabase.instance
+            .reference()
+            .child('users')
+            .child(_auth.currentUser.uid)
+            .child("name")
+            .once())
+        .value;
+    var phone = (await FirebaseDatabase.instance
+            .reference()
+            .child('users')
+            .child(_auth.currentUser.uid)
+            .child("phone")
+            .once())
+        .value;
+    var type = (await FirebaseDatabase.instance
+            .reference()
+            .child('users')
+            .child(_auth.currentUser.uid)
+            .child("type")
+            .once())
+        .value;
+    await DataManager.mPrefManager.setLoggedInData(
+        _auth.currentUser.uid, name, phone, email, password, type);
+    return authresult;
+  }
 }
