@@ -31,31 +31,7 @@ class FirebaseManager {
     return items;
   }
 
-  static Future<bool> setSelfReport(int selfReportStatus) async {
-    try {
-      WifiInfoWrapper mWifiInfo = await WifiInfoPlugin.wifiDetails;
-      var dbRef2 = databaseRef.child('data').child('reports');
-      await dbRef2.child(DataManager.mPrefManager.getId().toString()).set({
-        'user_id': DataManager.mPrefManager.getId().toString(),
-        'address': mWifiInfo.macAddress,
-        'status': selfReportStatus,
-      }).then((value) {
-        Fluttertoast.showToast(
-          msg:
-              "Self report was successfully submitted, thank you for being honest.",
-          toastLength: Toast.LENGTH_LONG,
-        );
-      });
-      return true;
-    } catch (e) {
-      Fluttertoast.showToast(
-        msg: e.message.toString(),
-        toastLength: Toast.LENGTH_LONG,
-      );
-      return false;
-    }
-  }
-
+  
   /*
   static Future<List> getUserAddresses() async {
     var path = 'addresses.json';
