@@ -106,29 +106,7 @@ class FirebaseManager {
     return items;
   }
 
-  static Future<List> getMainMenuItems() async {
-    var path = 'main_menu_items.json';
-    final List<MainMenuItemClass> items = [];
-    try {
-      final response = await http.get(url + path);
-      final dbData = json.decode(response.body) as Map<String, dynamic>;
-      dbData.forEach((key, data) {
-        if (int.parse(data['is_active'].toString()) == 1) {
-          items.add(MainMenuItemClass(
-            key.toString(),
-            data['category_id'].toString(),
-            data['name'].toString(),
-            data['image'].toString(),
-            (int.parse(data['is_active'].toString()) == 1),
-          ));
-        }
-      });
-    } on Exception catch (e) {
-      print(e.toString());
-      throw (e);
-    }
-    return items;
-  }
+
 
   static Future<List> getSubMenuItems(String menuId) async {
     var path = 'sub_menu_items.json';
