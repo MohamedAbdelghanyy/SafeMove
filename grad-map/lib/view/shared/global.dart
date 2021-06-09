@@ -125,7 +125,6 @@ abstract class Global {
       'position': [0.0029, -0.299],
       'door_position': [-0.005, -0.271],
       'corridor_position': [-0.005, -0.256],
-      'tile': 2,
     },
     {
       'location': 'Room 309',
@@ -135,7 +134,6 @@ abstract class Global {
       'position': [-0.035, -0.299],
       'door_position': [-0.026, -0.271],
       'corridor_position': [-0.026, -0.256],
-      'tile': 2,
     },
     {
       'location': 'Room 308',
@@ -145,7 +143,6 @@ abstract class Global {
       'position': [-0.072, -0.299],
       'door_position': [-0.061, -0.271],
       'corridor_position': [-0.061, -0.256],
-      'tile': 2,
     },
     {
       'location': 'Room 307',
@@ -155,7 +152,6 @@ abstract class Global {
       'position': [-0.109, -0.299],
       'door_position': [-0.1, -0.271],
       'corridor_position': [-0.1, -0.256],
-      'tile': 2,
     },
     {
       'location': 'Room 306',
@@ -165,7 +161,6 @@ abstract class Global {
       'position': [-0.151, -0.299],
       'door_position': [-0.137, -0.271],
       'corridor_position': [-0.137, -0.256],
-      'tile': 2,
     },
     {
       'location': 'Room 305',
@@ -175,7 +170,6 @@ abstract class Global {
       'position': [-0.192, -0.299],
       'door_position': [-0.198, -0.271],
       'corridor_position': [-0.198, -0.256],
-      'tile': 1,
     },
     {
       'location': 'Room 304',
@@ -185,7 +179,6 @@ abstract class Global {
       'position': [-0.229, -0.299],
       'door_position': [-0.22, -0.271],
       'corridor_position': [-0.22, -0.256],
-      'tile': 1,
     },
     {
       'location': 'Room 303',
@@ -195,7 +188,6 @@ abstract class Global {
       'position': [-0.266, -0.299],
       'door_position': [-0.257, -0.271],
       'corridor_position': [-0.257, -0.256],
-      'tile': 1,
     },
     {
       'location': 'Room 302',
@@ -205,7 +197,6 @@ abstract class Global {
       'position': [-0.302, -0.299],
       'door_position': [-0.292, -0.271],
       'corridor_position': [-0.292, -0.256],
-      'tile': 1,
     },
     {
       'location': 'Room 301',
@@ -215,7 +206,6 @@ abstract class Global {
       'position': [-0.36, -0.299],
       'door_position': [-0.329, -0.271],
       'corridor_position': [-0.329, -0.256],
-      'tile': 1,
     },
 
     //Corridor 2 Bottom
