@@ -217,7 +217,6 @@ abstract class Global {
       'position': [0.013, -0.209],
       'door_position': [0.01, -0.242],
       'corridor_position': [0.01, -0.256],
-      'tile': 2,
     },
     {
       'location': 'Male Rest Room',
@@ -227,7 +226,6 @@ abstract class Global {
       'position': [-0.006, -0.209],
       'door_position': [-0.0025, -0.242],
       'corridor_position': [-0.0025, -0.256],
-      'tile': 2,
     },
     {
       'location': 'Buffet',
@@ -237,7 +235,6 @@ abstract class Global {
       'position': [-0.034, -0.209],
       'door_position': [-0.034, -0.242],
       'corridor_position': [-0.034, -0.256],
-      'tile': 2,
     },
     {
       'location': 'Room 320',
@@ -247,7 +244,6 @@ abstract class Global {
       'position': [-0.073, -0.209],
       'door_position': [-0.078, -0.242],
       'corridor_position': [-0.078, -0.256],
-      'tile': 2,
     },
     {
       'location': 'Room 321',
@@ -257,7 +253,6 @@ abstract class Global {
       'position': [-0.111, -0.209],
       'door_position': [-0.117, -0.242],
       'corridor_position': [-0.117, -0.256],
-      'tile': 2,
     },
     {
       'location': 'Room 322',
@@ -267,7 +262,6 @@ abstract class Global {
       'position': [-0.151, -0.209],
       'door_position': [-0.163, -0.242],
       'corridor_position': [-0.163, -0.256],
-      'tile': 2,
     },
     {
       'location': 'Room 323',
@@ -277,7 +271,6 @@ abstract class Global {
       'position': [-0.191, -0.209],
       'door_position': [-0.2, -0.242],
       'corridor_position': [-0.2, -0.256],
-      'tile': 1,
     },
   ];
 
