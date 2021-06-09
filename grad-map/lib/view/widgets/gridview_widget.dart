@@ -103,7 +103,7 @@ class LinePainter extends CustomPainter {
       ..strokeWidth = 2
       ..strokeCap = StrokeCap.round;
 
-    List xy = [0.06, -0.29];
+    List xy = [0.07, -0.276];
 
     print('[' + xy[0].toString() + ', ' + xy[1].toString());
 
