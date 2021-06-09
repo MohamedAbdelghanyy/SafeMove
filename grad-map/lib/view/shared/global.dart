@@ -6,7 +6,7 @@ abstract class Global {
   static const List rooms = [
     // Corridor 1 (Top)
     {
-      'location': 'Room 315',
+      'location': 'Room 315', // Updated
       'name': '315',
       'icon': Icons.menu_book_rounded,
       'status': true,
@@ -308,7 +308,7 @@ abstract class Global {
       'tile': 3,
     },
     {
-      'position': [0.027, 0.0125], // 315
+      'position': [0.3285, -0.288], // 315 // Updated
       'tile': 3,
     },
     {
