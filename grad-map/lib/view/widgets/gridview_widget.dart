@@ -1,6 +1,5 @@
 import 'package:custom_zoomable_floorplan/core/models/models.dart';
 import 'package:custom_zoomable_floorplan/core/viewmodels/floorplan_model.dart';
-import 'package:custom_zoomable_floorplan/view/shared/bla.dart';
 import 'package:custom_zoomable_floorplan/view/shared/global.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
