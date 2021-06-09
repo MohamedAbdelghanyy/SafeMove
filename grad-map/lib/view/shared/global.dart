@@ -30,7 +30,7 @@ abstract class Global {
       'status': true,
       'position': [0.235, -0.33],
       'door_position': [0.234, -0.30],
-      'corridor_position': [0.234, -0.29],
+      'corridor_position': [0.234, -0.288],
     },
     {
       'location': 'Room 312',
@@ -39,7 +39,7 @@ abstract class Global {
       'status': true,
       'position': [0.175, -0.33],
       'door_position': [0.132, -0.30],
-      'corridor_position': [0.132, -0.29],
+      'corridor_position': [0.132, -0.288],
     },
     {
       'location': 'Room 311',
@@ -48,7 +48,7 @@ abstract class Global {
       'status': false,
       'position': [0.085, -0.33],
       'door_position': [0.06, -0.30],
-      'corridor_position': [0.06, -0.29],
+      'corridor_position': [0.06, -0.288],
     },
 
     //Corridor 1 Bottom
@@ -59,7 +59,7 @@ abstract class Global {
       'status': true,
       'position': [0.349, -0.245],
       'door_position': [0.3595, -0.276],
-      'corridor_position': [0.3595, -0.286],
+      'corridor_position': [0.3595, -0.288],
     },
     {
       'location': 'Room 317',
@@ -68,7 +68,7 @@ abstract class Global {
       'status': true,
       'position': [0.268, -0.245],
       'door_position': [0.299, -0.276],
-      'corridor_position': [0.299, -0.286],
+      'corridor_position': [0.299, -0.288],
     },
     {
       'location': 'Room 318',
@@ -77,7 +77,7 @@ abstract class Global {
       'status': false,
       'position': [0.21, -0.245],
       'door_position': [0.225, -0.276],
-      'corridor_position': [0.225, -0.286],
+      'corridor_position': [0.225, -0.288],
     },
     {
       'location': 'Room 319',
@@ -86,7 +86,7 @@ abstract class Global {
       'status': true,
       'position': [0.149, -0.245],
       'door_position': [0.18, -0.276],
-      'corridor_position': [0.18, -0.286],
+      'corridor_position': [0.18, -0.288],
     },
     {
       'location': 'Male Rest Room',
@@ -95,7 +95,7 @@ abstract class Global {
       'status': true,
       'position': [0.105, -0.245],
       'door_position': [0.107, -0.276],
-      'corridor_position': [0.107, -0.286],
+      'corridor_position': [0.107, -0.288],
     },
     {
       'location': 'Female Rest Room',
@@ -104,7 +104,7 @@ abstract class Global {
       'status': true,
       'position': [0.087, -0.245],
       'door_position': [0.09, -0.276],
-      'corridor_position': [0.09, -0.286],
+      'corridor_position': [0.09, -0.288],
     },
     {
       'location': 'Buffet',
@@ -113,7 +113,7 @@ abstract class Global {
       'status': true,
       'position': [0.064, -0.245],
       'door_position': [0.07, -0.276],
-      'corridor_position': [0.07, -0.286],
+      'corridor_position': [0.07, -0.288],
     },
 
     //Corridor 2 Top
