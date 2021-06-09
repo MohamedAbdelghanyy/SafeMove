@@ -28,94 +28,64 @@ class _GridViewWidgetState extends State<GridViewWidget> {
     final Size size = MediaQuery.of(context).size;
     final model = Provider.of<FloorPlanModel>(context);
     return Stack(
-      children: [
-        GridView.builder(
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            //crossAxisSpacing: 2.0,
-            //mainAxisSpacing: 2.0,
-            crossAxisCount: 3,
+      alignment: Alignment.center,
+      children: <Widget>[
+        Container(
+          color: Global.blue,
+          child: Image.asset(
+            'images/miu.png',
           ),
-          itemCount: 9,
-          shrinkWrap: true,
-          itemBuilder: (context, index) {
-            int currentTile = index + 1;
-            List<Room> tileRooms =
-                model.rooms.where((item) => item.tile == currentTile).toList();
-
-            return Stack(
-              alignment: Alignment.center,
-              children: <Widget>[
-                Container(
-                  color: Global.blue,
-                  child: Image.asset(
-                    'images/tile_0$currentTile.png',
-                  ),
-                ),
-                /*model.isScaled
+        ),
+        /*model.isScaled
                   ?*/
-                Stack(
-                  children: List.generate(
-                    tileRooms.length,
-                    (idx) {
-                      return Transform.translate(
-                        offset: Offset(
-                          size.width * tileRooms[idx].position[0],
-                          size.width * tileRooms[idx].position[1],
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            CircleAvatar(
-                              backgroundColor: tileRooms[idx].status
-                                  ? Colors.green
-                                  : Colors.red,
-                              radius: 3.0,
-                              child: Center(
-                                child: Icon(
-                                  tileRooms[idx].icon,
-                                  color: Colors.white, //Global.blue,
-                                  size: 4,
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 1,
-                            ),
-                            Text(
-                              tileRooms[idx].name,
-                              style: TextStyle(
-                                fontSize: 3.5,
-                                color: Colors.black,
-                              ),
-                            )
-                          ],
-                        ),
-                      );
-                    },
-                  ),
+        Stack(
+          children: List.generate(
+            model.rooms.length,
+            (idx) {
+              return Transform.translate(
+                offset: Offset(
+                  size.width * model.rooms[idx].position[0],
+                  size.width * model.rooms[idx].position[1],
                 ),
-                widget.routeData != null
-                    ? Container(
-                        alignment: Alignment.center,
-                        child: CustomPaint(
-                          painter: LinePainter(
-                              widget.routeData, size.width, currentTile),
-                        ),
-                      )
-                    : SizedBox()
-                /*: CircleAvatar(
-                      backgroundColor: Colors.white,
-                      child: Text(
-                        '${tileRooms.length}',
-                        style: TextStyle(
-                          color: Global.blue,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    CircleAvatar(
+                      backgroundColor:
+                          model.rooms[idx].status ? Colors.green : Colors.red,
+                      radius: 3.0,
+                      child: Center(
+                        child: Icon(
+                          model.rooms[idx].icon,
+                          color: Colors.white, //Global.blue,
+                          size: 4,
                         ),
                       ),
-                    ),*/
-              ],
-            );
-          },
+                    ),
+                    SizedBox(
+                      height: 1,
+                    ),
+                    Text(
+                      model.rooms[idx].name,
+                      style: TextStyle(
+                        fontSize: 3.5,
+                        color: Colors.black,
+                      ),
+                    )
+                  ],
+                ),
+              );
+            },
+          ),
         ),
+        widget.routeData != null
+            ? Container(
+                alignment: Alignment.center,
+                child: CustomPaint(
+                  painter: LinePainter(widget.routeData, size.width),
+                ),
+              )
+            : SizedBox()
       ],
     );
   }
@@ -124,23 +94,24 @@ class _GridViewWidgetState extends State<GridViewWidget> {
 class LinePainter extends CustomPainter {
   RouteData routeData;
   double cSize;
-  int cTile;
 
-  LinePainter(this.routeData, this.cSize, this.cTile);
+  LinePainter(this.routeData, this.cSize);
 
   @override
   void paint(Canvas canvas, Size size) {
-    print(cTile);
     final paint = Paint()
       ..color = Colors.red
       ..strokeWidth = 2
       ..strokeCap = StrokeCap.round;
 
-    /*List xy = [-0.0257, 0.032];
-    print('[' + xy[0].toString() + ', ' + xy[1].toString());
-    canvas.drawLine(Offset(cSize * xy[0], cSize * xy[1]),
-        Offset(cSize * xy[0], cSize * xy[1]), paint);*/
+    List xy = [-0.0257, 0.032];
 
+    print('[' + xy[0].toString() + ', ' + xy[1].toString());
+
+    canvas.drawLine(Offset(cSize * xy[0], cSize * xy[1]),
+        Offset(cSize * xy[0], cSize * xy[1]), paint);
+
+    /*
     if (cTile == routeData.roomX.tile) {
       canvas.drawLine(
           Offset(cSize * routeData.roomX.doorPosition[0],
@@ -204,7 +175,7 @@ class LinePainter extends CustomPainter {
           }
         }
       }
-    }
+    }*/
   }
 
   @override
