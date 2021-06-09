@@ -10,10 +10,9 @@ abstract class Global {
       'name': '315',
       'icon': Icons.menu_book_rounded,
       'status': true,
-      'position': [0.055, -0.03],
-      'door_position': [0.027, 0.0],
-      'corridor_position': [0.027, 0.0125],
-      'tile': 3,
+      'position': [0.356, -0.33],
+      'door_position': [0.3285, -0.30],
+      'corridor_position': [0.3285, -0.288],
     },
     {
       'location': 'Room 314',
