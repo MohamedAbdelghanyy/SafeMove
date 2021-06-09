@@ -4,7 +4,7 @@ abstract class Global {
   static const Color blue = const Color(0xff4A64FE);
 
   static const List rooms = [
-    // Corridor 1 (Top)
+    // Corridor 1 Top
     {
       'location': 'Room 315', // Updated
       'name': '315',
