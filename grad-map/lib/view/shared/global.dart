@@ -19,9 +19,9 @@ abstract class Global {
       'name': '314',
       'icon': Icons.menu_book_rounded,
       'status': true,
-      'position': [-0.017, -0.03],
-      'door_position': [0.000, 0.000],
-      'corridor_position': [-0.0455, 0.0125],
+      'position': [0.28, -0.33],
+      'door_position': [0.255, -0.30],
+      'corridor_position': [0.255, 0.0125],
       'tile': 3,
     },
     {
