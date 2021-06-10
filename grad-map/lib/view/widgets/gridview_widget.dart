@@ -21,7 +21,7 @@ class _GridViewWidgetState extends State<GridViewWidget> {
         Container(
           //color: Global.blue,
           child: Image.asset(
-            'images/miu.png',
+            'images/miu_2.png',
           ),
         ),
         /*model.isScaled
