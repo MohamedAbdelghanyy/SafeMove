@@ -70,7 +70,6 @@ class _SplashScreenState extends State<SplashScreen>
 */
 
 import 'package:SafeMove/screens/admin_view.dart';
-import 'package:SafeMove/screens/home.dart';
 import 'package:SafeMove/screens/map_screen.dart';
 import 'package:SafeMove/screens/sign_in.dart';
 import 'package:SafeMove/services/data_manager.dart';
@@ -102,7 +101,7 @@ class _SplashScreenState extends State<SplashScreen> {
           if (DataManager.mPrefManager.isLoggedIn()) {
             print("Already Logged In");
             if (DataManager.mPrefManager.getType() != 'admin') {
-              return MapView();
+              return MapScreen();
             } else {
               return AdminView();
             }
