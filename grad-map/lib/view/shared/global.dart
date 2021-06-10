@@ -369,4 +369,14 @@ abstract class Global {
       'position': [-0.329, -0.256], // 301
     }
   ];
+
+  static const List grids = [
+    {
+      'grid_id': 1,
+      'status': true,
+      'fingerprint_L': [0, 1, 2],
+      'fingerprint_R': [0, 1, 2],
+      'corridor_position': [-0.078, -0.256],
+    }
+  ];
 }
