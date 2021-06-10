@@ -38,6 +38,8 @@ dependencies:
   flutter_spinkit: "^4.1.2"
   wifi_info_plugin: ^1.1.5
   webview_flutter: ^2.0.2
+  provider: ^4.3.1
+  dropdown_search: ^0.6.1
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -80,6 +82,8 @@ flutter:
     - assets/wear_mask.png
     - assets/dr.png
     - assets/admin.png
+    - assets/miu.png
+    - assets/miu_2.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

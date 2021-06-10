@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:SafeMove/models/room.dart';
+import 'package:SafeMove/models/room_data_model.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -16,12 +16,12 @@ class FirebaseManager {
 
   static Future<List> getRoomsData() async {
     var path = 'locations/MIU/rooms.json';
-    final List<RoomClass> items = [];
+    final List<RoomDataModel> items = [];
     try {
       final response = await http.get(url + path);
       final dbData = json.decode(response.body) as Map<String, dynamic>;
       dbData.forEach((key, data) {
-        items.add(RoomClass(
+        items.add(RoomDataModel(
             key, data['total'], data['violations'], data['mask-violations']));
       });
     } on Exception catch (e) {

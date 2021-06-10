@@ -1,4 +1,4 @@
-import 'package:SafeMove/models/room.dart';
+import 'package:SafeMove/models/room_data_model.dart';
 import 'package:SafeMove/services/data_manager.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +14,7 @@ class RoomsScreen extends StatefulWidget {
 }
 
 class _RoomsScreenState extends State<RoomsScreen> {
-  RoomClass currRoom;
+  RoomDataModel currRoom;
   List roomsData = List();
 
   @override
@@ -26,7 +26,7 @@ class _RoomsScreenState extends State<RoomsScreen> {
     super.initState();
   }
 
-  void roomChanged(RoomClass newRoom) {
+  void roomChanged(RoomDataModel newRoom) {
     setState(() {
       currRoom = newRoom;
     });
@@ -85,11 +85,12 @@ class _RoomsScreenState extends State<RoomsScreen> {
                                     ),
                                     SizedBox(width: 10),
                                     DropdownButtonHideUnderline(
-                                      child: DropdownButton<RoomClass>(
+                                      child: DropdownButton<RoomDataModel>(
                                         onChanged: roomChanged,
                                         value: currRoom,
                                         items: roomsData.map((value) {
-                                          return DropdownMenuItem<RoomClass>(
+                                          return DropdownMenuItem<
+                                              RoomDataModel>(
                                             value: value,
                                             child: Text(
                                               value.name,
