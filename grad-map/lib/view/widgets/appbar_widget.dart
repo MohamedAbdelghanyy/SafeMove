@@ -11,7 +11,7 @@ class AppBarWidget extends StatelessWidget {
         child: Column(
           children: <Widget>[
             Text(
-              'Floor Plan Screen',
+              'MIU Safe Move Map',
               style: TextStyle(
                 color: Global.blue,
                 fontWeight: FontWeight.w900,

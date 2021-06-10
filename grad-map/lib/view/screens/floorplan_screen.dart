@@ -4,6 +4,7 @@ import 'package:custom_zoomable_floorplan/view/shared/global.dart';
 import 'package:custom_zoomable_floorplan/view/widgets/appbar_widget.dart';
 import 'package:custom_zoomable_floorplan/view/widgets/gridview_widget.dart';
 import 'package:custom_zoomable_floorplan/view/widgets/raw_gesture_detector_widget.dart';
+import 'package:custom_zoomable_floorplan/view/widgets/route_selection_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -16,7 +17,7 @@ class FloorPlanScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(100.0),
+        preferredSize: Size.fromHeight(70.0),
         child: AppBarWidget(),
       ),
       body: ClipRRect(
@@ -30,6 +31,7 @@ class FloorPlanScreen extends StatelessWidget {
             child: Stack(
               alignment: Alignment.center,
               children: <Widget>[
+                RouteSelectionWidget(),
                 RawGestureDetectorWidget(
                   child: GridViewWidget(),
                 ),

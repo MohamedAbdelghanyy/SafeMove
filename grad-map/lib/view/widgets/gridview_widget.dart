@@ -1,18 +1,11 @@
 import 'package:custom_zoomable_floorplan/core/models/models.dart';
 import 'package:custom_zoomable_floorplan/core/viewmodels/floorplan_model.dart';
-import 'package:custom_zoomable_floorplan/view/shared/bla.dart';
 import 'package:custom_zoomable_floorplan/view/shared/global.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class GridViewWidget extends StatefulWidget {
-  GridViewWidget() {
-    Bla.foundX = false;
-    Bla.foundY = false;
-    Bla.startDrawing = false;
-  }
-
   @override
   _GridViewWidgetState createState() => _GridViewWidgetState();
 }
@@ -88,11 +81,11 @@ class _GridViewWidgetState extends State<GridViewWidget> {
 class LinePainter extends CustomPainter {
   RouteData routeData;
   double cSize;
-  final Path path = Path();
-  final paintt = Paint()
+  Paint paintt = Paint()
     ..color = Colors.blue[900]
     ..strokeWidth = 2
     ..strokeCap = StrokeCap.round;
+  bool isDrawingStarted = false, isRoomXFound = false, isRoomYFound = false;
 
   LinePainter(this.routeData, this.cSize);
 
@@ -123,35 +116,33 @@ class LinePainter extends CustomPainter {
               Global.corridorCheckPoint[i]['position'][0] &&
           routeData.roomX.corridorPosition[1] ==
               Global.corridorCheckPoint[i]['position'][1] &&
-          !Bla.foundX) {
-        Bla.foundX = true;
-        Bla.startDrawing = true;
-        if (!Bla.foundY) {}
+          !isRoomXFound) {
+        isRoomXFound = true;
+        isDrawingStarted = true;
       }
       if (routeData.roomY.corridorPosition[0] ==
               Global.corridorCheckPoint[i]['position'][0] &&
           routeData.roomY.corridorPosition[1] ==
               Global.corridorCheckPoint[i]['position'][1] &&
-          !Bla.foundY) {
-        Bla.foundY = true;
-        Bla.startDrawing = true;
-        if (!Bla.foundX) {}
+          !isRoomYFound) {
+        isRoomYFound = true;
+        isDrawingStarted = true;
       }
-      if (!(Bla.foundX && Bla.foundY)) {
-        if (Bla.startDrawing && (i + 1 < Global.corridorCheckPoint.length)) {
-          canvas.drawLine(
-            Offset(cSize * Global.corridorCheckPoint[i]['position'][0],
-                cSize * Global.corridorCheckPoint[i]['position'][1]),
-            Offset(cSize * Global.corridorCheckPoint[i + 1]['position'][0],
-                cSize * Global.corridorCheckPoint[i + 1]['position'][1]),
-            paintt,
-          );
-        }
+      if (!(isRoomXFound && isRoomYFound) &&
+          isDrawingStarted &&
+          (i + 1 < Global.corridorCheckPoint.length)) {
+        canvas.drawLine(
+          Offset(cSize * Global.corridorCheckPoint[i]['position'][0],
+              cSize * Global.corridorCheckPoint[i]['position'][1]),
+          Offset(cSize * Global.corridorCheckPoint[i + 1]['position'][0],
+              cSize * Global.corridorCheckPoint[i + 1]['position'][1]),
+          paintt,
+        );
       }
     }
-    Bla.foundX = false;
-    Bla.foundY = false;
-    Bla.startDrawing = false;
+    isRoomXFound = false;
+    isRoomYFound = false;
+    isDrawingStarted = false;
   }
 
   @override
