@@ -62,28 +62,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/background.png
-    - assets/logo.png
-    - assets/bg.png
-    - assets/profile.jpg
-    - assets/bluetooth.png
-    - assets/masks.png
-    - assets/social.png
-    - assets/distancing.png
-    - assets/total.png
-    - assets/profile.png
-    - assets/covidlogo.png
-    - assets/caugh.png
-    - assets/coronadr.svg
-    - assets/fever.png
-    - assets/headache.png
-    - assets/virus.png
-    - assets/wash_hands.png
-    - assets/wear_mask.png
-    - assets/dr.png
-    - assets/admin.png
-    - assets/miu.png
-    - assets/miu_2.png
+    - assets/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -1,6 +1,6 @@
 import 'package:SafeMove/data/global.dart';
 import 'package:SafeMove/models/floorplan_model.dart';
-import 'package:SafeMove/models/models.dart';
+import 'package:SafeMove/models/room_model.dart';
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

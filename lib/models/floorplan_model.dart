@@ -1,5 +1,5 @@
 import 'package:SafeMove/data/global.dart';
-import 'package:SafeMove/models/models.dart';
+import 'package:SafeMove/models/room_model.dart';
 import 'package:flutter/cupertino.dart';
 
 class Pos {

@@ -1,6 +1,6 @@
 import 'package:SafeMove/data/global.dart';
 import 'package:SafeMove/models/floorplan_model.dart';
-import 'package:SafeMove/models/models.dart';
+import 'package:SafeMove/models/room_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -21,7 +21,7 @@ class _GridViewWidgetState extends State<GridViewWidget> {
         Container(
           //color: Global.blue,
           child: Image.asset(
-            'assets/miu_2.png',
+            'assets/miu_3.png',
           ),
         ),
         /*model.isScaled
