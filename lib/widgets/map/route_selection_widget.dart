@@ -59,7 +59,7 @@ class _RouteSelectionWidgetState extends State<RouteSelectionWidget> {
           ),
         ),
         Padding(
-          padding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+          padding: EdgeInsets.only(top: 10, left: 15, right: 15),
           child: DropdownSearch<Room>(
             mode: Mode.BOTTOM_SHEET,
             label: "To",
