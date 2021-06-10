@@ -1,20 +1,16 @@
 import 'package:custom_zoomable_floorplan/core/models/models.dart';
 import 'package:custom_zoomable_floorplan/core/viewmodels/floorplan_model.dart';
+import 'package:custom_zoomable_floorplan/view/shared/bla.dart';
 import 'package:custom_zoomable_floorplan/view/shared/global.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class GridViewWidget extends StatefulWidget {
-  RouteData routeData;
-
   GridViewWidget() {
-    // Bla.foundX = false;
-    // Bla.foundY = false;
-    // Bla.startDrawing = false;
-
-    routeData = new RouteData(
-        new Room.fromMap(Global.rooms[0]), new Room.fromMap(Global.rooms[13]));
+    Bla.foundX = false;
+    Bla.foundY = false;
+    Bla.startDrawing = false;
   }
 
   @override
@@ -77,11 +73,10 @@ class _GridViewWidgetState extends State<GridViewWidget> {
             },
           ),
         ),
-        widget.routeData != null
+        model.routeData != null
             ? Container(
-                alignment: Alignment.center,
                 child: CustomPaint(
-                  painter: LinePainter(widget.routeData, size.width),
+                  painter: LinePainter(model.routeData, size.width),
                 ),
               )
             : SizedBox()
@@ -93,92 +88,74 @@ class _GridViewWidgetState extends State<GridViewWidget> {
 class LinePainter extends CustomPainter {
   RouteData routeData;
   double cSize;
+  final Path path = Path();
+  final paintt = Paint()
+    ..color = Colors.blue[900]
+    ..strokeWidth = 2
+    ..strokeCap = StrokeCap.round;
 
   LinePainter(this.routeData, this.cSize);
 
   @override
-  void paint(Canvas canvas, Size size) {
-    final paint = Paint()
-      ..color = Colors.red
-      ..strokeWidth = 2
-      ..strokeCap = StrokeCap.round;
-
-    List xy = [0.3285, -0.288];
-
+  void paint(final Canvas canvas, final Size size) {
+    /*List xy = [0.0362, -0.256];
     print('[' + xy[0].toString() + ', ' + xy[1].toString());
-
     canvas.drawLine(Offset(cSize * xy[0], cSize * xy[1]),
         Offset(cSize * xy[0], cSize * xy[1]), paint);
+    */
 
-    /*
-    if (cTile == routeData.roomX.tile) {
-      canvas.drawLine(
-          Offset(cSize * routeData.roomX.doorPosition[0],
-              cSize * routeData.roomX.doorPosition[1]),
-          Offset(cSize * routeData.roomX.corridorPosition[0],
-              cSize * routeData.roomX.corridorPosition[1]),
-          paint);
-    }
-    if (cTile == routeData.roomY.tile) {
-      canvas.drawLine(
-          Offset(cSize * routeData.roomY.doorPosition[0],
-              cSize * routeData.roomY.doorPosition[1]),
-          Offset(cSize * routeData.roomY.corridorPosition[0],
-              cSize * routeData.roomY.corridorPosition[1]),
-          paint);
-    }
+    canvas.drawLine(
+        Offset(cSize * routeData.roomX.doorPosition[0],
+            cSize * routeData.roomX.doorPosition[1]),
+        Offset(cSize * routeData.roomX.corridorPosition[0],
+            cSize * routeData.roomX.corridorPosition[1]),
+        paintt);
+
+    canvas.drawLine(
+        Offset(cSize * routeData.roomY.doorPosition[0],
+            cSize * routeData.roomY.doorPosition[1]),
+        Offset(cSize * routeData.roomY.corridorPosition[0],
+            cSize * routeData.roomY.corridorPosition[1]),
+        paintt);
+
     for (int i = 0; i < Global.corridorCheckPoint.length; i++) {
-      print('looping..');
-      if (cTile == Global.corridorCheckPoint[i]['tile']) {
-        if (Bla.foundX && Bla.foundY) {
-          print('found both');
-          //break;
-        }
-        if (routeData.roomX.corridorPosition[0] ==
-                Global.corridorCheckPoint[i]['position'][0] &&
-            routeData.roomX.corridorPosition[1] ==
-                Global.corridorCheckPoint[i]['position'][1] &&
-            routeData.roomX.tile == cTile) {
-          Bla.foundX = true;
-          Bla.startDrawing = true;
-          print('xfound');
-          if (Bla.foundY) {
-            //break;
-          }
-        }
-        if (routeData.roomY.corridorPosition[0] ==
-                Global.corridorCheckPoint[i]['position'][0] &&
-            routeData.roomY.corridorPosition[1] ==
-                Global.corridorCheckPoint[i]['position'][1] &&
-            routeData.roomY.tile == cTile) {
-          Bla.foundY = true;
-          Bla.startDrawing = true;
-          print('yfound');
-          if (Bla.foundX) {
-            //break;
-          }
-        }
-        if (!(Bla.foundX && Bla.foundY)) {
-          print('st');
-          if (Bla.startDrawing &&
-              (i + 1 < Global.corridorCheckPoint.length) &&
-              cTile == Global.corridorCheckPoint[i + 1]['tile']) {
-            print('drawing');
-            canvas.drawLine(
-              Offset(cSize * Global.corridorCheckPoint[i]['position'][0],
-                  cSize * Global.corridorCheckPoint[i]['position'][1]),
-              Offset(cSize * Global.corridorCheckPoint[i + 1]['position'][0],
-                  cSize * Global.corridorCheckPoint[i + 1]['position'][1]),
-              paint,
-            );
-          }
+      if (routeData.roomX.corridorPosition[0] ==
+              Global.corridorCheckPoint[i]['position'][0] &&
+          routeData.roomX.corridorPosition[1] ==
+              Global.corridorCheckPoint[i]['position'][1] &&
+          !Bla.foundX) {
+        Bla.foundX = true;
+        Bla.startDrawing = true;
+        if (!Bla.foundY) {}
+      }
+      if (routeData.roomY.corridorPosition[0] ==
+              Global.corridorCheckPoint[i]['position'][0] &&
+          routeData.roomY.corridorPosition[1] ==
+              Global.corridorCheckPoint[i]['position'][1] &&
+          !Bla.foundY) {
+        Bla.foundY = true;
+        Bla.startDrawing = true;
+        if (!Bla.foundX) {}
+      }
+      if (!(Bla.foundX && Bla.foundY)) {
+        if (Bla.startDrawing && (i + 1 < Global.corridorCheckPoint.length)) {
+          canvas.drawLine(
+            Offset(cSize * Global.corridorCheckPoint[i]['position'][0],
+                cSize * Global.corridorCheckPoint[i]['position'][1]),
+            Offset(cSize * Global.corridorCheckPoint[i + 1]['position'][0],
+                cSize * Global.corridorCheckPoint[i + 1]['position'][1]),
+            paintt,
+          );
         }
       }
-    }*/
+    }
+    Bla.foundX = false;
+    Bla.foundY = false;
+    Bla.startDrawing = false;
   }
 
   @override
   bool shouldRepaint(covariant CustomPainter oldDelegate) {
-    return true;
+    return false;
   }
 }

@@ -1,3 +1,4 @@
+import 'package:custom_zoomable_floorplan/core/models/models.dart';
 import 'package:custom_zoomable_floorplan/core/viewmodels/floorplan_model.dart';
 import 'package:custom_zoomable_floorplan/view/shared/global.dart';
 import 'package:custom_zoomable_floorplan/view/widgets/appbar_widget.dart';
@@ -10,7 +11,8 @@ class FloorPlanScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final model = Provider.of<FloorPlanModel>(context);
-
+    model.setRouteData(new RouteData(
+        Room.fromMap(Global.rooms[0]), Room.fromMap(Global.rooms[15])));
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: PreferredSize(

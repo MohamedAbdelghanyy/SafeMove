@@ -277,127 +277,96 @@ abstract class Global {
   static const List corridorCheckPoint = [
     {
       'position': [0.3595, -0.288], // 316
-      'tile': 3,
     },
     {
       'position': [0.3285, -0.288], // 315
-      'tile': 3,
     },
     {
       'position': [0.299, -0.288], // 317
-      'tile': 3,
     },
     {
       'position': [0.255, -0.288], // 314
-      'tile': 3,
     },
     {
       'position': [0.234, -0.288], // 313
-      'tile': 3,
     },
     {
       'position': [0.225, -0.288], // 318
-      'tile': 3,
     },
     {
       'position': [0.18, -0.288], // 319
-      'tile': 3,
     },
     {
       'position': [0.132, -0.288], // 312
-      'tile': 2,
     },
     {
       'position': [0.107, -0.288], // WCM
-      'tile': 2,
     },
     {
       'position': [0.09, -0.288], // WCF
-      'tile': 2,
     },
     {
       'position': [0.07, -0.288], // B
-      'tile': 2,
     },
     {
       'position': [0.06, -0.288], // 311
-      'tile': 2,
     },
     {
-      'position': [0.036, 0.0125], // Tile 2 Turn 1
-      'tile': 2,
+      'position': [0.0362, -0.288], // Tile 2 Turn 1
     },
     {
-      'position': [0.036, 0.045], // Tile 2 Turn 2
-      'tile': 2,
+      'position': [0.0362, -0.256], // Tile 2 Turn 2
     },
     {
       'position': [0.01, -0.256], // WCF
-      'tile': 2,
     },
     {
       'position': [-0.0025, -0.256], // WCM
-      'tile': 2,
     },
     {
       'position': [-0.005, -0.256], // 310
-      'tile': 2,
     },
     {
       'position': [-0.026, -0.256], // 309
-      'tile': 2,
     },
     {
       'position': [-0.034, -0.256], // B
-      'tile': 2,
     },
     {
       'position': [-0.061, -0.256], // 308
-      'tile': 2,
     },
     {
       'position': [-0.078, -0.256], // 320
-      'tile': 2,
     },
     {
       'position': [-0.1, -0.256], // 307
-      'tile': 2,
     },
     {
       'position': [-0.117, -0.256], // 321
-      'tile': 2,
     },
     {
       'position': [-0.137, -0.256], // 306
-      'tile': 2,
     },
     {
       'position': [-0.163, -0.256], // 322
-      'tile': 2,
     },
     {
       'position': [-0.198, -0.256], // 305
-      'tile': 2,
     },
     {
       'position': [-0.2, -0.256], // 323
-      'tile': 2,
     },
     {
       'position': [-0.22, -0.256], // 304
-      'tile': 2,
     },
     {
       'position': [-0.257, -0.256], // 303
-      'tile': 2,
     },
     {
       'position': [-0.292, -0.256], // 302
-      'tile': 2,
     },
     {
       'position': [-0.329, -0.256], // 301
-      'tile': 2,
     }
   ];
 }

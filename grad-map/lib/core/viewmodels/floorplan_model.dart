@@ -19,6 +19,7 @@ class FloorPlanModel extends ChangeNotifier {
   Pos _previousPos = Pos(0.0, 0.0);
   Pos _endPos = Pos(0.0, 0.0);
   bool _isScaled = false;
+  RouteData _routeData;
 
   double get scale => _scale;
   double get previousScale => _previousScale;
@@ -26,6 +27,7 @@ class FloorPlanModel extends ChangeNotifier {
   Pos get previousPos => _previousPos;
   Pos get endPos => _endPos;
   bool get isScaled => _isScaled;
+  RouteData get routeData => _routeData;
 
   bool _hasTouched = false;
   bool get hasTouched => _hasTouched;
@@ -77,6 +79,11 @@ class FloorPlanModel extends ChangeNotifier {
   void handleDragScaleEnd() {
     _previousScale = 1.0;
     _endPos = _pos;
+    notifyListeners();
+  }
+
+  void setRouteData(RouteData routeData) {
+    _routeData = routeData;
     notifyListeners();
   }
 }
