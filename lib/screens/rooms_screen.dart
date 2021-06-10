@@ -2,13 +2,16 @@ import 'package:SafeMove/models/room_data_model.dart';
 import 'package:SafeMove/services/data_manager.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
-import 'package:firebase_database/firebase_database.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import './main_drawer.dart';
 
 class RoomsScreen extends StatefulWidget {
   static const routeName = '/rooms-screen';
+  String currRoomName;
+
+  RoomsScreen({this.currRoomName = ""});
+
   @override
   _RoomsScreenState createState() => _RoomsScreenState();
 }
@@ -21,7 +24,15 @@ class _RoomsScreenState extends State<RoomsScreen> {
   void initState() {
     DataManager.getRoomsData().then((value) {
       roomsData = DataManager.roomsData;
-      roomChanged(roomsData[0]);
+      if (widget.currRoomName == "") {
+        roomChanged(roomsData[0]);
+      } else {
+        for (int i = 0; i < roomsData.length; i++) {
+          if ((roomsData[i] as RoomDataModel).name == widget.currRoomName) {
+            roomChanged(roomsData[i]);
+          }
+        }
+      }
     });
     super.initState();
   }
