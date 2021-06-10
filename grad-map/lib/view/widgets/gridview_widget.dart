@@ -91,7 +91,7 @@ class LinePainter extends CustomPainter {
 
   @override
   void paint(final Canvas canvas, final Size size) {
-    List xy = [-0.333, 0.032];
+    List xy = [-0.341, 0.344];
     List zz = [0.403, -0.288];
     List aa = [0.39, -0.288];
     print('[' + xy[0].toString() + ', ' + xy[1].toString());

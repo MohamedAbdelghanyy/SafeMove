@@ -278,11 +278,37 @@ abstract class Global {
       'name': '333',
       'icon': Icons.menu_book_rounded,
       'status': true,
-      'position': [-0.366, 0.055],
-      'door_position': [-0.333, 0.032],
-      'corridor_position': [-0.322, 0.032],
+      'position': [-0.374, 0.114],
+      'door_position': [-0.341, 0.091],
+      'corridor_position': [-0.329, 0.091],
     },
-    
+    {
+      'location': 'Room 332',
+      'name': '332',
+      'icon': Icons.menu_book_rounded,
+      'status': true,
+      'position': [-0.374, 0.2],
+      'door_position': [-0.341, 0.15],
+      'corridor_position': [-0.329, 0.15],
+    },
+    {
+      'location': '331',
+      'name': '331',
+      'icon': Icons.menu_book_rounded,
+      'status': true,
+      'position': [-0.374, 0.299],
+      'door_position': [-0.341, 0.27],
+      'corridor_position': [-0.329, 0.27],
+    },
+    {
+      'location': 'Room 330',
+      'name': '330',
+      'icon': Icons.menu_book_rounded,
+      'status': true,
+      'position': [-0.374, 0.375],
+      'door_position': [-0.341, 0.344],
+      'corridor_position': [-0.329, 0.44],
+    },
   ];
 
   static const List corridorCheckPoint = [
