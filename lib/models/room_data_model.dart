@@ -1,9 +1,9 @@
-class RoomClass {
+class RoomDataModel {
   String name;
   int total;
   int distanceViolations;
   int maskViolations;
 
-  RoomClass(
+  RoomDataModel(
       this.name, this.total, this.distanceViolations, this.maskViolations);
 }
