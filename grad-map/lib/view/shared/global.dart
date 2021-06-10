@@ -374,8 +374,12 @@ abstract class Global {
     {
       'grid_id': 1,
       'status': true,
-      'fingerprint_L': [0, 1, 2],
-      'fingerprint_R': [0, 1, 2],
+      'fingerprint_L1': ['00:00:00:00', 0],
+      'fingerprint_L2': ['00:00:00:00', 0],
+      'fingerprint_L3': ['00:00:00:00', 0],
+      'fingerprint_R1': ['00:00:00:00', 0],
+      'fingerprint_R2': ['00:00:00:00', 0],
+      'fingerprint_R3': ['00:00:00:00', 0],
       'corridor_position': [-0.078, -0.256],
     }
   ];
