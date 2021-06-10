@@ -72,16 +72,18 @@ class _GridViewWidgetState extends State<GridViewWidget> {
                 ),
               )
             : SizedBox(),
-        Transform.translate(
-          offset: Offset(
-            size.width * model.locationData[0],
-            size.width * model.locationData[1],
-          ),
-          child: Image.asset(
-            'assets/pointer.jpg',
-            width: 8,
-          ),
-        ),
+        (model.locationData[0] != 0.0 && model.locationData[1] != 0.0)
+            ? Transform.translate(
+                offset: Offset(
+                  size.width * model.locationData[0],
+                  size.width * model.locationData[1],
+                ),
+                child: Image.asset(
+                  'assets/pointer.jpg',
+                  width: 8,
+                ),
+              )
+            : SizedBox(),
       ],
     );
   }
