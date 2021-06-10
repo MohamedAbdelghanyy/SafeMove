@@ -35,6 +35,7 @@ class _RouteSelectionWidgetState extends State<RouteSelectionWidget> {
 
   void setRoomY(Room room) {
     this.roomY = room;
+    ScaffoldMessenger.of(context).clearSnackBars();
     final snackBar = SnackBar(
       content: Text(
           'Room ' + room.name + ' is ' + (room.status ? 'safe' : 'not safe')),

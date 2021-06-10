@@ -1,6 +1,7 @@
 import 'package:SafeMove/data/global.dart';
 import 'package:SafeMove/models/room_model.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class Pos {
   double x = 0.0;
