@@ -20,6 +20,7 @@ class FloorPlanModel extends ChangeNotifier {
   Pos _endPos = Pos(0.0, 0.0);
   bool _isScaled = false;
   RouteData _routeData;
+  List _locationData = [0.0, 0.0];
 
   double get scale => _scale;
   double get previousScale => _previousScale;
@@ -28,6 +29,7 @@ class FloorPlanModel extends ChangeNotifier {
   Pos get endPos => _endPos;
   bool get isScaled => _isScaled;
   RouteData get routeData => _routeData;
+  List get locationData => _locationData;
 
   bool _hasTouched = false;
   bool get hasTouched => _hasTouched;
@@ -84,6 +86,11 @@ class FloorPlanModel extends ChangeNotifier {
 
   void setRouteData(RouteData routeData) {
     _routeData = routeData;
+    notifyListeners();
+  }
+
+  void setLocationData(double locationDataX, double locationDataY) {
+    _locationData = [locationDataX, locationDataY];
     notifyListeners();
   }
 }

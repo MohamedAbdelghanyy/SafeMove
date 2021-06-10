@@ -72,7 +72,17 @@ class _GridViewWidgetState extends State<GridViewWidget> {
                   painter: LinePainter(model.routeData, size.width),
                 ),
               )
-            : SizedBox()
+            : SizedBox(),
+        Transform.translate(
+          offset: Offset(
+            size.width * model.locationData[0],
+            size.width * model.locationData[1],
+          ),
+          child: Image.asset(
+            'assets/pointer.jpg',
+            width: 8,
+          ),
+        ),
       ],
     );
   }
@@ -94,8 +104,7 @@ class LinePainter extends CustomPainter {
     /*List xy = [0.0362, -0.256];
     print('[' + xy[0].toString() + ', ' + xy[1].toString());
     canvas.drawLine(Offset(cSize * xy[0], cSize * xy[1]),
-        Offset(cSize * xy[0], cSize * xy[1]), paint);
-    */
+        Offset(cSize * xy[0], cSize * xy[1]), paintt);*/
 
     canvas.drawLine(
         Offset(cSize * routeData.roomX.doorPosition[0],
