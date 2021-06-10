@@ -83,7 +83,7 @@ class LinePainter extends CustomPainter {
   double cSize;
   Paint paintt = Paint()
     ..color = Colors.blue[900]
-    ..strokeWidth = 2
+    ..strokeWidth = 5
     ..strokeCap = StrokeCap.round;
   bool isDrawingStarted = false, isRoomXFound = false, isRoomYFound = false;
 
