@@ -1,6 +1,7 @@
 import 'package:SafeMove/data/global.dart';
 import 'package:SafeMove/models/floorplan_model.dart';
 import 'package:SafeMove/models/room_model.dart';
+import 'package:SafeMove/screens/rooms_screen.dart';
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -34,6 +35,25 @@ class _RouteSelectionWidgetState extends State<RouteSelectionWidget> {
 
   void setRoomY(Room room) {
     this.roomY = room;
+    final snackBar = SnackBar(
+      content: Text(
+          'Room ' + room.name + ' is ' + (room.status ? 'safe' : 'not safe')),
+      duration: Duration(days: 365),
+      action: SnackBarAction(
+        label: 'View Room Crowding',
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => RoomsScreen(
+                currRoomName: room.name.toString(),
+              ),
+            ),
+          );
+        },
+      ),
+    );
+    ScaffoldMessenger.of(context).showSnackBar(snackBar);
     drawRoute();
   }
 
