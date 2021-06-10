@@ -19,7 +19,7 @@ class _GridViewWidgetState extends State<GridViewWidget> {
       alignment: Alignment.center,
       children: <Widget>[
         Container(
-          color: Global.blue,
+          //color: Global.blue,
           child: Image.asset(
             'images/miu.png',
           ),
