@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 abstract class Global {
-  static const Color blue = const Color(0xff4A64FE);
+  static const Color blue = const Color(0xffB0E0E6);
 
   static const List rooms = [
     // Corridor 1 Top
@@ -89,7 +89,7 @@ abstract class Global {
       'corridor_position': [0.18, -0.288],
     },
     {
-      'location': 'Male Rest Room',
+      'location': 'Male Rest Room 2',
       'name': 'WC',
       'icon': Icons.male_rounded,
       'status': true,
@@ -98,7 +98,7 @@ abstract class Global {
       'corridor_position': [0.107, -0.288],
     },
     {
-      'location': 'Female Rest Room',
+      'location': 'Female Rest Room 2',
       'name': 'WC',
       'icon': Icons.female_rounded,
       'status': true,
@@ -107,7 +107,7 @@ abstract class Global {
       'corridor_position': [0.09, -0.288],
     },
     {
-      'location': 'Buffet',
+      'location': 'Buffet 2',
       'name': 'B',
       'icon': Icons.food_bank_rounded,
       'status': true,
@@ -210,7 +210,7 @@ abstract class Global {
 
     //Corridor 2 Bottom
     {
-      'location': 'Female Rest Room',
+      'location': 'Female Rest Room 1',
       'name': 'WC',
       'icon': Icons.female_rounded,
       'status': true,
@@ -219,7 +219,7 @@ abstract class Global {
       'corridor_position': [0.01, -0.256],
     },
     {
-      'location': 'Male Rest Room',
+      'location': 'Male Rest Room 1',
       'name': 'WC',
       'icon': Icons.male_rounded,
       'status': true,
@@ -228,7 +228,7 @@ abstract class Global {
       'corridor_position': [-0.0025, -0.256],
     },
     {
-      'location': 'Buffet',
+      'location': 'Buffet 1',
       'name': 'B',
       'icon': Icons.food_bank_rounded,
       'status': true,
