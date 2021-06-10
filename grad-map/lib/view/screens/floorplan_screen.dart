@@ -12,8 +12,6 @@ class FloorPlanScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final model = Provider.of<FloorPlanModel>(context);
-    model.setRouteData(new RouteData(
-        Room.fromMap(Global.rooms[0]), Room.fromMap(Global.rooms[15])));
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: PreferredSize(
@@ -28,8 +26,7 @@ class FloorPlanScreen extends StatelessWidget {
         child: Container(
           color: Global.blue,
           child: Center(
-            child: Stack(
-              alignment: Alignment.center,
+            child: Column(
               children: <Widget>[
                 RouteSelectionWidget(),
                 RawGestureDetectorWidget(
