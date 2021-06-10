@@ -18,13 +18,10 @@ class _GridViewWidgetState extends State<GridViewWidget> {
       alignment: Alignment.center,
       children: <Widget>[
         Container(
-          //color: Global.blue,
           child: Image.asset(
             'assets/miu_3.png',
           ),
         ),
-        /*model.isScaled
-                  ?*/
         Stack(
           children: List.generate(
             model.rooms.length,
@@ -44,7 +41,7 @@ class _GridViewWidgetState extends State<GridViewWidget> {
                       child: Center(
                         child: Icon(
                           model.rooms[idx].icon,
-                          color: Colors.white, //Global.blue,
+                          color: Colors.white,
                           size: 4,
                         ),
                       ),
