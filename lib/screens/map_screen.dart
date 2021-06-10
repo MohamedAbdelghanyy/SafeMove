@@ -22,6 +22,15 @@ class MapScreen extends StatelessWidget {
         ),
       ),
       drawer: MainDrawer(),
+      floatingActionButton: model.isScaled
+          ? FloatingActionButton(
+              onPressed: () {
+                model.reset();
+              },
+              child: const Icon(Icons.zoom_out_outlined),
+              backgroundColor: Colors.blue,
+            )
+          : SizedBox(),
       body: ClipRRect(
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(40),

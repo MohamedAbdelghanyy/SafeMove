@@ -52,8 +52,8 @@ class _RoomsScreenState extends State<RoomsScreen> {
       drawer: MainDrawer(),
       body: roomsData == null || currRoom == null
           ? Padding(
-              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-              child: Text('Loading Rooms List...'),
+              padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+              child: Text('Loading ...'),
             )
           : ListView(
               children: [
