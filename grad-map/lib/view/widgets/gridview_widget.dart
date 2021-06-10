@@ -83,7 +83,7 @@ class LinePainter extends CustomPainter {
   double cSize;
   Paint paintt = Paint()
     ..color = Colors.blue[900]
-    ..strokeWidth = 5
+    ..strokeWidth = 2
     ..strokeCap = StrokeCap.round;
   bool isDrawingStarted = false, isRoomXFound = false, isRoomYFound = false;
 
@@ -91,11 +91,14 @@ class LinePainter extends CustomPainter {
 
   @override
   void paint(final Canvas canvas, final Size size) {
-    /*List xy = [0.0362, -0.256];
+    List xy = [0.415, -0.288];
+    List zz = [0.405, -0.288];
     print('[' + xy[0].toString() + ', ' + xy[1].toString());
     canvas.drawLine(Offset(cSize * xy[0], cSize * xy[1]),
-        Offset(cSize * xy[0], cSize * xy[1]), paint);
-    */
+        Offset(cSize * xy[0], cSize * xy[1]), paintt);
+    canvas.drawLine(Offset(cSize * zz[0], cSize * zz[1]),
+        Offset(cSize * zz[0], cSize * zz[1]), paintt);
+    
 
     canvas.drawLine(
         Offset(cSize * routeData.roomX.doorPosition[0],
