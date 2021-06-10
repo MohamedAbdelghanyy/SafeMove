@@ -272,6 +272,17 @@ abstract class Global {
       'door_position': [-0.2, -0.242],
       'corridor_position': [-0.2, -0.256],
     },
+    //Corridor 3 left
+    {
+      'location': 'Room 333',
+      'name': '333',
+      'icon': Icons.menu_book_rounded,
+      'status': true,
+      'position': [-0.366, 0.055],
+      'door_position': [-0.333, 0.032],
+      'corridor_position': [-0.322, 0.032],
+    },
+    
   ];
 
   static const List corridorCheckPoint = [
@@ -413,7 +424,7 @@ abstract class Global {
       'fingerprint_R1': ['ac:f2:c5:97:33:a9', -70],
       'fingerprint_R2': ['00:12:17:7a:bd:81', -84],
       'fingerprint_R3': ['d0:d0:fd:66:4a:65', -81],
-      'corridor_position': [0.405, -0.288],
+      'corridor_position': [0.403, -0.288],
     },
     {
       'grid_id': 5,
@@ -424,7 +435,7 @@ abstract class Global {
       'fingerprint_R1': ['ac:f2:c5:97:33:a9', -63],
       'fingerprint_R2': ['50:57:a8:67:a7:73',  -88],
       'fingerprint_R3': ['d4:8c:b5:67:e8:af', -89],
-      'corridor_position': [-0.078, -0.256],
+      'corridor_position': [0.39, -0.288],
     },
     {
       'grid_id': 6,
