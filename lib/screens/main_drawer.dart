@@ -39,7 +39,7 @@ class MainDrawer extends StatelessWidget {
               color: Global.secondaryColor,
               child: Image(
                 image: AssetImage("assets/covidlogo.png"),
-                width: 350,
+                height: 90,
               )),
           SizedBox(
             height: 20,

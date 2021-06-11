@@ -69,6 +69,7 @@ class _SplashScreenState extends State<SplashScreen>
 
 */
 
+import 'package:SafeMove/data/global.dart';
 import 'package:SafeMove/screens/admin_view.dart';
 import 'package:SafeMove/screens/map_screen.dart';
 import 'package:SafeMove/screens/sign_in.dart';
@@ -90,6 +91,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Future<Function> iniApp() async {
     await DataManager.mPrefManager.loadDataFromLocalMemory();
     if (DataManager.mPrefManager.isLoggedIn()) {
+      await DataManager.getRoomsData();
       /*await DataManager.iniUserAddresses();
       await DataManager.iniMainMenuCategories();
       await DataManager.iniMainMenuItems();*/
@@ -122,40 +124,21 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Global.secondaryColor,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(0.0),
         child: AppBar(
           brightness: Brightness.dark,
-          flexibleSpace: Container(
-            decoration: new BoxDecoration(
-              gradient: LinearGradient(
-                colors: <Color>[
-                  Color(0xFF00d466),
-                  Color(0xFF00af87),
-                ],
-              ),
-            ),
-          ),
         ),
       ),
       body: Stack(
         children: [
           Container(
-            constraints: BoxConstraints.expand(),
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topRight,
-                end: Alignment.bottomLeft,
-                colors: [Color(0xFFff8e89), Color(0xFFff7366)],
-              ),
-            ),
-          ),
-          Container(
             alignment: Alignment.center,
             margin: EdgeInsets.all(30.0),
             child: Image.asset(
               'assets/covidlogo.png',
-              width: 300,
+              width: 200,
             ),
           ),
           Padding(
@@ -164,7 +147,7 @@ class _SplashScreenState extends State<SplashScreen> {
             child: Align(
               alignment: Alignment.bottomCenter,
               child: SpinKitSquareCircle(
-                color: Color(0xFFff8e89),
+                color: Global.primaryColor,
                 size: 20,
               ),
             ),
