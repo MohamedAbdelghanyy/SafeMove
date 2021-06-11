@@ -4,7 +4,7 @@ abstract class Global {
   static Color primaryColor = Colors.white; //Colors.blue[900];
   static Color secondaryColor = Colors.blue[900]; //Colors.white;
 
-  static const List rooms = [
+  /*static const List rooms = [
     // Corridor 1 Top
     {
       'location': 'Room 315', // Updated
@@ -405,9 +405,9 @@ abstract class Global {
       'door_position': [-0.315, 0.399],
       'corridor_position': [-0.329, 0.399],
     },
-  ];
+  ];*/
 
-  static const List corridorCheckPoint = [
+  /*static const List corridorCheckPoint = [
     {
       'position': [0.3595, -0.288], // 316
     },
@@ -544,6 +544,7 @@ abstract class Global {
       'position': [-0.329, 0.399], // 329
     }
   ];
+  */
 
   static const List grids = [
     {
