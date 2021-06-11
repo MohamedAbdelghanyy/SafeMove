@@ -272,7 +272,7 @@ abstract class Global {
       'door_position': [-0.2, -0.242],
       'corridor_position': [-0.2, -0.256],
     },
-    //Corridor 3 left
+    //Corridor 3 Left
     {
       'location': 'Room 333',
       'name': '333',
@@ -308,6 +308,62 @@ abstract class Global {
       'position': [-0.374, 0.375],
       'door_position': [-0.341, 0.344],
       'corridor_position': [-0.329, 0.44],
+    },
+
+    //Corridor 3 Right
+    {
+      'location': 'Female Rest Room',
+      'name': 'WC',
+      'icon': Icons.female_rounded,
+      'status': true,
+      'position': [-0.285, 0.114],
+      'door_position': [-0.315, 0.114],
+      'corridor_position': [-0.329, 0.114],
+    },
+    {
+      'location': 'Male Rest Room',
+      'name': 'WC',
+      'icon': Icons.male_rounded,
+      'status': true,
+      'position': [-0.285, 0.133],
+      'door_position': [-0.315, 0.133],
+      'corridor_position': [-0.329, 0.133],
+    },
+    {
+      'location': 'Room 327 TA',
+      'name': '327 TA',
+      'icon': Icons.menu_book_rounded,
+      'status': true,
+      'position': [-0.285, 0.179],
+      'door_position': [-0.315, 0.205],
+      'corridor_position': [-0.329, 0.205],
+    },
+    {
+      'location': 'Room 327',
+      'name': '327',
+      'icon': Icons.menu_book_rounded,
+      'status': true,
+      'position': [-0.285, 0.24],
+      'door_position': [-0.315, 0.252],
+      'corridor_position': [-0.329, 0.252],
+    },
+    {
+      'location': 'Room 328',
+      'name': '328',
+      'icon': Icons.menu_book_rounded,
+      'status': true,
+      'position': [-0.285, 0.3],
+      'door_position': [-0.315, 0.325],
+      'corridor_position': [-0.329, 0.325],
+    },
+    {
+      'location': 'Room 329',
+      'name': '329',
+      'icon': Icons.menu_book_rounded,
+      'status': true,
+      'position': [-0.285, 0.372],
+      'door_position': [-0.315, 0.399],
+      'corridor_position': [-0.329, 0.399],
     },
   ];
 
