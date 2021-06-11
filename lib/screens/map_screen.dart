@@ -56,7 +56,7 @@ class MapScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                model.routeData != null
+                model.showBottomModal
                     ? Container(
                         alignment: Alignment.center,
                         width: MediaQuery.of(context).size.width,

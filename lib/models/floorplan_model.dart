@@ -22,6 +22,7 @@ class FloorPlanModel extends ChangeNotifier {
   Pos _endPos = Pos(0.0, 0.0);
   bool _isScaled = false;
   RouteData _routeData;
+  bool _showBottomModal = false;
   int _routeSafeRoomsCount = 0;
   int _routeUnSafeRoomsCount = 0;
   List _locationData = [0.0, 0.0];
@@ -33,6 +34,7 @@ class FloorPlanModel extends ChangeNotifier {
   Pos get endPos => _endPos;
   bool get isScaled => _isScaled;
   RouteData get routeData => _routeData;
+  bool get showBottomModal => _showBottomModal;
   int get routeSafeRoomsCount => _routeSafeRoomsCount;
   int get routeUnSafeRoomsCount => _routeUnSafeRoomsCount;
   List get locationData => _locationData;
@@ -107,18 +109,21 @@ class FloorPlanModel extends ChangeNotifier {
 
   void setRouteSafeRoomsCount(int count) {
     _routeSafeRoomsCount = count;
-    notifyListeners();
   }
 
   void setRouteUnSafeRoomsCount(int count) {
     _routeUnSafeRoomsCount = count;
-    notifyListeners();
   }
 
   void resetRouteData() {
+    _showBottomModal = false;
     _routeSafeRoomsCount = 0;
     _routeUnSafeRoomsCount = 0;
     _routeData = null;
     notifyListeners();
+  }
+
+  void setShowBottomModal(bool status) {
+    _showBottomModal = status;
   }
 }

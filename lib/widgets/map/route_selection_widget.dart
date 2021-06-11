@@ -19,8 +19,9 @@ class _RouteSelectionWidgetState extends State<RouteSelectionWidget> {
   Future<List<RoomDataModel>> getRoomData(String filter) async {
     List<RoomDataModel> searchResult = [];
     for (int i = 0; i < model.rooms.length; i++) {
-      if (model.rooms[i].location.toString().contains(filter) ||
-          filter.contains(model.rooms[i].location.toString())) {
+      if ((model.rooms[i].location.toString().contains(filter) ||
+              filter.contains(model.rooms[i].location.toString())) &&
+          model.rooms[i].name != "Turn") {
         searchResult.add(model.rooms[i]);
       }
     }
@@ -41,6 +42,9 @@ class _RouteSelectionWidgetState extends State<RouteSelectionWidget> {
   void drawRoute() {
     if (this.roomX != null && this.roomY != null) {
       model.setRouteData(RouteData(roomX, roomY));
+      Future.delayed(const Duration(milliseconds: 300), () {
+        model.notifyListeners();
+      });
     }
   }
 

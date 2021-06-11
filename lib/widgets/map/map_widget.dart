@@ -34,69 +34,73 @@ class _MapWidgetState extends State<MapWidget> {
             children: List.generate(
               model.rooms.length,
               (idx) {
-                return Transform.translate(
-                  offset: Offset(
-                    size.width * model.rooms[idx].position[0],
-                    size.width * model.rooms[idx].position[1],
-                  ),
-                  child: model.rooms[idx].isVertical
-                      ? Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            CircleAvatar(
-                              backgroundColor: model.rooms[idx].isSafe
-                                  ? Colors.green
-                                  : Colors.red,
-                              radius: 3.0,
-                              child: Center(
-                                child: Icon(
-                                  model.rooms[idx].icon,
-                                  color: Colors.white,
-                                  size: 4,
+                if (model.rooms[idx].name != "Turn") {
+                  return Transform.translate(
+                    offset: Offset(
+                      size.width * model.rooms[idx].position[0],
+                      size.width * model.rooms[idx].position[1],
+                    ),
+                    child: model.rooms[idx].isVertical
+                        ? Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              CircleAvatar(
+                                backgroundColor: model.rooms[idx].isSafe
+                                    ? Colors.green
+                                    : Colors.red,
+                                radius: 3.0,
+                                child: Center(
+                                  child: Icon(
+                                    model.rooms[idx].icon,
+                                    color: Colors.white,
+                                    size: 4,
+                                  ),
                                 ),
                               ),
-                            ),
-                            SizedBox(
-                              height: 1,
-                            ),
-                            Text(
-                              model.rooms[idx].name,
-                              style: TextStyle(
-                                fontSize: 3.5,
-                                color: Colors.black,
+                              SizedBox(
+                                height: 1,
                               ),
-                            )
-                          ],
-                        )
-                      : Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            CircleAvatar(
-                              backgroundColor: model.rooms[idx].isSafe
-                                  ? Colors.green
-                                  : Colors.red,
-                              radius: 3.0,
-                              child: Center(
-                                child: Icon(
-                                  model.rooms[idx].icon,
-                                  color: Colors.white,
-                                  size: 4,
+                              Text(
+                                model.rooms[idx].name,
+                                style: TextStyle(
+                                  fontSize: 3.5,
+                                  color: Colors.black,
+                                ),
+                              )
+                            ],
+                          )
+                        : Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              CircleAvatar(
+                                backgroundColor: model.rooms[idx].isSafe
+                                    ? Colors.green
+                                    : Colors.red,
+                                radius: 3.0,
+                                child: Center(
+                                  child: Icon(
+                                    model.rooms[idx].icon,
+                                    color: Colors.white,
+                                    size: 4,
+                                  ),
                                 ),
                               ),
-                            ),
-                            SizedBox(
-                              width: 1,
-                            ),
-                            Text(
-                              model.rooms[idx].name,
-                              style: TextStyle(
-                                fontSize: 3.5,
-                                color: Colors.black,
+                              SizedBox(
+                                width: 1,
                               ),
-                            )
-                          ],
-                        ),
-                );
+                              Text(
+                                model.rooms[idx].name,
+                                style: TextStyle(
+                                  fontSize: 3.5,
+                                  color: Colors.black,
+                                ),
+                              )
+                            ],
+                          ),
+                  );
+                } else {
+                  return SizedBox();
+                }
               },
             ),
           ),

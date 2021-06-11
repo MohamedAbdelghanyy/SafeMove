@@ -1,4 +1,3 @@
-import 'package:SafeMove/data/global.dart';
 import 'package:SafeMove/models/room_data_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -12,6 +11,8 @@ class RoutePainter extends CustomPainter {
     ..strokeWidth = 3
     ..strokeCap = StrokeCap.round;
   bool isDrawingStarted = false, isRoomXFound = false, isRoomYFound = false;
+  int safeRoomsCount = 0;
+  int unSafeRoomsCount = 0;
 
   RoutePainter(this.model, this.cSize) {
     this.routeData = model.routeData;
@@ -58,10 +59,12 @@ class RoutePainter extends CustomPainter {
       if (!(isRoomXFound && isRoomYFound) &&
           isDrawingStarted &&
           (i + 1 < model.rooms.length)) {
-        if (model.rooms[i + 1].isSafe) {
-          model.setRouteSafeRoomsCount(model.routeSafeRoomsCount + 1);
-        } else {
-          model.setRouteUnSafeRoomsCount(model.routeUnSafeRoomsCount + 1);
+        if (model.rooms[i + 1].name != "Turn") {
+          if (model.rooms[i + 1].isSafe) {
+            safeRoomsCount += 1;
+          } else {
+            unSafeRoomsCount += 1;
+          }
         }
         canvas.drawLine(
           Offset(cSize * model.rooms[i].corridorPosition[0],
@@ -75,6 +78,11 @@ class RoutePainter extends CustomPainter {
     isRoomXFound = false;
     isRoomYFound = false;
     isDrawingStarted = false;
+    model.setRouteSafeRoomsCount(safeRoomsCount);
+    model.setRouteUnSafeRoomsCount(unSafeRoomsCount);
+    model.setShowBottomModal(true);
+    safeRoomsCount = 0;
+    unSafeRoomsCount = 0;
   }
 
   @override
