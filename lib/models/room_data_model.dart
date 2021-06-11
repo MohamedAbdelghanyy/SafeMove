@@ -25,6 +25,8 @@ class RoomDataModel {
         this.icon = Icons.female_rounded;
       } else if (data['icon'].toString() == 'food') {
         this.icon = Icons.food_bank_rounded;
+      } else {
+        this.icon = Icons.menu_book_rounded;
       }
     } else {
       this.icon = Icons.menu_book_rounded;
