@@ -20,7 +20,6 @@ class MapScreen extends StatelessWidget {
         elevation: 0,
         title: Text(
           'MIU Map',
-          //style: TextStyle(color: Colors.white),
         ),
       ),
       drawer: MainDrawer(),
@@ -30,7 +29,7 @@ class MapScreen extends StatelessWidget {
                 model.reset();
               },
               child: const Icon(Icons.zoom_out_outlined),
-              backgroundColor: Colors.blue,
+              backgroundColor: Global.secondaryColor,
             )
           : SizedBox(),
       body: ClipRRect(
