@@ -502,16 +502,16 @@ abstract class Global {
       'position': [-0.326, -0.256], // 301 done
     },
     {
-      'position': [-0.326, -0.207], // Turn 1
+      'position': [-0.326, -0.207], // Turn 1 done
     },
     {
-      'position': [-0.25, -0.207], // Turn 2
+      'position': [-0.25, -0.207], // Turn 2 done
     },
     {
-      'position': [-0.25, 0.015], // Turn 3
+      'position': [-0.25, 0.015], // Turn 3 done
     },
     {
-      'position': [-0.329, 0.015], // Turn 4
+      'position': [-0.329, 0.015], // Turn 4 done
     },
     {
       'position': [-0.329, 0.091], // 333
