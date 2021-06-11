@@ -1,4 +1,5 @@
 import 'package:SafeMove/data/global.dart';
+import 'package:SafeMove/models/grid_model.dart';
 import 'package:SafeMove/models/room_data_model.dart';
 import 'package:SafeMove/services/data_manager.dart';
 import 'package:flutter/cupertino.dart';
@@ -26,6 +27,7 @@ class FloorPlanModel extends ChangeNotifier {
   int _routeSafeRoomsCount = 0;
   int _routeUnSafeRoomsCount = 0;
   List _locationData = [0.0, 0.0];
+  GridModel _locationGrid;
 
   double get scale => _scale;
   double get previousScale => _previousScale;
@@ -38,6 +40,7 @@ class FloorPlanModel extends ChangeNotifier {
   int get routeSafeRoomsCount => _routeSafeRoomsCount;
   int get routeUnSafeRoomsCount => _routeUnSafeRoomsCount;
   List get locationData => _locationData;
+  GridModel get locationGrid => _locationGrid;
 
   bool _hasTouched = false;
   bool get hasTouched => _hasTouched;
@@ -125,5 +128,11 @@ class FloorPlanModel extends ChangeNotifier {
 
   void setShowBottomModal(bool status) {
     _showBottomModal = status;
+  }
+
+  void setLocationGrid(GridModel locationGrid) {
+    _locationGrid = locationGrid;
+    _locationData = locationGrid.corridorPosition;
+    notifyListeners();
   }
 }

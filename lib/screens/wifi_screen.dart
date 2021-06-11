@@ -22,7 +22,6 @@ class _WifiScreenState extends State<WifiScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     startScanning();
     super.initState();
   }

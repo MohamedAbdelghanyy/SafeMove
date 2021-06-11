@@ -96,6 +96,7 @@ class _SplashScreenState extends State<SplashScreen> {
     await DataManager.mPrefManager.loadDataFromLocalMemory();
     if (DataManager.mPrefManager.isLoggedIn()) {
       await DataManager.getRoomsData();
+      await DataManager.getGridsData();
       model.setRoomsData(DataManager.roomsData);
     }
     return Navigator.pushReplacement(

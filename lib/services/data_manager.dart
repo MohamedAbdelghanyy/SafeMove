@@ -1,3 +1,5 @@
+import 'package:SafeMove/data/global.dart';
+import 'package:SafeMove/models/grid_model.dart';
 import 'package:SafeMove/services/firebase_manager.dart';
 import 'dart:async';
 import 'package:SafeMove/services/perference_manager.dart';
@@ -5,9 +7,15 @@ import 'package:SafeMove/services/perference_manager.dart';
 class DataManager {
   static PrefManager mPrefManager = new PrefManager();
   static List roomsData = new List();
+  static List<GridModel> gridsData = new List();
 
   static Future<void> getRoomsData() async {
     DataManager.roomsData = await FirebaseManager.getRoomsData();
+  }
+
+  static Future<void> getGridsData() async {
+    DataManager.gridsData =
+        Global.grids.map((grid) => gridsData.add(GridModel.fromMap(grid)));
   }
 
   static Future<void> setSelfReportData(int selfReportStatus) async {

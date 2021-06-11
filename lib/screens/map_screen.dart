@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:SafeMove/data/global.dart';
+import 'package:SafeMove/models/fingerprint_model.dart';
 import 'package:SafeMove/models/floorplan_model.dart';
 import 'package:SafeMove/screens/main_drawer.dart';
 import 'package:SafeMove/screens/rooms_screen.dart';
@@ -6,14 +9,56 @@ import 'package:SafeMove/widgets/map/map_widget.dart';
 import 'package:SafeMove/widgets/map/raw_gesture_detector_widget.dart';
 import 'package:SafeMove/widgets/map/route_selection_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
+import 'package:wifi_iot/wifi_iot.dart';
 
-class MapScreen extends StatelessWidget {
+class MapScreen extends StatefulWidget {
   static const routeName = '/map-screen';
 
   @override
+  _MapScreenState createState() => _MapScreenState();
+}
+
+class _MapScreenState extends State<MapScreen> {
+  var model;
+
+  @override
+  void initState() {
+    startScanning();
+    super.initState();
+  }
+
+  Future<void> startScanning() async {
+    Timer.periodic(Duration(seconds: 5), (Timer t) {
+      WiFiForIoTPlugin.isEnabled().then((val) async {
+        if (val) {
+          List<WifiNetwork> _scanResult;
+          print("Rescanning...");
+          try {
+            _scanResult = await WiFiForIoTPlugin.loadWifiList();
+            print("Loaded!");
+            if (_scanResult != null && _scanResult.length > 0) {
+              FingerprintModel.findGrid(_scanResult).then(
+                (value) => {
+                  if (value != null) {model.setLocationGrid(value)}
+                },
+              );
+            }
+            print("Initialized!");
+          } on PlatformException {
+            print("Error");
+          }
+        } else {
+          print("Wifi is disabled!");
+        }
+      });
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
-    final model = Provider.of<FloorPlanModel>(context);
+    model = Provider.of<FloorPlanModel>(context);
     return Scaffold(
       backgroundColor: Global.primaryColor,
       appBar: AppBar(
