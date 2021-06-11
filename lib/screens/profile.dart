@@ -1,3 +1,5 @@
+import 'package:SafeMove/data/global.dart';
+import 'package:SafeMove/screens/main_drawer.dart';
 import 'package:SafeMove/services/data_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -7,6 +9,14 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Global.primaryColor,
+        elevation: 0,
+        title: Text(
+          'Profile',
+        ),
+      ),
+      drawer: MainDrawer(),
       body: ListView(
         children: [
           ClipPath(
@@ -18,7 +28,7 @@ class ProfileScreen extends StatelessWidget {
                 gradient: LinearGradient(
                   begin: Alignment.topRight,
                   end: Alignment.bottomLeft,
-                  colors: [Color(0xFF91b3fa), Color(0xFF4f52ff)],
+                  colors: [Color(0xFF91b3fa), Global.secondaryColor],
                 ),
                 image: DecorationImage(
                   image: AssetImage(
@@ -48,7 +58,6 @@ class ProfileScreen extends StatelessWidget {
                   textStyle: Theme.of(context).textTheme.headline4,
                   fontSize: 15,
                   fontWeight: FontWeight.w700,
-                  fontStyle: FontStyle.italic,
                 ),
               ),
             ),
@@ -73,7 +82,6 @@ class ProfileScreen extends StatelessWidget {
                   textStyle: Theme.of(context).textTheme.headline4,
                   fontSize: 15,
                   fontWeight: FontWeight.w700,
-                  fontStyle: FontStyle.italic,
                 ),
               ),
             ),
@@ -98,7 +106,6 @@ class ProfileScreen extends StatelessWidget {
                   textStyle: Theme.of(context).textTheme.headline4,
                   fontSize: 15,
                   fontWeight: FontWeight.w700,
-                  fontStyle: FontStyle.italic,
                 ),
               ),
             ),

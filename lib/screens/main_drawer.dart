@@ -56,62 +56,45 @@ class MainDrawer extends StatelessWidget {
             'Home',
             Icons.home,
             () {
-              Navigator.of(context).pushNamed('/');
+              Navigator.of(context).pushReplacementNamed('/');
             },
           ),
           buildListTitle(
             'Profile',
             Icons.person,
             () {
-              Navigator.of(context).pushNamed(ProfileScreen.routeName);
+              Navigator.of(context)
+                  .pushReplacementNamed(ProfileScreen.routeName);
             },
           ),
           buildListTitle(
             'Wifi Scan',
             Icons.wifi,
             () {
-              Navigator.of(context).pushNamed(WifiScreen.routeName);
+              Navigator.of(context).pushReplacementNamed(WifiScreen.routeName);
             },
           ),
           buildListTitle(
             'View Rooms',
             Icons.business,
             () {
-              Navigator.of(context).pushNamed(RoomsScreen.routeName);
+              Navigator.of(context).pushReplacementNamed(RoomsScreen.routeName);
             },
           ),
-          /*
-          buildListTitle(
-            'Admin Area',
-            Icons.admin_panel_settings_outlined,
-            () {
-              Navigator.of(context).pushNamed(AdminView.routeName);
-            },
-          ),
-          */
           buildListTitle(
             'Self Report',
             Icons.bluetooth,
             () {
-              Navigator.of(context).pushNamed(SelfReport.routeName);
+              Navigator.of(context).pushReplacementNamed(SelfReport.routeName);
             },
           ),
           buildListTitle(
             'Symptomps',
             Icons.info,
             () {
-              Navigator.of(context).pushNamed(Symptoms.routeName);
+              Navigator.of(context).pushReplacementNamed(Symptoms.routeName);
             },
           ),
-          /*
-          buildListTitle(
-            'MapView',
-            Icons.info,
-            () {
-              Navigator.of(context).pushNamed(MapView.routeName);
-            },
-          ),
-          */
           buildListTitle(
             'Logout',
             Icons.exit_to_app,
