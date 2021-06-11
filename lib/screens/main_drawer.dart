@@ -73,13 +73,13 @@ class MainDrawer extends StatelessWidget {
               Navigator.of(context).pushReplacementNamed(RoomsScreen.routeName);
             },
           ),
-          buildListTitle(
+          /*buildListTitle(
             'Self Report',
             Icons.bluetooth,
             () {
               Navigator.of(context).pushReplacementNamed(SelfReport.routeName);
             },
-          ),
+          ),*/
           buildListTitle(
             'Symptomps',
             Icons.info,
