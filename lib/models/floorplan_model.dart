@@ -1,5 +1,6 @@
 import 'package:SafeMove/data/global.dart';
-import 'package:SafeMove/models/room_model.dart';
+import 'package:SafeMove/models/room_data_model.dart';
+import 'package:SafeMove/services/data_manager.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -39,8 +40,8 @@ class FloorPlanModel extends ChangeNotifier {
     notifyListeners();
   }
 
-  List<Room> _rooms = Global.rooms.map((item) => Room.fromMap(item)).toList();
-  List<Room> get rooms => _rooms;
+  List<RoomDataModel> _rooms;
+  List<RoomDataModel> get rooms => _rooms;
 
   void handleDragScaleStart(ScaleStartDetails details) {
     _hasTouched = true;
@@ -92,6 +93,11 @@ class FloorPlanModel extends ChangeNotifier {
 
   void setLocationData(double locationDataX, double locationDataY) {
     _locationData = [locationDataX, locationDataY];
+    notifyListeners();
+  }
+
+  void setRoomsData(roomsData) {
+    _rooms = roomsData;
     notifyListeners();
   }
 }

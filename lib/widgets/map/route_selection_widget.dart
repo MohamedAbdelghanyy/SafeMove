@@ -1,5 +1,6 @@
 import 'package:SafeMove/data/global.dart';
 import 'package:SafeMove/models/floorplan_model.dart';
+import 'package:SafeMove/models/room_data_model.dart';
 import 'package:SafeMove/models/room_model.dart';
 import 'package:SafeMove/screens/rooms_screen.dart';
 import 'package:dropdown_search/dropdown_search.dart';
@@ -13,32 +14,32 @@ class RouteSelectionWidget extends StatefulWidget {
 }
 
 class _RouteSelectionWidgetState extends State<RouteSelectionWidget> {
-  Room roomX;
-  Room roomY;
+  RoomDataModel roomX;
+  RoomDataModel roomY;
   var model;
 
-  Future<List<Room>> getRoomData(String filter) async {
-    List<Room> searchResult = [];
-    for (int i = 0; i < Global.rooms.length; i++) {
-      if (Global.rooms[i]['location'].toString().contains(filter) ||
-          filter.contains(Global.rooms[i]['location'].toString())) {
-        searchResult.add(Room.fromMap(Global.rooms[i]));
+  Future<List<RoomDataModel>> getRoomData(String filter) async {
+    List<RoomDataModel> searchResult = [];
+    for (int i = 0; i < model.rooms.length; i++) {
+      if (model.rooms[i].location.toString().contains(filter) ||
+          filter.contains(model.rooms[i].location.toString())) {
+        searchResult.add(model.rooms[i]);
       }
     }
     return searchResult;
   }
 
-  void setRoomX(Room room) {
+  void setRoomX(RoomDataModel room) {
     this.roomX = room;
     drawRoute();
   }
 
-  void setRoomY(Room room) {
+  void setRoomY(RoomDataModel room) {
     this.roomY = room;
     ScaffoldMessenger.of(context).clearSnackBars();
     final snackBar = SnackBar(
       content: Text(
-          'Room ' + room.name + ' is ' + (room.status ? 'safe' : 'not safe')),
+          'Room ' + room.name + ' is ' + (room.isSafe ? 'safe' : 'not safe')),
       duration: Duration(days: 365),
       action: SnackBarAction(
         label: 'View Room Crowding',
@@ -81,7 +82,7 @@ class _RouteSelectionWidgetState extends State<RouteSelectionWidget> {
       children: [
         Padding(
           padding: EdgeInsets.only(top: 30, left: 15, right: 15),
-          child: DropdownSearch<Room>(
+          child: DropdownSearch<RoomDataModel>(
             dropdownSearchDecoration: InputDecoration(
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.all(
@@ -99,8 +100,8 @@ class _RouteSelectionWidgetState extends State<RouteSelectionWidget> {
             mode: Mode.BOTTOM_SHEET,
             label: "From",
             onFind: (String filter) => getRoomData(filter),
-            itemAsString: (Room room) => room.location,
-            onChanged: (Room room) {
+            itemAsString: (RoomDataModel room) => room.location,
+            onChanged: (RoomDataModel room) {
               if (room != null && room.name != null) {
                 setRoomX(room);
               } else {
@@ -111,7 +112,7 @@ class _RouteSelectionWidgetState extends State<RouteSelectionWidget> {
         ),
         Padding(
           padding: EdgeInsets.only(top: 10, left: 15, right: 15),
-          child: DropdownSearch<Room>(
+          child: DropdownSearch<RoomDataModel>(
             dropdownSearchDecoration: InputDecoration(
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.all(
@@ -129,8 +130,8 @@ class _RouteSelectionWidgetState extends State<RouteSelectionWidget> {
             mode: Mode.BOTTOM_SHEET,
             label: "To",
             onFind: (String filter) => getRoomData(filter),
-            itemAsString: (Room room) => room.location,
-            onChanged: (Room room) {
+            itemAsString: (RoomDataModel room) => room.location,
+            onChanged: (RoomDataModel room) {
               if (room != null && room.name != null) {
                 setRoomY(room);
               } else {

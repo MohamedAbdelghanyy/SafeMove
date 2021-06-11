@@ -70,6 +70,7 @@ class _SplashScreenState extends State<SplashScreen>
 */
 
 import 'package:SafeMove/data/global.dart';
+import 'package:SafeMove/models/floorplan_model.dart';
 import 'package:SafeMove/screens/admin_view.dart';
 import 'package:SafeMove/screens/map_screen.dart';
 import 'package:SafeMove/screens/sign_in.dart';
@@ -79,6 +80,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:provider/provider.dart';
 
 class SplashScreen extends StatefulWidget {
   static const routeName = '/';
@@ -88,10 +90,13 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  var model;
+
   Future<Function> iniApp() async {
     await DataManager.mPrefManager.loadDataFromLocalMemory();
     if (DataManager.mPrefManager.isLoggedIn()) {
       await DataManager.getRoomsData();
+      model.setRoomsData(DataManager.roomsData);
       /*await DataManager.iniUserAddresses();
       await DataManager.iniMainMenuCategories();
       await DataManager.iniMainMenuItems();*/
@@ -123,6 +128,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
+    model = Provider.of<FloorPlanModel>(context);
     return Scaffold(
       backgroundColor: Global.secondaryColor,
       appBar: PreferredSize(

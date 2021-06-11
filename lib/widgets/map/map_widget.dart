@@ -44,7 +44,7 @@ class _MapWidgetState extends State<MapWidget> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             CircleAvatar(
-                              backgroundColor: model.rooms[idx].status
+                              backgroundColor: model.rooms[idx].isSafe
                                   ? Colors.green
                                   : Colors.red,
                               radius: 3.0,
@@ -72,7 +72,7 @@ class _MapWidgetState extends State<MapWidget> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             CircleAvatar(
-                              backgroundColor: model.rooms[idx].status
+                              backgroundColor: model.rooms[idx].isSafe
                                   ? Colors.green
                                   : Colors.red,
                               radius: 3.0,

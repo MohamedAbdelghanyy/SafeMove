@@ -19,10 +19,9 @@ class FirebaseManager {
     final List<RoomDataModel> items = [];
     try {
       final response = await http.get(url + path);
-      final dbData = json.decode(response.body) as Map<String, dynamic>;
-      dbData.forEach((key, data) {
-        items.add(RoomDataModel(
-            key, data['total'], data['violations'], data['mask-violations']));
+      final dbData = json.decode(response.body) as List<dynamic>;
+      dbData.forEach((data) {
+        items.add(RoomDataModel.fromMap(data));
       });
     } on Exception catch (e) {
       print(e.toString());

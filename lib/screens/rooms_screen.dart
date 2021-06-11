@@ -1,8 +1,10 @@
+import 'package:SafeMove/models/floorplan_model.dart';
 import 'package:SafeMove/models/room_data_model.dart';
 import 'package:SafeMove/services/data_manager.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 import './main_drawer.dart';
 
@@ -19,11 +21,13 @@ class RoomsScreen extends StatefulWidget {
 class _RoomsScreenState extends State<RoomsScreen> {
   RoomDataModel currRoom;
   List roomsData = List();
+  var model;
 
   @override
   void initState() {
     DataManager.getRoomsData().then((value) {
-      roomsData = DataManager.roomsData;
+      model.setRoomsData(DataManager.roomsData);
+      roomsData = model.rooms;
       if (widget.currRoomName == "") {
         roomChanged(roomsData[0]);
       } else {
@@ -45,6 +49,7 @@ class _RoomsScreenState extends State<RoomsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    model = Provider.of<FloorPlanModel>(context);
     return Scaffold(
       appBar: AppBar(
         title: Text("Rooms Crowding"),
@@ -193,7 +198,8 @@ class _RoomsScreenState extends State<RoomsScreen> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
-                                    (currRoom.total - currRoom.maskViolations)
+                                    (currRoom.totalPeople -
+                                            currRoom.maskViolations)
                                         .toString(),
                                     style: GoogleFonts.montserrat(
                                       color: Colors.black,
@@ -292,7 +298,7 @@ class _RoomsScreenState extends State<RoomsScreen> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
-                                    (currRoom.total -
+                                    (currRoom.totalPeople -
                                             currRoom.distanceViolations)
                                         .toString(),
                                     style: GoogleFonts.montserrat(
@@ -345,7 +351,7 @@ class _RoomsScreenState extends State<RoomsScreen> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
-                                    currRoom.total.toString(),
+                                    currRoom.totalPeople.toString(),
                                     style: GoogleFonts.montserrat(
                                       color: Colors.black,
                                       fontSize: 60,
