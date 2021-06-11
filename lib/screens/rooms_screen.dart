@@ -47,7 +47,7 @@ class _RoomsScreenState extends State<RoomsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Rooms"),
+        title: Text("Rooms Crowding"),
       ),
       drawer: MainDrawer(),
       body: roomsData == null || currRoom == null
@@ -85,13 +85,12 @@ class _RoomsScreenState extends State<RoomsScreen> {
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
                                     Text(
-                                      'Room Id: ',
+                                      'Room: ',
                                       textAlign: TextAlign.center,
                                       style: GoogleFonts.montserrat(
                                         color: Colors.black,
                                         fontSize: 14,
                                         fontWeight: FontWeight.w700,
-                                        fontStyle: FontStyle.italic,
                                       ),
                                     ),
                                     SizedBox(width: 10),
@@ -140,7 +139,6 @@ class _RoomsScreenState extends State<RoomsScreen> {
                                       color: Colors.black,
                                       fontSize: 15,
                                       fontWeight: FontWeight.w700,
-                                      fontStyle: FontStyle.italic,
                                     ),
                                   ),
                                 ],
@@ -154,7 +152,6 @@ class _RoomsScreenState extends State<RoomsScreen> {
                                       color: Colors.black,
                                       fontSize: 60,
                                       fontWeight: FontWeight.w700,
-                                      fontStyle: FontStyle.italic,
                                     ),
                                   ),
                                   Text(
@@ -164,7 +161,6 @@ class _RoomsScreenState extends State<RoomsScreen> {
                                       color: Colors.black,
                                       fontSize: 14,
                                       fontWeight: FontWeight.w700,
-                                      fontStyle: FontStyle.italic,
                                     ),
                                   ),
                                 ],
@@ -189,7 +185,6 @@ class _RoomsScreenState extends State<RoomsScreen> {
                                       color: Colors.black,
                                       fontSize: 15,
                                       fontWeight: FontWeight.w700,
-                                      fontStyle: FontStyle.italic,
                                     ),
                                   ),
                                 ],
@@ -204,7 +199,6 @@ class _RoomsScreenState extends State<RoomsScreen> {
                                       color: Colors.black,
                                       fontSize: 60,
                                       fontWeight: FontWeight.w700,
-                                      fontStyle: FontStyle.italic,
                                     ),
                                   ),
                                   Text(
@@ -214,7 +208,6 @@ class _RoomsScreenState extends State<RoomsScreen> {
                                       color: Colors.black,
                                       fontSize: 14,
                                       fontWeight: FontWeight.w700,
-                                      fontStyle: FontStyle.italic,
                                     ),
                                   ),
                                 ],
@@ -245,7 +238,6 @@ class _RoomsScreenState extends State<RoomsScreen> {
                                       color: Colors.black,
                                       fontSize: 15,
                                       fontWeight: FontWeight.w700,
-                                      fontStyle: FontStyle.italic,
                                     ),
                                   ),
                                 ],
@@ -259,7 +251,6 @@ class _RoomsScreenState extends State<RoomsScreen> {
                                       color: Colors.black,
                                       fontSize: 60,
                                       fontWeight: FontWeight.w700,
-                                      fontStyle: FontStyle.italic,
                                     ),
                                   ),
                                   Text(
@@ -269,7 +260,6 @@ class _RoomsScreenState extends State<RoomsScreen> {
                                       color: Colors.black,
                                       fontSize: 14,
                                       fontWeight: FontWeight.w700,
-                                      fontStyle: FontStyle.italic,
                                     ),
                                   ),
                                 ],
@@ -294,7 +284,6 @@ class _RoomsScreenState extends State<RoomsScreen> {
                                           color: Colors.black,
                                           fontSize: 15,
                                           fontWeight: FontWeight.w700,
-                                          fontStyle: FontStyle.italic,
                                         )),
                                   ),
                                 ],
@@ -310,7 +299,6 @@ class _RoomsScreenState extends State<RoomsScreen> {
                                       color: Colors.black,
                                       fontSize: 60,
                                       fontWeight: FontWeight.w700,
-                                      fontStyle: FontStyle.italic,
                                     ),
                                   ),
                                   Text(
@@ -320,7 +308,6 @@ class _RoomsScreenState extends State<RoomsScreen> {
                                       color: Colors.black,
                                       fontSize: 14,
                                       fontWeight: FontWeight.w700,
-                                      fontStyle: FontStyle.italic,
                                     ),
                                   ),
                                 ],
@@ -350,7 +337,6 @@ class _RoomsScreenState extends State<RoomsScreen> {
                                       color: Colors.black,
                                       fontSize: 18,
                                       fontWeight: FontWeight.w700,
-                                      fontStyle: FontStyle.italic,
                                     ),
                                   ),
                                 ],
@@ -364,7 +350,6 @@ class _RoomsScreenState extends State<RoomsScreen> {
                                       color: Colors.black,
                                       fontSize: 60,
                                       fontWeight: FontWeight.w700,
-                                      fontStyle: FontStyle.italic,
                                     ),
                                   ),
                                   Text(
@@ -374,7 +359,6 @@ class _RoomsScreenState extends State<RoomsScreen> {
                                       color: Colors.black,
                                       fontSize: 14,
                                       fontWeight: FontWeight.w700,
-                                      fontStyle: FontStyle.italic,
                                     ),
                                   ),
                                 ],

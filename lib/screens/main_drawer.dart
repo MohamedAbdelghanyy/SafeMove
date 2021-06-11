@@ -1,3 +1,4 @@
+import 'package:SafeMove/data/global.dart';
 import 'package:SafeMove/screens/profile.dart';
 import 'package:SafeMove/screens/self_report.dart';
 import 'package:SafeMove/screens/sign_in.dart';
@@ -14,14 +15,13 @@ class MainDrawer extends StatelessWidget {
     return ListTile(
       leading: Icon(
         icon,
-        size: 26,
+        size: 24,
       ),
       title: Text(
         title,
         style: TextStyle(
           fontFamily: 'RobotoCondensed',
-          fontSize: 24,
-          fontWeight: FontWeight.bold,
+          fontSize: 18,
         ),
       ),
       onTap: tapHandler,
@@ -34,21 +34,13 @@ class MainDrawer extends StatelessWidget {
       child: ListView(
         children: <Widget>[
           Container(
-            height: 120,
-            width: double.infinity,
-            padding: EdgeInsets.all(20),
-            alignment: Alignment.center,
-            color: Theme.of(context).accentColor,
-            child: Text(
-              'Safe Move',
-              style: TextStyle(
-                fontWeight: FontWeight.w900,
-                fontSize: 30,
-                color: Theme.of(context).primaryColor,
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
+              height: 120,
+              alignment: Alignment.center,
+              color: Global.secondaryColor,
+              child: Image(
+                image: AssetImage("assets/covidlogo.png"),
+                width: 350,
+              )),
           SizedBox(
             height: 20,
           ),
@@ -75,7 +67,7 @@ class MainDrawer extends StatelessWidget {
             },
           ),
           buildListTitle(
-            'View Rooms',
+            'Rooms Crowding',
             Icons.business,
             () {
               Navigator.of(context).pushReplacementNamed(RoomsScreen.routeName);
