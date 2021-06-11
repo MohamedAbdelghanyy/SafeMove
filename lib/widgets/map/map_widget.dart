@@ -1,3 +1,4 @@
+import 'package:SafeMove/data/global.dart';
 import 'package:SafeMove/models/floorplan_model.dart';
 import 'package:SafeMove/widgets/map/route_painter.dart';
 import 'package:flutter/cupertino.dart';
@@ -14,105 +15,112 @@ class _MapWidgetState extends State<MapWidget> {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     final model = Provider.of<FloorPlanModel>(context);
-    return Stack(
-      alignment: Alignment.center,
-      children: <Widget>[
-        Container(
-          child: Image.asset(
-            'assets/miu.png',
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(25),
+        color: Global.primaryColor,
+      ),
+      padding: EdgeInsets.only(bottom: 25),
+      child: Stack(
+        alignment: Alignment.center,
+        children: <Widget>[
+          Container(
+            child: Image.asset(
+              'assets/miu.png',
+            ),
           ),
-        ),
-        Stack(
-          alignment: Alignment.center,
-          children: List.generate(
-            model.rooms.length,
-            (idx) {
-              return Transform.translate(
-                offset: Offset(
-                  size.width * model.rooms[idx].position[0],
-                  size.width * model.rooms[idx].position[1],
-                ),
-                child: model.rooms[idx].isVertical
-                    ? Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          CircleAvatar(
-                            backgroundColor: model.rooms[idx].status
-                                ? Colors.green
-                                : Colors.red,
-                            radius: 3.0,
-                            child: Center(
-                              child: Icon(
-                                model.rooms[idx].icon,
-                                color: Colors.white,
-                                size: 4,
+          Stack(
+            alignment: Alignment.center,
+            children: List.generate(
+              model.rooms.length,
+              (idx) {
+                return Transform.translate(
+                  offset: Offset(
+                    size.width * model.rooms[idx].position[0],
+                    size.width * model.rooms[idx].position[1],
+                  ),
+                  child: model.rooms[idx].isVertical
+                      ? Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            CircleAvatar(
+                              backgroundColor: model.rooms[idx].status
+                                  ? Colors.green
+                                  : Colors.red,
+                              radius: 3.0,
+                              child: Center(
+                                child: Icon(
+                                  model.rooms[idx].icon,
+                                  color: Colors.white,
+                                  size: 4,
+                                ),
                               ),
                             ),
-                          ),
-                          SizedBox(
-                            height: 1,
-                          ),
-                          Text(
-                            model.rooms[idx].name,
-                            style: TextStyle(
-                              fontSize: 3.5,
-                              color: Colors.black,
+                            SizedBox(
+                              height: 1,
                             ),
-                          )
-                        ],
-                      )
-                    : Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          CircleAvatar(
-                            backgroundColor: model.rooms[idx].status
-                                ? Colors.green
-                                : Colors.red,
-                            radius: 3.0,
-                            child: Center(
-                              child: Icon(
-                                model.rooms[idx].icon,
-                                color: Colors.white,
-                                size: 4,
+                            Text(
+                              model.rooms[idx].name,
+                              style: TextStyle(
+                                fontSize: 3.5,
+                                color: Colors.black,
+                              ),
+                            )
+                          ],
+                        )
+                      : Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            CircleAvatar(
+                              backgroundColor: model.rooms[idx].status
+                                  ? Colors.green
+                                  : Colors.red,
+                              radius: 3.0,
+                              child: Center(
+                                child: Icon(
+                                  model.rooms[idx].icon,
+                                  color: Colors.white,
+                                  size: 4,
+                                ),
                               ),
                             ),
-                          ),
-                          SizedBox(
-                            width: 1,
-                          ),
-                          Text(
-                            model.rooms[idx].name,
-                            style: TextStyle(
-                              fontSize: 3.5,
-                              color: Colors.black,
+                            SizedBox(
+                              width: 1,
                             ),
-                          )
-                        ],
-                      ),
-              );
-            },
+                            Text(
+                              model.rooms[idx].name,
+                              style: TextStyle(
+                                fontSize: 3.5,
+                                color: Colors.black,
+                              ),
+                            )
+                          ],
+                        ),
+                );
+              },
+            ),
           ),
-        ),
-        model.routeData != null
-            ? Container(
-                child: CustomPaint(
-                  painter: RoutePainter(model.routeData, size.width),
-                ),
-              )
-            : SizedBox(),
-        (model.locationData[0] != 0.0 && model.locationData[1] != 0.0)
-            ? Transform.translate(
-                offset: Offset(
-                  size.width * model.locationData[0],
-                  size.width * model.locationData[1],
-                ),
-                child: Image.asset(
-                  'assets/pointer.jpg',
-                  width: 8,
-                ),
-              )
-            : SizedBox(),
-      ],
+          model.routeData != null
+              ? Container(
+                  child: CustomPaint(
+                    painter: RoutePainter(model.routeData, size.width),
+                  ),
+                )
+              : SizedBox(),
+          (model.locationData[0] != 0.0 && model.locationData[1] != 0.0)
+              ? Transform.translate(
+                  offset: Offset(
+                    size.width * model.locationData[0],
+                    size.width * model.locationData[1],
+                  ),
+                  child: Image.asset(
+                    'assets/pointer.jpg',
+                    width: 8,
+                  ),
+                )
+              : SizedBox(),
+        ],
+      ),
     );
   }
 }

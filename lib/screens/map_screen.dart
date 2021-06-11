@@ -14,11 +14,13 @@ class MapScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final model = Provider.of<FloorPlanModel>(context);
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Global.primaryColor,
       appBar: AppBar(
+        backgroundColor: Global.primaryColor,
         elevation: 0,
         title: Text(
           'MIU Map',
+          //style: TextStyle(color: Colors.white),
         ),
       ),
       drawer: MainDrawer(),
@@ -37,7 +39,7 @@ class MapScreen extends StatelessWidget {
           topRight: Radius.circular(40),
         ),
         child: Container(
-          color: Global.blue,
+          color: Global.secondaryColor,
           child: Center(
             child: Column(
               children: <Widget>[

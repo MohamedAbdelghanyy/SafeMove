@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 abstract class Global {
-  static const Color blue = const Color(0xffB0E0E6);
+  static Color primaryColor = Colors.white; //Colors.blue[900];
+  static Color secondaryColor = Colors.blue[900]; //Colors.white;
 
   static const List rooms = [
     // Corridor 1 Top
