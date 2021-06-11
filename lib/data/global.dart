@@ -490,16 +490,16 @@ abstract class Global {
       'position': [-0.2, -0.256], // 323 done
     },
     {
-      'position': [-0.22, -0.256], // 304
+      'position': [-0.22, -0.256], // 304 done
     },
     {
-      'position': [-0.257, -0.256], // 303
+      'position': [-0.257, -0.256], // 303 done
     },
     {
-      'position': [-0.292, -0.256], // 302
+      'position': [-0.292, -0.256], // 302 done
     },
     {
-      'position': [-0.326, -0.256], // 301
+      'position': [-0.326, -0.256], // 301 done
     },
     {
       'position': [-0.326, -0.207], // Turn 1
