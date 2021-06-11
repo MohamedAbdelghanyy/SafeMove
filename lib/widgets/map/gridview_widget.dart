@@ -33,33 +33,63 @@ class _GridViewWidgetState extends State<GridViewWidget> {
                   size.width * model.rooms[idx].position[0],
                   size.width * model.rooms[idx].position[1],
                 ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    CircleAvatar(
-                      backgroundColor:
-                          model.rooms[idx].status ? Colors.green : Colors.red,
-                      radius: 3.0,
-                      child: Center(
-                        child: Icon(
-                          model.rooms[idx].icon,
-                          color: Colors.white,
-                          size: 4,
-                        ),
+                child: model.rooms[idx].isVertical
+                    ? Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          CircleAvatar(
+                            backgroundColor: model.rooms[idx].status
+                                ? Colors.green
+                                : Colors.red,
+                            radius: 3.0,
+                            child: Center(
+                              child: Icon(
+                                model.rooms[idx].icon,
+                                color: Colors.white,
+                                size: 4,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 1,
+                          ),
+                          Text(
+                            model.rooms[idx].name,
+                            style: TextStyle(
+                              fontSize: 3.5,
+                              color: Colors.black,
+                            ),
+                          )
+                        ],
+                      )
+                    : Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          CircleAvatar(
+                            backgroundColor: model.rooms[idx].status
+                                ? Colors.green
+                                : Colors.red,
+                            radius: 3.0,
+                            child: Center(
+                              child: Icon(
+                                model.rooms[idx].icon,
+                                color: Colors.white,
+                                size: 4,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 1,
+                          ),
+                          Text(
+                            model.rooms[idx].name,
+                            style: TextStyle(
+                              fontSize: 3.5,
+                              color: Colors.black,
+                            ),
+                          )
+                        ],
                       ),
-                    ),
-                    SizedBox(
-                      height: 1,
-                    ),
-                    Text(
-                      model.rooms[idx].name,
-                      style: TextStyle(
-                        fontSize: 3.5,
-                        color: Colors.black,
-                      ),
-                    )
-                  ],
-                ),
               );
             },
           ),
