@@ -58,6 +58,11 @@ class RoutePainter extends CustomPainter {
       if (!(isRoomXFound && isRoomYFound) &&
           isDrawingStarted &&
           (i + 1 < model.rooms.length)) {
+        if (model.rooms[i + 1].isSafe) {
+          model.setRouteSafeRoomsCount(model.routeSafeRoomsCount + 1);
+        } else {
+          model.setRouteUnSafeRoomsCount(model.routeUnSafeRoomsCount + 1);
+        }
         canvas.drawLine(
           Offset(cSize * model.rooms[i].corridorPosition[0],
               cSize * model.rooms[i].corridorPosition[1]),

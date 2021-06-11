@@ -33,6 +33,7 @@ class _RouteSelectionWidgetState extends State<RouteSelectionWidget> {
   }
 
   void setRoomY(RoomDataModel room) {
+    model.resetRouteData();
     this.roomY = room;
     ScaffoldMessenger.of(context).clearSnackBars();
     final snackBar = SnackBar(
@@ -70,7 +71,7 @@ class _RouteSelectionWidgetState extends State<RouteSelectionWidget> {
       this.roomY = null;
       ScaffoldMessenger.of(context).clearSnackBars();
     }
-    model.setRouteData(null);
+    model.resetRouteData();
   }
 
   @override

@@ -114,4 +114,11 @@ class FloorPlanModel extends ChangeNotifier {
     _routeUnSafeRoomsCount = count;
     notifyListeners();
   }
+
+  void resetRouteData() {
+    _routeSafeRoomsCount = 0;
+    _routeUnSafeRoomsCount = 0;
+    _routeData = null;
+    notifyListeners();
+  }
 }
