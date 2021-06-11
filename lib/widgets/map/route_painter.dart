@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class RoutePainter extends CustomPainter {
+  var model;
   RouteData routeData;
   double cSize;
   Paint paintt = Paint()
@@ -12,7 +13,9 @@ class RoutePainter extends CustomPainter {
     ..strokeCap = StrokeCap.round;
   bool isDrawingStarted = false, isRoomXFound = false, isRoomYFound = false;
 
-  RoutePainter(this.routeData, this.cSize);
+  RoutePainter(this.model, this.cSize) {
+    this.routeData = model.routeData;
+  }
 
   @override
   void paint(final Canvas canvas, final Size size) {
@@ -35,31 +38,31 @@ class RoutePainter extends CustomPainter {
             cSize * routeData.roomY.corridorPosition[1]),
         paintt);
 
-    for (int i = 0; i < Global.corridorCheckPoint.length; i++) {
+    for (int i = 0; i < model.rooms.length; i++) {
       if (routeData.roomX.corridorPosition[0] ==
-              Global.corridorCheckPoint[i]['position'][0] &&
+              model.rooms[i].corridorPosition[0] &&
           routeData.roomX.corridorPosition[1] ==
-              Global.corridorCheckPoint[i]['position'][1] &&
+              model.rooms[i].corridorPosition[1] &&
           !isRoomXFound) {
         isRoomXFound = true;
         isDrawingStarted = true;
       }
       if (routeData.roomY.corridorPosition[0] ==
-              Global.corridorCheckPoint[i]['position'][0] &&
+              model.rooms[i].corridorPosition[0] &&
           routeData.roomY.corridorPosition[1] ==
-              Global.corridorCheckPoint[i]['position'][1] &&
+              model.rooms[i].corridorPosition[1] &&
           !isRoomYFound) {
         isRoomYFound = true;
         isDrawingStarted = true;
       }
       if (!(isRoomXFound && isRoomYFound) &&
           isDrawingStarted &&
-          (i + 1 < Global.corridorCheckPoint.length)) {
+          (i + 1 < model.rooms.length)) {
         canvas.drawLine(
-          Offset(cSize * Global.corridorCheckPoint[i]['position'][0],
-              cSize * Global.corridorCheckPoint[i]['position'][1]),
-          Offset(cSize * Global.corridorCheckPoint[i + 1]['position'][0],
-              cSize * Global.corridorCheckPoint[i + 1]['position'][1]),
+          Offset(cSize * model.rooms[i].corridorPosition[0],
+              cSize * model.rooms[i].corridorPosition[1]),
+          Offset(cSize * model.rooms[i + 1].corridorPosition[0],
+              cSize * model.rooms[i + 1].corridorPosition[1]),
           paintt,
         );
       }

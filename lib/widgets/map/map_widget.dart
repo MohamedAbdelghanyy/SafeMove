@@ -103,7 +103,7 @@ class _MapWidgetState extends State<MapWidget> {
           model.routeData != null
               ? Container(
                   child: CustomPaint(
-                    painter: RoutePainter(model.routeData, size.width),
+                    painter: RoutePainter(model, size.width),
                   ),
                 )
               : SizedBox(),

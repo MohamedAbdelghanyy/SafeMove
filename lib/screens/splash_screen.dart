@@ -97,9 +97,6 @@ class _SplashScreenState extends State<SplashScreen> {
     if (DataManager.mPrefManager.isLoggedIn()) {
       await DataManager.getRoomsData();
       model.setRoomsData(DataManager.roomsData);
-      /*await DataManager.iniUserAddresses();
-      await DataManager.iniMainMenuCategories();
-      await DataManager.iniMainMenuItems();*/
     }
     return Navigator.pushReplacement(
       context,
