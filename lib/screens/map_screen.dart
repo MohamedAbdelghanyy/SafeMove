@@ -23,15 +23,19 @@ class MapScreen extends StatelessWidget {
         ),
       ),
       drawer: MainDrawer(),
-      floatingActionButton: model.isScaled
-          ? FloatingActionButton(
-              onPressed: () {
-                model.reset();
-              },
-              child: const Icon(Icons.zoom_out_outlined),
-              backgroundColor: Global.secondaryColor,
-            )
-          : SizedBox(),
+      floatingActionButton:
+          model.isScaled || model.pos.x != 0 || model.pos.y != 0
+              ? FloatingActionButton(
+                  onPressed: () {
+                    model.reset();
+                  },
+                  child: Icon(
+                    Icons.fullscreen_exit_rounded,
+                    size: 35,
+                  ),
+                  backgroundColor: Global.secondaryColor,
+                )
+              : SizedBox(),
       body: ClipRRect(
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(40),
@@ -46,7 +50,6 @@ class MapScreen extends StatelessWidget {
                 RawGestureDetectorWidget(
                   child: MapWidget(),
                 ),
-                //model.hasTouched ? ResetButtonWidget() : OverlayWidget()
               ],
             ),
           ),
