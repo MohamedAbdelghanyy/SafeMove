@@ -204,8 +204,8 @@ abstract class Global {
       'icon': Icons.menu_book_rounded,
       'status': true,
       'position': [-0.36, -0.299],
-      'door_position': [-0.329, -0.271],
-      'corridor_position': [-0.329, -0.256],
+      'door_position': [-0.326, -0.271],
+      'corridor_position': [-0.326, -0.256],
     },
 
     //Corridor 2 Bottom
@@ -292,7 +292,7 @@ abstract class Global {
       'corridor_position': [-0.329, 0.15],
     },
     {
-      'location': '331',
+      'location': 'Room 331',
       'name': '331',
       'icon': Icons.menu_book_rounded,
       'status': true,
@@ -307,7 +307,7 @@ abstract class Global {
       'status': true,
       'position': [-0.374, 0.375],
       'door_position': [-0.341, 0.344],
-      'corridor_position': [-0.329, 0.44],
+      'corridor_position': [-0.329, 0.344],
     },
 
     //Corridor 3 Right
@@ -405,10 +405,10 @@ abstract class Global {
       'position': [0.06, -0.288], // 311
     },
     {
-      'position': [0.0362, -0.288], // Tile 2 Turn 1
+      'position': [0.0362, -0.288], // Turn 1
     },
     {
-      'position': [0.0362, -0.256], // Tile 2 Turn 2
+      'position': [0.0362, -0.256], // Turn 2
     },
     {
       'position': [0.01, -0.256], // WCF
@@ -459,7 +459,49 @@ abstract class Global {
       'position': [-0.292, -0.256], // 302
     },
     {
-      'position': [-0.329, -0.256], // 301
+      'position': [-0.326, -0.256], // 301
+    },
+    {
+      'position': [-0.326, -0.207], // Turn 1
+    },
+    {
+      'position': [-0.25, -0.207], // Turn 2
+    },
+    {
+      'position': [-0.25, 0.015], // Turn 3
+    },
+    {
+      'position': [-0.329, 0.015], // Turn 4
+    },
+    {
+      'position': [-0.329, 0.091], // 333
+    },
+    {
+      'position': [-0.329, 0.114], // WCF
+    },
+    {
+      'position': [-0.329, 0.133], // WCM
+    },
+    {
+      'position': [-0.329, 0.15], // 332
+    },
+    {
+      'position': [-0.329, 0.205], // 327 TA
+    },
+    {
+      'position': [-0.329, 0.252], // 327
+    },
+    {
+      'position': [-0.329, 0.27], // 331
+    },
+    {
+      'position': [-0.329, 0.325], // 328
+    },
+    {
+      'position': [-0.329, 0.344], // 330
+    },
+    {
+      'position': [-0.329, 0.399], // 329
     }
   ];
 

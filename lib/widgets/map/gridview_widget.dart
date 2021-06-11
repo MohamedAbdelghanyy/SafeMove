@@ -20,10 +20,11 @@ class _GridViewWidgetState extends State<GridViewWidget> {
       children: <Widget>[
         Container(
           child: Image.asset(
-            'assets/miu_3.png',
+            'assets/miu.png',
           ),
         ),
         Stack(
+          alignment: Alignment.center,
           children: List.generate(
             model.rooms.length,
             (idx) {
