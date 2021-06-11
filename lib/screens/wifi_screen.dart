@@ -1,11 +1,9 @@
 import 'dart:async';
 
-import 'package:SafeMove/services/data_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:wifi_iot/wifi_iot.dart';
 import 'package:firebase_database/firebase_database.dart';
-import 'dart:io';
 import './main_drawer.dart';
 
 void main() async {
