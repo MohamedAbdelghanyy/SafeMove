@@ -1,6 +1,7 @@
 import 'package:SafeMove/data/global.dart';
 import 'package:SafeMove/models/floorplan_model.dart';
 import 'package:SafeMove/screens/main_drawer.dart';
+import 'package:SafeMove/screens/rooms_screen.dart';
 import 'package:SafeMove/widgets/map/map_widget.dart';
 import 'package:SafeMove/widgets/map/raw_gesture_detector_widget.dart';
 import 'package:SafeMove/widgets/map/route_selection_widget.dart';
@@ -57,9 +58,9 @@ class MapScreen extends StatelessWidget {
                 ),
                 model.routeData != null
                     ? Container(
-                        alignment: Alignment.bottomCenter,
+                        alignment: Alignment.center,
                         width: MediaQuery.of(context).size.width,
-                        height: 150,
+                        height: ((MediaQuery.of(context).size.width + 60) / 3),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(25),
@@ -71,6 +72,254 @@ class MapScreen extends StatelessWidget {
                               blurRadius: 20.0,
                             ),
                           ],
+                        ),
+                        child: Padding(
+                          padding: EdgeInsets.all(15),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                children: [
+                                  Container(
+                                    alignment: Alignment.center,
+                                    width: ((MediaQuery.of(context).size.width -
+                                            60) /
+                                        3),
+                                    height:
+                                        ((MediaQuery.of(context).size.width -
+                                                60) /
+                                            3),
+                                    decoration: BoxDecoration(
+                                      border: Border.all(
+                                        width: 5,
+                                        color: Global.secondaryColor,
+                                      ),
+                                      borderRadius: BorderRadius.circular(25),
+                                      color: Colors.white,
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.grey,
+                                          blurRadius: 20.0,
+                                        ),
+                                      ],
+                                    ),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          model.routeData.roomY.location +
+                                              ' is ',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.bold,
+                                            color: Global.secondaryColor,
+                                          ),
+                                        ),
+                                        SizedBox(height: 4),
+                                        Text(
+                                          (model.routeData.roomY.isSafe
+                                              ? 'SAFE'
+                                              : 'NOT SAFE'),
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.bold,
+                                            color: model.routeData.roomY.isSafe
+                                                ? Colors.green
+                                                : Colors.red,
+                                          ),
+                                        ),
+                                        SizedBox(height: 7),
+                                        Padding(
+                                          padding: EdgeInsets.symmetric(
+                                              horizontal: 6),
+                                          child: Container(
+                                            height: 30,
+                                            alignment: Alignment.center,
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(25),
+                                              color: Global.secondaryColor,
+                                              boxShadow: [
+                                                BoxShadow(
+                                                  color: Colors.grey,
+                                                  blurRadius: 20.0,
+                                                ),
+                                              ],
+                                            ),
+                                            child: InkWell(
+                                              onTap: () {
+                                                Navigator.push(
+                                                  context,
+                                                  MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        RoomsScreen(
+                                                      roomData:
+                                                          model.routeData.roomY,
+                                                    ),
+                                                  ),
+                                                );
+                                              },
+                                              child: Text(
+                                                'View Details',
+                                                textAlign: TextAlign.center,
+                                                style: TextStyle(
+                                                  fontSize: 13,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.white,
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        /*RaisedButton(
+                                          color: model.routeData.roomY.isSafe
+                                              ? Colors.green
+                                              : Colors.red,
+                                          child: Text(
+                                            "View Details",
+                                            style: TextStyle(
+                                              fontSize: 11.0,
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                          onPressed: () {},
+                                        ),*/
+                                      ],
+                                    ),
+                                  ),
+                                  SizedBox(width: 15),
+                                  Container(
+                                    alignment: Alignment.center,
+                                    width: ((MediaQuery.of(context).size.width -
+                                            60) /
+                                        3),
+                                    height:
+                                        ((MediaQuery.of(context).size.width -
+                                                60) /
+                                            3),
+                                    decoration: BoxDecoration(
+                                      border: Border.all(
+                                          width: 5, color: Colors.green),
+                                      borderRadius: BorderRadius.circular(25),
+                                      color: Colors.white,
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.grey,
+                                          blurRadius: 20.0,
+                                        ),
+                                      ],
+                                    ),
+                                    child: Text(
+                                      'You will pass by ' +
+                                          model.routeSafeRoomsCount.toString() +
+                                          ' safe rooms',
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.green,
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(width: 15),
+                                  Container(
+                                    alignment: Alignment.center,
+                                    width: ((MediaQuery.of(context).size.width -
+                                            60) /
+                                        3),
+                                    height:
+                                        ((MediaQuery.of(context).size.width -
+                                                60) /
+                                            3),
+                                    decoration: BoxDecoration(
+                                      border: Border.all(
+                                        width: 5,
+                                        color: Colors.red,
+                                      ),
+                                      borderRadius: BorderRadius.circular(25),
+                                      color: Colors.white,
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.grey,
+                                          blurRadius: 20.0,
+                                        ),
+                                      ],
+                                    ),
+                                    child: Text(
+                                      'You will pass by ' +
+                                          model.routeUnSafeRoomsCount
+                                              .toString() +
+                                          ' unsafe rooms',
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.red,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              /*Row(
+                                children: [
+                                  Text(
+                                    'From',
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  SizedBox(width: 10),
+                                  Text(
+                                    model.routeData.roomX.location,
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(height: 15),
+                              Row(
+                                children: [
+                                  Text(
+                                    'To',
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  SizedBox(width: 10),
+                                  Text(
+                                    model.routeData.roomY.location,
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(height: 15),
+                              Row(
+                                children: [
+                                  Text(
+                                    'Your route passes by ' +
+                                        model.routeUnSafeRoomsCount.toString() +
+                                        ' unsafe rooms \n and ' +
+                                        model.routeSafeRoomsCount.toString() +
+                                        ' safe rooms.',
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                    ),
+                                  ),
+                                ],
+                              ),*/
+                            ],
+                          ),
                         ),
                       )
                     : SizedBox()

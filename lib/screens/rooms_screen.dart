@@ -10,9 +10,9 @@ import './main_drawer.dart';
 
 class RoomsScreen extends StatefulWidget {
   static const routeName = '/rooms-screen';
-  String currRoomName;
+  RoomDataModel roomData;
 
-  RoomsScreen({this.currRoomName = ""});
+  RoomsScreen({this.roomData = null});
 
   @override
   _RoomsScreenState createState() => _RoomsScreenState();
@@ -28,11 +28,11 @@ class _RoomsScreenState extends State<RoomsScreen> {
     DataManager.getRoomsData().then((value) {
       model.setRoomsData(DataManager.roomsData);
       roomsData = model.rooms;
-      if (widget.currRoomName == "") {
+      if (widget.roomData == null) {
         roomChanged(roomsData[0]);
       } else {
         for (int i = 0; i < roomsData.length; i++) {
-          if ((roomsData[i] as RoomDataModel).name == widget.currRoomName) {
+          if ((roomsData[i] as RoomDataModel).name == widget.roomData.name) {
             roomChanged(roomsData[i]);
           }
         }
