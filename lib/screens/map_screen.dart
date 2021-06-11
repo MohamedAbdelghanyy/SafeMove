@@ -1,7 +1,7 @@
 import 'package:SafeMove/data/global.dart';
 import 'package:SafeMove/models/floorplan_model.dart';
 import 'package:SafeMove/screens/main_drawer.dart';
-import 'package:SafeMove/widgets/map/gridview_widget.dart';
+import 'package:SafeMove/widgets/map/map_widget.dart';
 import 'package:SafeMove/widgets/map/raw_gesture_detector_widget.dart';
 import 'package:SafeMove/widgets/map/route_selection_widget.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +18,7 @@ class MapScreen extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         title: Text(
-          'MIU Safe Move Map',
+          'MIU Map',
         ),
       ),
       drawer: MainDrawer(),
@@ -43,7 +43,7 @@ class MapScreen extends StatelessWidget {
               children: <Widget>[
                 RouteSelectionWidget(),
                 RawGestureDetectorWidget(
-                  child: GridViewWidget(),
+                  child: MapWidget(),
                 ),
                 //model.hasTouched ? ResetButtonWidget() : OverlayWidget()
               ],

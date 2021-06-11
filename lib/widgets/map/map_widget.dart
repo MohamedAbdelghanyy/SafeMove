@@ -1,16 +1,15 @@
 import 'package:SafeMove/models/floorplan_model.dart';
-import 'package:SafeMove/screens/rooms_screen.dart';
 import 'package:SafeMove/widgets/map/route_painter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class GridViewWidget extends StatefulWidget {
+class MapWidget extends StatefulWidget {
   @override
-  _GridViewWidgetState createState() => _GridViewWidgetState();
+  _MapWidgetState createState() => _MapWidgetState();
 }
 
-class _GridViewWidgetState extends State<GridViewWidget> {
+class _MapWidgetState extends State<MapWidget> {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
