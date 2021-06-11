@@ -207,7 +207,7 @@ class MapScreen extends StatelessWidget {
                                     child: Text(
                                       'You will pass by ' +
                                           model.routeSafeRoomsCount.toString() +
-                                          ' safe rooms',
+                                          ' safe room(s)',
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
                                         fontSize: 14,
@@ -244,7 +244,7 @@ class MapScreen extends StatelessWidget {
                                       'You will pass by ' +
                                           model.routeUnSafeRoomsCount
                                               .toString() +
-                                          ' unsafe rooms',
+                                          ' unsafe room(s)',
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
                                         fontSize: 14,
