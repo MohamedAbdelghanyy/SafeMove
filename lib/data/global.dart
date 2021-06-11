@@ -514,22 +514,22 @@ abstract class Global {
       'position': [-0.329, 0.015], // Turn 4 done
     },
     {
-      'position': [-0.329, 0.091], // 333
+      'position': [-0.329, 0.091], // 333 done
     },
     {
-      'position': [-0.329, 0.114], // WCF
+      'position': [-0.329, 0.114], // WCF done
     },
     {
-      'position': [-0.329, 0.133], // WCM
+      'position': [-0.329, 0.133], // WCM done
     },
     {
-      'position': [-0.329, 0.15], // 332
+      'position': [-0.329, 0.15], // 332 done
     },
     {
-      'position': [-0.329, 0.205], // 327 TA
+      'position': [-0.329, 0.205], // 327 TA done
     },
     {
-      'position': [-0.329, 0.252], // 327
+      'position': [-0.329, 0.252], // 327 done
     },
     {
       'position': [-0.329, 0.27], // 331
