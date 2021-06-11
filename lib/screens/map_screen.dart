@@ -44,12 +44,36 @@ class MapScreen extends StatelessWidget {
         child: Container(
           color: Global.secondaryColor,
           child: Center(
-            child: Column(
-              children: <Widget>[
-                RouteSelectionWidget(),
-                RawGestureDetectorWidget(
-                  child: MapWidget(),
+            child: Stack(
+              alignment: Alignment.bottomCenter,
+              children: [
+                Column(
+                  children: <Widget>[
+                    RouteSelectionWidget(),
+                    RawGestureDetectorWidget(
+                      child: MapWidget(),
+                    ),
+                  ],
                 ),
+                model.routeData != null
+                    ? Container(
+                        alignment: Alignment.bottomCenter,
+                        width: MediaQuery.of(context).size.width,
+                        height: 150,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(25),
+                              topRight: Radius.circular(25)),
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey,
+                              blurRadius: 20.0,
+                            ),
+                          ],
+                        ),
+                      )
+                    : SizedBox()
               ],
             ),
           ),

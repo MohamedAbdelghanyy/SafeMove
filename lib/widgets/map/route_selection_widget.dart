@@ -35,26 +35,6 @@ class _RouteSelectionWidgetState extends State<RouteSelectionWidget> {
   void setRoomY(RoomDataModel room) {
     model.resetRouteData();
     this.roomY = room;
-    ScaffoldMessenger.of(context).clearSnackBars();
-    final snackBar = SnackBar(
-      content: Text(
-          'Room ' + room.name + ' is ' + (room.isSafe ? 'safe' : 'not safe')),
-      duration: Duration(days: 365),
-      action: SnackBarAction(
-        label: 'View Room Crowding',
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => RoomsScreen(
-                currRoomName: room.name.toString(),
-              ),
-            ),
-          );
-        },
-      ),
-    );
-    ScaffoldMessenger.of(context).showSnackBar(snackBar);
     drawRoute();
   }
 
@@ -69,7 +49,6 @@ class _RouteSelectionWidgetState extends State<RouteSelectionWidget> {
       this.roomX = null;
     } else if (room == 1) {
       this.roomY = null;
-      ScaffoldMessenger.of(context).clearSnackBars();
     }
     model.resetRouteData();
   }
