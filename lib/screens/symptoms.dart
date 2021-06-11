@@ -1,5 +1,6 @@
+import 'package:SafeMove/data/global.dart';
+import 'package:SafeMove/screens/main_drawer.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class Symptoms extends StatefulWidget {
   static const routeName = '/Symps';
@@ -11,6 +12,14 @@ class _SymptomsState extends State<Symptoms> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Global.primaryColor,
+        elevation: 0,
+        title: Text(
+          'Symptoms',
+        ),
+      ),
+      drawer: MainDrawer(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -20,32 +29,15 @@ class _SymptomsState extends State<Symptoms> {
                 clipper: MyClipper(),
                 child: Container(
                   height: 350,
-                  width: double.infinity,
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
                       begin: Alignment.topRight,
                       end: Alignment.bottomLeft,
-                      colors: [Color(0xFF91b3fa), Color(0xFF4f52ff)],
+                      colors: [Color(0xFF91b3fa), Global.secondaryColor],
                     ),
                     image: DecorationImage(
                       image: AssetImage('assets/dr.png'),
                     ),
-                  ),
-                  child: Column(
-                    children: [
-                      Container(
-                        margin: EdgeInsets.all(30),
-                        child: Text(
-                          "Get Informed",
-                          style: GoogleFonts.montserrat(
-                            color: Colors.black,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w700,
-                            fontStyle: FontStyle.italic,
-                          ),
-                        ),
-                      ),
-                    ],
                   ),
                 ),
               ),

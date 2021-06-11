@@ -1,3 +1,4 @@
+import 'package:SafeMove/data/global.dart';
 import 'package:SafeMove/models/floorplan_model.dart';
 import 'package:SafeMove/screens/map_screen.dart';
 import 'package:SafeMove/screens/sign_in.dart';
@@ -33,8 +34,8 @@ class MyApp extends StatelessWidget {
         title: 'Safe Move',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-          buttonTheme: ButtonThemeData(buttonColor: Colors.white),
-          primaryColor: Colors.white,
+          buttonTheme: ButtonThemeData(buttonColor: Global.secondaryColor),
+          primaryColor: Global.primaryColor,
         ),
         initialRoute: SplashScreen.routeName,
         routes: {

@@ -1,3 +1,5 @@
+import 'package:SafeMove/data/global.dart';
+import 'package:SafeMove/screens/main_drawer.dart';
 import 'package:SafeMove/services/data_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -14,6 +16,14 @@ class _SelfReportState extends State<SelfReport> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Global.primaryColor,
+        elevation: 0,
+        title: Text(
+          'Self Report',
+        ),
+      ),
+      drawer: MainDrawer(),
       body: ListView(
         children: [
           ClipPath(
@@ -31,22 +41,6 @@ class _SelfReportState extends State<SelfReport> {
                   image: AssetImage('assets/bluetooth.png'),
                 ),
               ),
-              child: Column(
-                children: [
-                  Container(
-                    margin: EdgeInsets.all(20),
-                    child: Text(
-                      "Self Report",
-                      style: GoogleFonts.montserrat(
-                        color: Colors.black,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w700,
-                        fontStyle: FontStyle.italic,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
             ),
           ),
           Column(
@@ -61,33 +55,30 @@ class _SelfReportState extends State<SelfReport> {
                     color: Colors.black,
                     fontSize: 15,
                     fontWeight: FontWeight.w700,
-                    fontStyle: FontStyle.italic,
                   ),
                   textAlign: TextAlign.center,
                 ),
               ),
               Container(
-                padding: EdgeInsets.all(15),
+                padding: EdgeInsets.all(10),
                 child: Text(
                   "By Self Reporting, you acknowledge that you tested postive for COVID-19",
                   style: GoogleFonts.montserrat(
                     color: Colors.black,
                     fontSize: 15,
                     fontWeight: FontWeight.w700,
-                    fontStyle: FontStyle.italic,
                   ),
                   textAlign: TextAlign.center,
                 ),
               ),
               Container(
-                padding: EdgeInsets.all(15),
+                padding: EdgeInsets.all(10),
                 child: Text(
-                  "We Will warn any users that have came in close proximity with you in the past 14 days",
+                  "We Will warn any users that will come in close proximity with you",
                   style: GoogleFonts.montserrat(
                     color: Colors.black,
                     fontSize: 15,
                     fontWeight: FontWeight.w700,
-                    fontStyle: FontStyle.italic,
                   ),
                   textAlign: TextAlign.center,
                 ),
@@ -95,18 +86,9 @@ class _SelfReportState extends State<SelfReport> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    'I Understand',
-                    style: GoogleFonts.montserrat(
-                      color: Colors.black,
-                      fontSize: 15,
-                      fontWeight: FontWeight.w700,
-                      fontStyle: FontStyle.italic,
-                    ),
-                  ),
                   Checkbox(
                     checkColor: Colors.white,
-                    activeColor: Colors.blue,
+                    activeColor: Global.secondaryColor,
                     value: this.valuefirst,
                     onChanged: (bool value) {
                       setState(() {
@@ -114,39 +96,45 @@ class _SelfReportState extends State<SelfReport> {
                       });
                     },
                   ),
-                ],
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                  shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(50),
+                  Text(
+                    'I Understand',
+                    style: GoogleFonts.montserrat(
+                      color: Colors.black,
+                      fontSize: 15,
+                      fontWeight: FontWeight.w700,
                     ),
                   ),
-                  elevation: 2,
-                  minimumSize: const Size(150, 50),
-                  padding: EdgeInsets.all(12),
-                ),
-                onPressed: () {
-                  if (this.valuefirst) {
-                    DataManager.setSelfReportData(1)
-                        .then((value) => Navigator.of(context).pop());
-                  }
-                },
-                icon: Icon(Icons.bluetooth),
-                label: Text(
-                  "Self Report",
-                  style: GoogleFonts.montserrat(
-                    color: Colors.white,
-                    fontSize: 28,
-                    fontWeight: FontWeight.w700,
-                    fontStyle: FontStyle.italic,
+                ],
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 10, bottom: 20),
+                child: ElevatedButton.icon(
+                  style: ElevatedButton.styleFrom(
+                    primary: Global.secondaryColor,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(50),
+                      ),
+                    ),
+                    elevation: 2,
+                    minimumSize: Size(150, 50),
+                  ),
+                  onPressed: () {
+                    if (this.valuefirst) {
+                      DataManager.setSelfReportData(1)
+                          .then((value) => Navigator.of(context).pop());
+                    }
+                  },
+                  icon: Icon(Icons.bluetooth),
+                  label: Text(
+                    "Self Report",
+                    style: GoogleFonts.montserrat(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w700,
+                    ),
                   ),
                 ),
-              )
+              ),
             ],
           )
         ],
