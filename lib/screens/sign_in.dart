@@ -121,10 +121,7 @@ class SignInScreenState extends State<SignInScreen> {
                   child: FlatButton(
                     child: Text(
                       "Login",
-                      style: TextStyle(
-                        fontSize: 18.0,
-                        color: Colors.white,
-                      ),
+                      style: TextStyle(fontSize: 18.0, color: Colors.white),
                     ),
                     onPressed: () async {
                       if (_formKey.currentState.validate()) {
@@ -154,9 +151,7 @@ class SignInScreenState extends State<SignInScreen> {
                       child: RichText(
                     text: TextSpan(
                       text: "Don't have an account? ",
-                      style: TextStyle(
-                        color: Colors.white,
-                      ),
+                      style: TextStyle(color: Colors.white),
                     ),
                   )),
                 ),
@@ -175,10 +170,7 @@ class SignInScreenState extends State<SignInScreen> {
                     },
                     child: Text(
                       "Sign Up",
-                      style: TextStyle(
-                        fontSize: 18.0,
-                        color: Colors.white,
-                      ),
+                      style: TextStyle(fontSize: 18.0, color: Colors.white),
                     ),
                   ),
                 ),
