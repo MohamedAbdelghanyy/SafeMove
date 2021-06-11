@@ -177,19 +177,6 @@ class MapScreen extends StatelessWidget {
                                             ),
                                           ),
                                         ),
-                                        /*RaisedButton(
-                                          color: model.routeData.roomY.isSafe
-                                              ? Colors.green
-                                              : Colors.red,
-                                          child: Text(
-                                            "View Details",
-                                            style: TextStyle(
-                                              fontSize: 11.0,
-                                              color: Colors.white,
-                                            ),
-                                          ),
-                                          onPressed: () {},
-                                        ),*/
                                       ],
                                     ),
                                   ),
@@ -266,58 +253,6 @@ class MapScreen extends StatelessWidget {
                                   ),
                                 ],
                               ),
-                              /*Row(
-                                children: [
-                                  Text(
-                                    'From',
-                                    style: TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  SizedBox(width: 10),
-                                  Text(
-                                    model.routeData.roomX.location,
-                                    style: TextStyle(
-                                      fontSize: 18,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(height: 15),
-                              Row(
-                                children: [
-                                  Text(
-                                    'To',
-                                    style: TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  SizedBox(width: 10),
-                                  Text(
-                                    model.routeData.roomY.location,
-                                    style: TextStyle(
-                                      fontSize: 18,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(height: 15),
-                              Row(
-                                children: [
-                                  Text(
-                                    'Your route passes by ' +
-                                        model.routeUnSafeRoomsCount.toString() +
-                                        ' unsafe rooms \n and ' +
-                                        model.routeSafeRoomsCount.toString() +
-                                        ' safe rooms.',
-                                    style: TextStyle(
-                                      fontSize: 18,
-                                    ),
-                                  ),
-                                ],
-                              ),*/
                             ],
                           ),
                         ),
