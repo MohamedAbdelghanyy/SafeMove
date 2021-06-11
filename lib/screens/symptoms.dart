@@ -36,7 +36,7 @@ class _SymptomsState extends State<Symptoms> {
                       colors: [Color(0xFF91b3fa), Global.secondaryColor],
                     ),
                     image: DecorationImage(
-                      image: AssetImage('assets/dr.png'),
+                      image: AssetImage('assets/images/vectors/dr.png'),
                     ),
                   ),
                 ),
@@ -61,16 +61,16 @@ class _SymptomsState extends State<Symptoms> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
                           SymptomCard(
-                            image: "assets/headache.png",
+                            image: "assets/images/vectors/headache.png",
                             title: "Headache",
                             isActive: true,
                           ),
                           SymptomCard(
-                            image: "assets/caugh.png",
+                            image: "assets/images/vectors/caugh.png",
                             title: "Coughing",
                           ),
                           SymptomCard(
-                            image: "assets/fever.png",
+                            image: "assets/images/vectors/fever.png",
                             title: "Fever",
                           ),
                         ],
@@ -89,13 +89,13 @@ class _SymptomsState extends State<Symptoms> {
                     PreventCard(
                       text:
                           "Since the start of the coronavirus outbreak some places have fully embraced wearing facemasks",
-                      image: "assets/wear_mask.png",
+                      image: "assets/images/vectors/wear_mask.png",
                       title: "Wear face mask",
                     ),
                     PreventCard(
                       text:
                           "Washing your hands for a full 60 seconds is essential in fighting COVID",
-                      image: "assets/wash_hands.png",
+                      image: "assets/images/vectors/wash_hands.png",
                       title: "Wash your hands",
                     ),
                     SizedBox(height: 50),

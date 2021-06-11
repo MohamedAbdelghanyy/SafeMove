@@ -38,7 +38,7 @@ class _SelfReportState extends State<SelfReport> {
                   colors: [Color(0xFF91b3fa), Color(0xFF4f52ff)],
                 ),
                 image: DecorationImage(
-                  image: AssetImage('assets/bluetooth.png'),
+                  image: AssetImage('assets/images/vectors/bluetooth.png'),
                 ),
               ),
             ),

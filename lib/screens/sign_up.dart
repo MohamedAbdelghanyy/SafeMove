@@ -48,7 +48,7 @@ class SignUpScreenState extends State<SignUpScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Image(
-                    image: AssetImage("assets/covidlogo.png"),
+                    image: AssetImage("assets/images/logo.png"),
                     width: 350,
                     height: 250,
                   )

@@ -47,7 +47,7 @@ class _SplashScreenState extends State<SplashScreen>
                     );
                   },
                   child: Image(
-                    image: AssetImage("assets/covidlogo.png"),
+                    image: AssetImage("assets/images/logo.png"),
                     width: 350,
                     height: 250,
                   )),
@@ -140,7 +140,7 @@ class _SplashScreenState extends State<SplashScreen> {
             alignment: Alignment.center,
             margin: EdgeInsets.all(30.0),
             child: Image.asset(
-              'assets/covidlogo.png',
+              'assets/images/logo.png',
               width: 200,
             ),
           ),

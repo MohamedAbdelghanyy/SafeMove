@@ -1,8 +1,10 @@
+import 'package:SafeMove/data/global.dart';
 import 'package:SafeMove/models/floorplan_model.dart';
 import 'package:SafeMove/models/room_data_model.dart';
 import 'package:SafeMove/services/data_manager.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
@@ -27,7 +29,11 @@ class _RoomsScreenState extends State<RoomsScreen> {
   void initState() {
     DataManager.getRoomsData().then((value) {
       model.setRoomsData(DataManager.roomsData);
-      roomsData = model.rooms;
+      for (int i = 0; i < model.rooms.length; i++) {
+        if ((model.rooms[i] as RoomDataModel).name != "Turn") {
+          roomsData.add(model.rooms[i]);
+        }
+      }
       if (widget.roomData == null) {
         roomChanged(roomsData[0]);
       } else {
@@ -58,7 +64,13 @@ class _RoomsScreenState extends State<RoomsScreen> {
       body: roomsData == null || currRoom == null
           ? Padding(
               padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-              child: Text('Loading ...'),
+              child: Align(
+                alignment: Alignment.bottomCenter,
+                child: SpinKitSquareCircle(
+                  color: Global.secondaryColor,
+                  size: 20,
+                ),
+              ),
             )
           : ListView(
               children: [
@@ -76,7 +88,8 @@ class _RoomsScreenState extends State<RoomsScreen> {
                             colors: [Color(0xFF91b3fa), Color(0xFF4f52ff)],
                           ),
                           image: DecorationImage(
-                            image: AssetImage('assets/admin.png'),
+                            image:
+                                AssetImage('assets/images/vectors/admin.png'),
                           ),
                         ),
                         child: Column(
@@ -85,37 +98,20 @@ class _RoomsScreenState extends State<RoomsScreen> {
                               child: Padding(
                                 padding: EdgeInsets.symmetric(
                                     vertical: 10, horizontal: 20),
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Text(
-                                      'Room: ',
-                                      textAlign: TextAlign.center,
-                                      style: GoogleFonts.montserrat(
-                                        color: Colors.black,
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w700,
-                                      ),
-                                    ),
-                                    SizedBox(width: 10),
-                                    DropdownButtonHideUnderline(
-                                      child: DropdownButton<RoomDataModel>(
-                                        onChanged: roomChanged,
-                                        value: currRoom,
-                                        items: roomsData.map((value) {
-                                          return DropdownMenuItem<
-                                              RoomDataModel>(
-                                            value: value,
-                                            child: Text(
-                                              value.name,
-                                              style: TextStyle(fontSize: 16),
-                                            ),
-                                          );
-                                        }).toList(),
-                                      ),
-                                    ),
-                                  ],
+                                child: DropdownButtonHideUnderline(
+                                  child: DropdownButton<RoomDataModel>(
+                                    onChanged: roomChanged,
+                                    value: currRoom,
+                                    items: roomsData.map((value) {
+                                      return DropdownMenuItem<RoomDataModel>(
+                                        value: value,
+                                        child: Text(
+                                          value.location,
+                                          style: TextStyle(fontSize: 16),
+                                        ),
+                                      );
+                                    }).toList(),
+                                  ),
                                 ),
                               ),
                             ),
@@ -136,7 +132,8 @@ class _RoomsScreenState extends State<RoomsScreen> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Image(
-                                    image: AssetImage('assets/masks.png'),
+                                    image: AssetImage(
+                                        'assets/images/vectors/masks.png'),
                                   ),
                                   Text(
                                     "Masks Violation",
@@ -182,7 +179,8 @@ class _RoomsScreenState extends State<RoomsScreen> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Image(
-                                    image: AssetImage('assets/masks.png'),
+                                    image: AssetImage(
+                                        'assets/images/vectors/masks.png'),
                                   ),
                                   Text(
                                     "Masks Commits",
@@ -236,7 +234,8 @@ class _RoomsScreenState extends State<RoomsScreen> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Image(
-                                    image: AssetImage('assets/distancing.png'),
+                                    image: AssetImage(
+                                        'assets/images/vectors/distancing.png'),
                                   ),
                                   Text(
                                     "Distancing Violation",
@@ -282,7 +281,8 @@ class _RoomsScreenState extends State<RoomsScreen> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Image(
-                                    image: AssetImage('assets/distancing.png'),
+                                    image: AssetImage(
+                                        'assets/images/vectors/distancing.png'),
                                   ),
                                   Center(
                                     child: Text("Distancing Commits",
@@ -335,7 +335,8 @@ class _RoomsScreenState extends State<RoomsScreen> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Image(
-                                    image: AssetImage('assets/total.png'),
+                                    image: AssetImage(
+                                        'assets/images/vectors/total.png'),
                                   ),
                                   Text(
                                     "Total Stats",

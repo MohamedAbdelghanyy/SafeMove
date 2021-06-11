@@ -42,7 +42,7 @@ class SignInScreenState extends State<SignInScreen> {
                 Padding(
                   padding: EdgeInsets.all(50),
                   child: Image(
-                    image: AssetImage("assets/covidlogo.png"),
+                    image: AssetImage("assets/images/logo.png"),
                     height: 175,
                   ),
                 ),

@@ -26,7 +26,7 @@ class _MapWidgetState extends State<MapWidget> {
         children: <Widget>[
           Container(
             child: Image.asset(
-              'assets/miu.png',
+              'assets/images/maps/miu.png',
             ),
           ),
           Stack(
@@ -118,7 +118,7 @@ class _MapWidgetState extends State<MapWidget> {
                     size.width * model.locationData[1],
                   ),
                   child: Image.asset(
-                    'assets/pointer.jpg',
+                    'assets/images/vectors/pointer.jpg',
                     width: 8,
                   ),
                 )

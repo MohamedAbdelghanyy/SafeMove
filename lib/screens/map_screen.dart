@@ -92,7 +92,7 @@ class MapScreen extends StatelessWidget {
                                             3),
                                     decoration: BoxDecoration(
                                       border: Border.all(
-                                        width: 5,
+                                        width: 3,
                                         color: Global.secondaryColor,
                                       ),
                                       borderRadius: BorderRadius.circular(25),
@@ -192,7 +192,9 @@ class MapScreen extends StatelessWidget {
                                             3),
                                     decoration: BoxDecoration(
                                       border: Border.all(
-                                          width: 5, color: Colors.green),
+                                        width: 3,
+                                        color: Colors.green,
+                                      ),
                                       borderRadius: BorderRadius.circular(25),
                                       color: Colors.white,
                                       boxShadow: [
@@ -226,7 +228,7 @@ class MapScreen extends StatelessWidget {
                                             3),
                                     decoration: BoxDecoration(
                                       border: Border.all(
-                                        width: 5,
+                                        width: 3,
                                         color: Colors.red,
                                       ),
                                       borderRadius: BorderRadius.circular(25),

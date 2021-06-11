@@ -27,7 +27,7 @@ class _AdminViewState extends State<AdminView> {
                   colors: [Color(0xFF91b3fa), Color(0xFF4f52ff)],
                 ),
                 image: DecorationImage(
-                  image: AssetImage('assets/admin.png'),
+                  image: AssetImage('assets/images/vectors/admin.png'),
                 ),
               ),
               child: Column(
@@ -61,7 +61,7 @@ class _AdminViewState extends State<AdminView> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image(
-                          image: AssetImage('assets/masks.png'),
+                          image: AssetImage('assets/images/vectors/masks.png'),
                         ),
                         Text(
                           "Masks Violation",
@@ -100,7 +100,7 @@ class _AdminViewState extends State<AdminView> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image(
-                          image: AssetImage('assets/masks.png'),
+                          image: AssetImage('assets/images/vectors/masks.png'),
                         ),
                         Text(
                           "Masks Commits",
@@ -147,7 +147,8 @@ class _AdminViewState extends State<AdminView> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image(
-                          image: AssetImage('assets/distancing.png'),
+                          image: AssetImage(
+                              'assets/images/vectors/distancing.png'),
                         ),
                         Text(
                           "Distancing Violation",
@@ -186,7 +187,8 @@ class _AdminViewState extends State<AdminView> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image(
-                          image: AssetImage('assets/distancing.png'),
+                          image: AssetImage(
+                              'assets/images/vectors/distancing.png'),
                         ),
                         Center(
                           child: Text("Distancing Commits",
@@ -232,7 +234,7 @@ class _AdminViewState extends State<AdminView> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image(
-                          image: AssetImage('assets/total.png'),
+                          image: AssetImage('assets/images/vectors/total.png'),
                         ),
                         Text("Total Stats",
                             style: GoogleFonts.montserrat(

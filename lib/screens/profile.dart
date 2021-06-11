@@ -32,7 +32,7 @@ class ProfileScreen extends StatelessWidget {
                 ),
                 image: DecorationImage(
                   image: AssetImage(
-                    'assets/profile.png',
+                    'assets/images/vectors/profile.png',
                   ),
                 ),
               ),
