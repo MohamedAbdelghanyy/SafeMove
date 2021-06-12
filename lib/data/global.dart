@@ -409,26 +409,7 @@ abstract class Global {
 /*static const List rooms = [
     
     //Corridor 3 Left
-    {
-      'location': 'Room 333',
-      'name': '333',
-      'icon': Icons.menu_book_rounded,
-      'layout': 'horizontal',
-      'status': true,
-      'position': [-0.374, 0.114],
-      'door_position': [-0.341, 0.091],
-      'corridor_position': [-0.329, 0.091],
-    },
-    {
-      'location': 'Room 332',
-      'name': '332',
-      'icon': Icons.menu_book_rounded,
-      'layout': 'horizontal',
-      'status': true,
-      'position': [-0.374, 0.2],
-      'door_position': [-0.341, 0.15],
-      'corridor_position': [-0.329, 0.15],
-    },
+    
     {
       'location': 'Room 331',
       'name': '331',
