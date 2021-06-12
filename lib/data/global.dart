@@ -6,6 +6,7 @@ abstract class Global {
 
   static const List grids = [
     {
+      //unused
       'grid_id': 1,
       'status': true,
       'fingerprint_L1': ['ac:f2:c5:97:33:a9', -69],
@@ -17,6 +18,7 @@ abstract class Global {
       'corridor_position': [-0.078, -0.256],
     },
     {
+      //unused
       'grid_id': 2,
       'status': true,
       'fingerprint_L1': ['ac:f2:c5:97:33:a9', -64],
@@ -140,6 +142,7 @@ abstract class Global {
       'corridor_position': [0.283, -0.288],
     },
     {
+      //unused
       'grid_id': 11,
       'status': true,
       'fingerprint_L1': ['ac:f2:c5:97:33:a9', -48],
