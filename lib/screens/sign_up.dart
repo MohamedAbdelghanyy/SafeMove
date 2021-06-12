@@ -30,17 +30,18 @@ class SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Global.secondaryColor,
-        body: SafeArea(
-            child: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topRight,
-              end: Alignment.bottomLeft,
-              colors: [Color(0xFFff8e89), Color(0xFFff7366)],
-            ),
-          ),
+      backgroundColor: Global.secondaryColor,
+      body: SafeArea(
+        child: Padding(
+          padding: EdgeInsets.all(30),
           child: ListView(children: [
+            Padding(
+              padding: EdgeInsets.all(50),
+              child: Image(
+                image: AssetImage("assets/images/logo.png"),
+                height: 175,
+              ),
+            ),
             Container(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -48,13 +49,7 @@ class SignUpScreenState extends State<SignUpScreen> {
                   //Logo section
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Image(
-                        image: AssetImage("assets/images/logo.png"),
-                        width: 350,
-                        height: 250,
-                      )
-                    ],
+                    children: <Widget>[],
                   ),
                   //Email textfield
                   Form(
@@ -329,6 +324,8 @@ class SignUpScreenState extends State<SignUpScreen> {
               ),
             ),
           ]),
-        )));
+        ),
+      ),
+    );
   }
 }
