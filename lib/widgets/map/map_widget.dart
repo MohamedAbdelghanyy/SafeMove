@@ -118,7 +118,7 @@ class _MapWidgetState extends State<MapWidget> {
                     size.width * model.locationData[1],
                   ),
                   child: Image.asset(
-                    'assets/images/vectors/pointer.jpg',
+                    'assets/images/maps/pointer.png',
                     width: 8,
                   ),
                 )
