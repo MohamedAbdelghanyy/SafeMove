@@ -452,13 +452,7 @@ abstract class Global {
     
     {
       'position': [-0.329, 0.091], // 333 done
-    },
-    {
-      'position': [-0.329, 0.114], // WCF done
-    },
-    {
-      'position': [-0.329, 0.133], // WCM done
-    },
+    }, 
     {
       'position': [-0.329, 0.15], // 332 done
     },
