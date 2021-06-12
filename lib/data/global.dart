@@ -410,26 +410,7 @@ abstract class Global {
     
     //Corridor 2 Bottom
     
-    {
-      'location': 'Room 322',
-      'name': '322',
-      'icon': Icons.menu_book_rounded,
-      'layout': 'vertical',
-      'status': true,
-      'position': [-0.151, -0.209],
-      'door_position': [-0.163, -0.242],
-      'corridor_position': [-0.163, -0.256],
-    },
-    {
-      'location': 'Room 323',
-      'name': '323',
-      'icon': Icons.menu_book_rounded,
-      'layout': 'vertical',
-      'status': true,
-      'position': [-0.191, -0.209],
-      'door_position': [-0.2, -0.242],
-      'corridor_position': [-0.2, -0.256],
-    },
+    
     //Corridor 3 Left
     {
       'location': 'Room 333',
