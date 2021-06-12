@@ -410,26 +410,7 @@ abstract class Global {
     
     //Corridor 3 Right
 
-    {
-      'location': 'Room 328',
-      'name': '328',
-      'icon': Icons.menu_book_rounded,
-      'layout': 'horizontal',
-      'status': true,
-      'position': [-0.285, 0.3],
-      'door_position': [-0.315, 0.325],
-      'corridor_position': [-0.329, 0.325],
-    },
-    {
-      'location': 'Room 329',
-      'name': '329',
-      'icon': Icons.menu_book_rounded,
-      'layout': 'horizontal',
-      'status': true,
-      'position': [-0.285, 0.372],
-      'door_position': [-0.315, 0.399],
-      'corridor_position': [-0.329, 0.399],
-    },
+    
   ];*/
 
 /*static const List corridorCheckPoint = [
