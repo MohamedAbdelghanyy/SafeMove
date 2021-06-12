@@ -30,33 +30,56 @@ class SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Global.secondaryColor,
-      body: SafeArea(
-        child: Padding(
-          padding: EdgeInsets.all(30),
-          child: ListView(children: [
-            Padding(
-              padding: EdgeInsets.all(50),
-              child: Image(
-                image: AssetImage("assets/images/logo.png"),
-                height: 175,
-              ),
-            ),
-            Container(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  //Logo section
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[],
+        backgroundColor: Global.secondaryColor,
+        body: SafeArea(
+          child: Padding(
+            padding: EdgeInsets.all(30),
+            child: Form(
+              key: _formKey,
+              child: ListView(children: [
+                Padding(
+                  padding: EdgeInsets.all(50),
+                  child: Image(
+                    image: AssetImage("assets/images/logo.png"),
+                    height: 175,
                   ),
-                  //Email textfield
-                  Form(
-                      key: _formKey,
-                      child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
+                ),
+                TextFormField(
+                  onSaved: (value) {
+                    _name = value;
+                  },
+                  validator: (value) {
+                    if (value.isEmpty) {
+                      return 'Please enter your full name';
+                    }
+                    if (value.length < 6) {
+                      return 'Minimum length is 6 characters';
+                    }
+                    return null;
+                  },
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[500]),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(50),
+                          )),
+                      fillColor: Colors.white,
+                      filled: true,
+                      prefixIcon: Padding(
+                        padding: EdgeInsets.only(left: 8),
+                        child: Icon(Icons.person, size: 18),
+                      ),
+                      hintText: 'Full Name'),
+                  style: TextStyle(fontSize: 18.0, color: Colors.black),
+                ),
+                Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Form(
+                          child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
@@ -65,44 +88,13 @@ class SignUpScreenState extends State<SignUpScreen> {
                                     padding: EdgeInsets.only(
                                         left: 20.0, right: 20.0, bottom: 10),
                                     child: Container(
-                                        alignment: Alignment.center,
-                                        height: 60.0,
-                                        decoration: BoxDecoration(
-                                            color: Colors.white,
-                                            borderRadius:
-                                                BorderRadius.circular(50)),
-                                        child: TextFormField(
-                                            onSaved: (value) {
-                                              _name = value;
-                                            },
-                                            validator: (value) {
-                                              if (value.isEmpty) {
-                                                return 'Please enter your full name';
-                                              }
-                                              if (value.length < 6) {
-                                                return 'Minimum length is 6 characters';
-                                              }
-                                              return null;
-                                            },
-                                            decoration: InputDecoration(
-                                                enabledBorder: OutlineInputBorder(
-                                                    borderSide: BorderSide(
-                                                        color:
-                                                            Colors.grey[500]),
-                                                    borderRadius: BorderRadius.all(
-                                                        Radius.circular(50))),
-                                                focusedBorder: OutlineInputBorder(
-                                                    borderSide: BorderSide(
-                                                        color:
-                                                            Colors.green[300]),
-                                                    borderRadius: BorderRadius.all(
-                                                        Radius.circular(50))),
-                                                prefixIcon:
-                                                    Icon(Icons.account_circle),
-                                                hintText: 'Full Name'),
-                                            style: TextStyle(
-                                                fontSize: 20.0,
-                                                color: Colors.black))),
+                                      alignment: Alignment.center,
+                                      height: 60.0,
+                                      decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius:
+                                              BorderRadius.circular(50)),
+                                    ),
                                   ),
                                 )
                               ],
@@ -320,12 +312,12 @@ class SignUpScreenState extends State<SignUpScreen> {
                               ],
                             ),
                           ]))
-                ],
-              ),
+                    ],
+                  ),
+                ),
+              ]),
             ),
-          ]),
-        ),
-      ),
-    );
+          ),
+        ));
   }
 }
