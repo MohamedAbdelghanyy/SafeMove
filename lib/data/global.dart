@@ -411,16 +411,6 @@ abstract class Global {
     //Corridor 3 Right
     
     {
-      'location': 'Room 327 TA',
-      'name': '327 TA',
-      'icon': Icons.menu_book_rounded,
-      'layout': 'horizontal',
-      'status': true,
-      'position': [-0.285, 0.179],
-      'door_position': [-0.315, 0.205],
-      'corridor_position': [-0.329, 0.205],
-    },
-    {
       'location': 'Room 327',
       'name': '327',
       'icon': Icons.menu_book_rounded,
