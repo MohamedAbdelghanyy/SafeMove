@@ -33,8 +33,7 @@ dependencies:
   flip_card: ^0.4.4
   shared_preferences: ^0.5.12+4
   wifi_flutter: ^0.1.0+1
-  wifi_iot:
-    path: ./other/wifi_iot/
+  wifi_iot: ^0.3.3
   flutter_spinkit: "^4.1.2"
   wifi_info_plugin: ^1.1.5
   webview_flutter: ^2.0.2

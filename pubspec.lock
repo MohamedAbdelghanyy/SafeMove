@@ -514,10 +514,10 @@ packages:
   wifi_iot:
     dependency: "direct main"
     description:
-      path: "other/wifi_iot"
-      relative: true
-    source: path
-    version: "0.2.0"
+      name: wifi_iot
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.3.3"
   win32:
     dependency: transitive
     description:

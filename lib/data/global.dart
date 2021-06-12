@@ -64,12 +64,12 @@ abstract class Global {
     {
       'grid_id': 100,
       'status': true,
-      'fingerprint_L1': ['d4:6b:a6:91:26:74', -55],
-      'fingerprint_L2': ['b4:f5:8e:3a:5d:0c', -46],
-      'fingerprint_L3': ['1e:d9:a0:84:46:41', -55],
-      'fingerprint_R1': ['d4:6b:a6:91:26:74', -55],
-      'fingerprint_R2': ['30:74:96:0e:f6:50', -46],
-      'fingerprint_R3': ['1e:d9:a0:84:46:41', -55],
+      'fingerprint_L1': ['d4:6b:a6:91:26:74', -41],
+      'fingerprint_L2': ['30:74:96:0e:f6:50', -40],
+      'fingerprint_L3': ['1e:d9:a0:84:46:41', -60],
+      'fingerprint_R1': ['d4:6b:a6:91:26:74', -41],
+      'fingerprint_R2': ['30:74:96:0e:f6:50', -40],
+      'fingerprint_R3': ['1e:d9:a0:84:46:41', -60],
       'corridor_position': [0.39, -0.288],
     },
     {
