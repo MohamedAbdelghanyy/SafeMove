@@ -406,10 +406,6 @@ abstract class Global {
   ];
 }
 
-/*static const List rooms = [ 
-    
-  ];*/
-
 /*static const List corridorCheckPoint = [
     {
       'position': [0.3595, -0.288], // 316
