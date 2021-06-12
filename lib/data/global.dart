@@ -406,29 +406,7 @@ abstract class Global {
   ];
 }
 
-/*static const List rooms = [
-    // Corridor 1 Top
-    {
-      'location': 'Room 312',
-      'name': '312',
-      'icon': Icons.menu_book_rounded,
-      'layout': 'vertical',
-      'status': true,
-      'position': [0.175, -0.33],
-      'door_position': [0.132, -0.30],
-      'corridor_position': [0.132, -0.288],
-    },
-    {
-      'location': 'Room 311',
-      'name': '311',
-      'icon': Icons.menu_book_rounded,
-      'layout': 'vertical',
-      'status': false,
-      'position': [0.085, -0.33],
-      'door_position': [0.06, -0.30],
-      'corridor_position': [0.06, -0.288],
-    },
-
+/*static const List rooms = [    
     //Corridor 1 Bottom
     {
       'location': 'Room 316',
