@@ -408,9 +408,6 @@ abstract class Global {
 
 /*static const List rooms = [ 
     
-    //Corridor 3 Right
-
-    
   ];*/
 
 /*static const List corridorCheckPoint = [
