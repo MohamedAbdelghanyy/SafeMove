@@ -410,26 +410,6 @@ abstract class Global {
     
     //Corridor 2 Bottom
     {
-      'location': 'Female Rest Room 1',
-      'name': 'WC',
-      'icon': Icons.female_rounded,
-      'layout': 'vertical',
-      'status': true,
-      'position': [0.013, -0.209],
-      'door_position': [0.01, -0.242],
-      'corridor_position': [0.01, -0.256],
-    },
-    {
-      'location': 'Male Rest Room 1',
-      'name': 'WC',
-      'icon': Icons.male_rounded,
-      'layout': 'vertical',
-      'status': true,
-      'position': [-0.006, -0.209],
-      'door_position': [-0.0025, -0.242],
-      'corridor_position': [-0.0025, -0.256],
-    },
-    {
       'location': 'Buffet 1',
       'name': 'B',
       'icon': Icons.food_bank_rounded,
