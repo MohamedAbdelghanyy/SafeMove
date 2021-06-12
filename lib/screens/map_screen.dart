@@ -30,7 +30,7 @@ class _MapScreenState extends State<MapScreen> {
   }
 
   Future<void> startScanning() async {
-    Timer.periodic(Duration(seconds: 5), (Timer t) {
+    Timer.periodic(Duration(seconds: 10), (Timer t) {
       WiFiForIoTPlugin.isEnabled().then((val) async {
         if (val) {
           List<WifiNetwork> _scanResult;
@@ -39,7 +39,11 @@ class _MapScreenState extends State<MapScreen> {
             _scanResult = await WiFiForIoTPlugin.loadWifiList();
             print("Loaded!");
             if (_scanResult != null && _scanResult.length > 0) {
-              FingerprintModel.findGrid(_scanResult).then(
+              print('WIFI LIST FOUND! + ' + _scanResult.length.toString());
+              _scanResult.forEach((wifiNetwork) {
+                print(wifiNetwork.bssid + wifiNetwork.level.toString());
+              });
+              await FingerprintModel.findGrid(_scanResult).then(
                 (value) => {
                   if (value != null) {model.setLocationGrid(value)}
                 },

@@ -14,8 +14,9 @@ class DataManager {
   }
 
   static Future<void> getGridsData() async {
-    DataManager.gridsData =
-        Global.grids.map((grid) => gridsData.add(GridModel.fromMap(grid)));
+    for (int i = 0; i < Global.grids.length; i++) {
+      DataManager.gridsData.add(GridModel.fromMap(Global.grids[i]));
+    }
   }
 
   static Future<void> setSelfReportData(int selfReportStatus) async {
