@@ -101,7 +101,6 @@ class SignUpScreenState extends State<SignUpScreen> {
                     prefixIcon: Icon(Icons.email),
                     hintText: 'Email'),
                 style: TextStyle(fontSize: 18.0, color: Colors.black),
-                obscureText: true,
               ),
               SizedBox(
                 height: 10,
