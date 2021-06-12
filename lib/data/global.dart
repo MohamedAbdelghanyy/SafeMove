@@ -406,10 +406,3 @@ abstract class Global {
   ];
 }
 
-/*static const List corridorCheckPoint = [
-    
-    
-  
-    
-  ];
-  */
