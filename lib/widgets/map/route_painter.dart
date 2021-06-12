@@ -35,7 +35,7 @@ class RoutePainter extends CustomPainter {
     canvas.drawLine(Offset(cSize * aa[0], cSize * aa[1]),
         Offset(cSize * aa[0], cSize * aa[1]), paintt);*/
 
-
+    //Draw route from door position to corridor position of ROOM X
     canvas.drawLine(
         Offset(cSize * routeData.roomX.doorPosition[0],
             cSize * routeData.roomX.doorPosition[1]),
@@ -43,6 +43,7 @@ class RoutePainter extends CustomPainter {
             cSize * routeData.roomX.corridorPosition[1]),
         paintt);
 
+    //Draw route from door position to corridor position of ROOM Y
     canvas.drawLine(
         Offset(cSize * routeData.roomY.doorPosition[0],
             cSize * routeData.roomY.doorPosition[1]),
@@ -50,6 +51,7 @@ class RoutePainter extends CustomPainter {
             cSize * routeData.roomY.corridorPosition[1]),
         paintt);
 
+    // Draw route
     for (int i = 0; i < model.rooms.length; i++) {
       if (routeData.roomX.corridorPosition[0] ==
               model.rooms[i].corridorPosition[0] &&
