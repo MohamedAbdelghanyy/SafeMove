@@ -1,6 +1,5 @@
 import 'package:SafeMove/data/global.dart';
 import 'package:SafeMove/screens/profile.dart';
-import 'package:SafeMove/screens/self_report.dart';
 import 'package:SafeMove/screens/sign_in.dart';
 import 'package:SafeMove/screens/symptoms.dart';
 import 'package:SafeMove/screens/wifi_screen.dart';

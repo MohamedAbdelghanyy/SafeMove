@@ -1,5 +1,5 @@
 import 'package:SafeMove/data/global.dart';
-import 'package:SafeMove/models/floorplan_model.dart';
+import 'package:SafeMove/models/map_model.dart';
 import 'package:SafeMove/screens/map_screen.dart';
 import 'package:SafeMove/screens/sign_in.dart';
 import 'package:SafeMove/screens/admin_view.dart';
@@ -27,8 +27,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider<FloorPlanModel>(
-            create: (context) => FloorPlanModel()),
+        ChangeNotifierProvider<MapModel>(create: (context) => MapModel()),
       ],
       child: MaterialApp(
         title: 'Safe Move',

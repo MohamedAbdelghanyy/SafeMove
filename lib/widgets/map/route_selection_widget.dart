@@ -1,4 +1,4 @@
-import 'package:SafeMove/models/floorplan_model.dart';
+import 'package:SafeMove/models/map_model.dart';
 import 'package:SafeMove/models/room_data_model.dart';
 import 'package:SafeMove/screens/rooms_screen.dart';
 import 'package:dropdown_search/dropdown_search.dart';
@@ -59,7 +59,7 @@ class _RouteSelectionWidgetState extends State<RouteSelectionWidget> {
 
   @override
   Widget build(BuildContext context) {
-    model = Provider.of<FloorPlanModel>(context);
+    model = Provider.of<MapModel>(context);
     return Column(
       children: [
         Padding(

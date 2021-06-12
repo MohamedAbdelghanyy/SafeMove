@@ -1,5 +1,5 @@
 import 'package:SafeMove/data/global.dart';
-import 'package:SafeMove/models/floorplan_model.dart';
+import 'package:SafeMove/models/map_model.dart';
 import 'package:SafeMove/widgets/map/route_painter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +14,7 @@ class _MapWidgetState extends State<MapWidget> {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-    final model = Provider.of<FloorPlanModel>(context);
+    final model = Provider.of<MapModel>(context);
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(25),

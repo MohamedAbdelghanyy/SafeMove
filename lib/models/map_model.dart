@@ -1,7 +1,5 @@
-import 'package:SafeMove/data/global.dart';
 import 'package:SafeMove/models/grid_model.dart';
 import 'package:SafeMove/models/room_data_model.dart';
-import 'package:SafeMove/services/data_manager.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +13,7 @@ class Pos {
   }
 }
 
-class FloorPlanModel extends ChangeNotifier {
+class MapModel extends ChangeNotifier {
   double _scale = 1.0;
   double _previousScale = 1.0;
   Pos _pos = Pos(0.0, 0.0);

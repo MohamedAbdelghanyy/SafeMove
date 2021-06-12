@@ -1,5 +1,5 @@
 import 'package:SafeMove/data/global.dart';
-import 'package:SafeMove/models/floorplan_model.dart';
+import 'package:SafeMove/models/map_model.dart';
 import 'package:SafeMove/models/room_data_model.dart';
 import 'package:SafeMove/services/data_manager.dart';
 import 'package:flip_card/flip_card.dart';
@@ -55,7 +55,7 @@ class _RoomsScreenState extends State<RoomsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    model = Provider.of<FloorPlanModel>(context);
+    model = Provider.of<MapModel>(context);
     return Scaffold(
       appBar: AppBar(
         title: Text("Rooms Crowding"),

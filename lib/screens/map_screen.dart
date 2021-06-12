@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:SafeMove/data/global.dart';
 import 'package:SafeMove/models/fingerprint_model.dart';
-import 'package:SafeMove/models/floorplan_model.dart';
+import 'package:SafeMove/models/map_model.dart';
 import 'package:SafeMove/screens/main_drawer.dart';
 import 'package:SafeMove/screens/rooms_screen.dart';
 import 'package:SafeMove/widgets/map/map_widget.dart';
@@ -62,7 +62,7 @@ class _MapScreenState extends State<MapScreen> {
 
   @override
   Widget build(BuildContext context) {
-    model = Provider.of<FloorPlanModel>(context);
+    model = Provider.of<MapModel>(context);
     return Scaffold(
       backgroundColor: Global.primaryColor,
       appBar: AppBar(

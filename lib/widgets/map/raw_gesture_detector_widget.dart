@@ -1,5 +1,4 @@
-import 'package:SafeMove/data/global.dart';
-import 'package:SafeMove/models/floorplan_model.dart';
+import 'package:SafeMove/models/map_model.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -28,7 +27,7 @@ class RawGestureDetectorWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-    final model = Provider.of<FloorPlanModel>(context);
+    final model = Provider.of<MapModel>(context);
 
     final _gestures = {
       DragAndScale: GestureRecognizerFactoryWithHandlers<DragAndScale>(
