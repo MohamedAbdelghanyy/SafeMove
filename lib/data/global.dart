@@ -410,16 +410,6 @@ abstract class Global {
     
     //Corridor 2 Bottom
     {
-      'location': 'Buffet 1',
-      'name': 'B',
-      'icon': Icons.food_bank_rounded,
-      'layout': 'vertical',
-      'status': true,
-      'position': [-0.034, -0.209],
-      'door_position': [-0.034, -0.242],
-      'corridor_position': [-0.034, -0.256],
-    },
-    {
       'location': 'Room 320',
       'name': '320',
       'icon': Icons.menu_book_rounded,
