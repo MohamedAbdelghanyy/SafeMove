@@ -410,27 +410,7 @@ abstract class Global {
     
     //Corridor 3 Left
     
-    {
-      'location': 'Room 331',
-      'name': '331',
-      'icon': Icons.menu_book_rounded,
-      'layout': 'horizontal',
-      'status': true,
-      'position': [-0.374, 0.299],
-      'door_position': [-0.341, 0.27],
-      'corridor_position': [-0.329, 0.27],
-    },
-    {
-      'location': 'Room 330',
-      'name': '330',
-      'icon': Icons.menu_book_rounded,
-      'layout': 'horizontal',
-      'status': true,
-      'position': [-0.374, 0.375],
-      'door_position': [-0.341, 0.344],
-      'corridor_position': [-0.329, 0.344],
-    },
-
+    
     //Corridor 3 Right
     {
       'location': 'Female Rest Room',
