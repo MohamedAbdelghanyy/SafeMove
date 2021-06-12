@@ -35,6 +35,13 @@ class SignUpScreenState extends State<SignUpScreen> {
         child: Padding(
           padding: EdgeInsets.all(30),
           child: ListView(children: [
+            Padding(
+              padding: EdgeInsets.all(50),
+              child: Image(
+                image: AssetImage("assets/images/logo.png"),
+                height: 175,
+              ),
+            ),
             Container(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -42,13 +49,7 @@ class SignUpScreenState extends State<SignUpScreen> {
                   //Logo section
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Image(
-                        image: AssetImage("assets/images/logo.png"),
-                        width: 350,
-                        height: 250,
-                      )
-                    ],
+                    children: <Widget>[],
                   ),
                   //Email textfield
                   Form(
