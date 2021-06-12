@@ -406,10 +406,7 @@ abstract class Global {
   ];
 }
 
-/*static const List rooms = [
-    
-    //Corridor 3 Left
-    
+/*static const List rooms = [ 
     
     //Corridor 3 Right
     {
