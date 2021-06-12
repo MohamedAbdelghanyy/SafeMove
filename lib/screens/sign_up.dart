@@ -72,6 +72,94 @@ class SignUpScreenState extends State<SignUpScreen> {
                       hintText: 'Full Name'),
                   style: TextStyle(fontSize: 18.0, color: Colors.black),
                 ),
+                SizedBox(
+                  height: 10,
+                ),
+                TextFormField(
+                  onSaved: (value) {
+                    _email = value;
+                  },
+                  controller: emailController,
+                  validator: (value) {
+                    if (value.isEmpty) {
+                      return 'Please enter your email';
+                    }
+                    if (!value.contains("@") || !value.contains(".")) {
+                      return 'Please enter email in the correct format';
+                    }
+                    return null;
+                  },
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.grey[500]),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(50),
+                        ),
+                      ),
+                      fillColor: Colors.white,
+                      filled: true,
+                      prefixIcon: Icon(Icons.email),
+                      hintText: 'Email'),
+                  style: TextStyle(fontSize: 18.0, color: Colors.black),
+                  obscureText: true,
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                TextFormField(
+                    onSaved: (value) {
+                      _phone = value;
+                    },
+                    validator: (value) {
+                      if (value.isEmpty) {
+                        return 'Please enter your mobile number';
+                      }
+                      if (value.length < 11) {
+                        return 'Please enter 11 numbers';
+                      }
+                      return null;
+                    },
+                    decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[500]),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(50),
+                          ),
+                        ),
+                        fillColor: Colors.white,
+                        filled: true,
+                        prefixIcon: Icon(Icons.add_call),
+                        hintText: 'Mobile number'),
+                    style: TextStyle(fontSize: 18.0, color: Colors.black)),
+                SizedBox(
+                  height: 10,
+                ),
+                TextFormField(
+                  onSaved: (value) {
+                    _password = value;
+                  },
+                  controller: passwordController,
+                  validator: (value) {
+                    if (value.isEmpty) {
+                      return 'Please enter your password';
+                    }
+                    if (value.length < 6) {
+                      return 'Minimum length for password 6 characters';
+                    }
+                    return null;
+                  },
+                  decoration: InputDecoration(
+                      enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[500]),
+                          borderRadius: BorderRadius.all(Radius.circular(50))),
+                      focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.green[300]),
+                          borderRadius: BorderRadius.all(Radius.circular(50))),
+                      prefixIcon: Icon(Icons.lock),
+                      hintText: 'Password'),
+                  style: TextStyle(fontSize: 20.0, color: Colors.black),
+                  obscureText: true,
+                ),
                 Container(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -108,45 +196,13 @@ class SignUpScreenState extends State<SignUpScreen> {
                                     padding: EdgeInsets.only(
                                         left: 20.0, right: 20.0, bottom: 10),
                                     child: Container(
-                                        alignment: Alignment.center,
-                                        height: 60.0,
-                                        decoration: BoxDecoration(
-                                            color: Colors.white,
-                                            borderRadius:
-                                                BorderRadius.circular(50.0)),
-                                        child: TextFormField(
-                                            onSaved: (value) {
-                                              _email = value;
-                                            },
-                                            controller: emailController,
-                                            validator: (value) {
-                                              if (value.isEmpty) {
-                                                return 'Please enter your email';
-                                              }
-                                              if (!value.contains("@") ||
-                                                  !value.contains(".")) {
-                                                return 'Please enter email in the correct format';
-                                              }
-                                              return null;
-                                            },
-                                            decoration: InputDecoration(
-                                                enabledBorder: OutlineInputBorder(
-                                                    borderSide: BorderSide(
-                                                        color:
-                                                            Colors.grey[500]),
-                                                    borderRadius: BorderRadius.all(
-                                                        Radius.circular(50))),
-                                                focusedBorder: OutlineInputBorder(
-                                                    borderSide: BorderSide(
-                                                        color:
-                                                            Colors.green[300]),
-                                                    borderRadius: BorderRadius.all(
-                                                        Radius.circular(50))),
-                                                prefixIcon: Icon(Icons.email),
-                                                hintText: 'Email'),
-                                            style: TextStyle(
-                                                fontSize: 20.0,
-                                                color: Colors.black))),
+                                      alignment: Alignment.center,
+                                      height: 60.0,
+                                      decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius:
+                                              BorderRadius.circular(50.0)),
+                                    ),
                                   ),
                                 )
                               ],
@@ -160,44 +216,14 @@ class SignUpScreenState extends State<SignUpScreen> {
                                     padding: EdgeInsets.only(
                                         left: 20.0, right: 20.0, bottom: 10.0),
                                     child: Container(
-                                        alignment: Alignment.center,
-                                        height: 60.0,
-                                        decoration: BoxDecoration(
-                                            color: Colors.white,
-                                            borderRadius:
-                                                BorderRadius.circular(50.0)),
-                                        child: TextFormField(
-                                            onSaved: (value) {
-                                              _phone = value;
-                                            },
-                                            validator: (value) {
-                                              if (value.isEmpty) {
-                                                return 'Please enter your mobile number';
-                                              }
-                                              if (value.length < 11) {
-                                                return 'Please enter 11 numbers';
-                                              }
-                                              return null;
-                                            },
-                                            decoration: InputDecoration(
-                                                enabledBorder: OutlineInputBorder(
-                                                    borderSide: BorderSide(
-                                                        color:
-                                                            Colors.grey[500]),
-                                                    borderRadius: BorderRadius.all(
-                                                        Radius.circular(50))),
-                                                focusedBorder: OutlineInputBorder(
-                                                    borderSide: BorderSide(
-                                                        color:
-                                                            Colors.green[300]),
-                                                    borderRadius: BorderRadius.all(
-                                                        Radius.circular(50))),
-                                                prefixIcon:
-                                                    Icon(Icons.add_call),
-                                                hintText: 'Mobile number'),
-                                            style: TextStyle(
-                                                fontSize: 20.0,
-                                                color: Colors.black))),
+                                      alignment: Alignment.center,
+                                      height: 60.0,
+                                      decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius:
+                                              BorderRadius.circular(50.0)),
+                                      child: Text('data'),
+                                    ),
                                   ),
                                 )
                               ],
@@ -216,40 +242,7 @@ class SignUpScreenState extends State<SignUpScreen> {
                                             color: Colors.white,
                                             borderRadius:
                                                 BorderRadius.circular(50.0)),
-                                        child: TextFormField(
-                                          onSaved: (value) {
-                                            _password = value;
-                                          },
-                                          controller: passwordController,
-                                          validator: (value) {
-                                            if (value.isEmpty) {
-                                              return 'Please enter your password';
-                                            }
-                                            if (value.length < 6) {
-                                              return 'Minimum length for password 6 characters';
-                                            }
-                                            return null;
-                                          },
-                                          decoration: InputDecoration(
-                                              enabledBorder: OutlineInputBorder(
-                                                  borderSide: BorderSide(
-                                                      color: Colors.grey[500]),
-                                                  borderRadius:
-                                                      BorderRadius.all(
-                                                          Radius.circular(50))),
-                                              focusedBorder: OutlineInputBorder(
-                                                  borderSide: BorderSide(
-                                                      color: Colors.green[300]),
-                                                  borderRadius:
-                                                      BorderRadius.all(
-                                                          Radius.circular(50))),
-                                              prefixIcon: Icon(Icons.lock),
-                                              hintText: 'Password'),
-                                          style: TextStyle(
-                                              fontSize: 20.0,
-                                              color: Colors.black),
-                                          obscureText: true,
-                                        )),
+                                        child: Text("data")),
                                   ),
                                 )
                               ],
