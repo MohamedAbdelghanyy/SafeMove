@@ -408,20 +408,7 @@ abstract class Global {
 
 /*static const List corridorCheckPoint = [
     
-    
-    
-    {
-      'position': [-0.034, -0.256], // B done
-    },
-    {
-      'position': [-0.061, -0.256], // 308 done
-    },
-    {
-      'position': [-0.078, -0.256], // 320 done
-    },
-    {
-      'position': [-0.1, -0.256], // 307 done
-    },
+  
     {
       'position': [-0.117, -0.256], // 321 done
     },
