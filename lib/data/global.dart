@@ -376,7 +376,7 @@ abstract class Global {
       'fingerprint_R1': ['ac:f2:c5:97:33:a9', -59],
       'fingerprint_R2': ['40:e3:d6:e0:13:30', -64],
       'fingerprint_R3': ['40:e3:d6:e0:25:50', -73],
-      'corridor_position': [-0.078, -0.256],
+      'corridor_position': [0.036, -0.294],
     },
     {
       'grid_id': 32,
@@ -387,7 +387,7 @@ abstract class Global {
       'fingerprint_R1': ['ac:f2:c5:97:33:a9', -65],
       'fingerprint_R2': ['40:e3:d6:e0:13:30', -52],
       'fingerprint_R3': ['40:e3:d6:e0:25:50', -60],
-      'corridor_position': [-0.078, -0.256],
+      'corridor_position': [0.036, -0.274],
     },
     {
       'grid_id': 33,
@@ -398,7 +398,7 @@ abstract class Global {
       'fingerprint_R1': ['ac:f2:c5:97:33:a9', -72],
       'fingerprint_R2': ['40:e3:d6:e0:13:30', -49],
       'fingerprint_R3': ['40:e3:d6:e0:25:50', -60],
-      'corridor_position': [-0.078, -0.256],
+      'corridor_position': [0.036, -0.254],
     },
     {
       'grid_id': 34,
@@ -409,7 +409,7 @@ abstract class Global {
       'fingerprint_R1': ['40:e3:d6:e0:13:30', -50],
       'fingerprint_R2': ['40:e3:d6:e0:13:20', -73],
       'fingerprint_R3': ['40:e3:d6:e0:25:50', -50],
-      'corridor_position': [-0.078, -0.256],
+      'corridor_position': [0.036, -0.234],
     },
   ];
 }
