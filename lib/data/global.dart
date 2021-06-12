@@ -413,18 +413,6 @@ abstract class Global {
       'position': [0.06, -0.288], // 311
     },
     {
-      'position': [0.0362, -0.288], // Turn 1
-    },
-    {
-      'position': [0.0362, -0.256], // Turn 2
-    },
-    {
-      'position': [0.01, -0.256], // WCF
-    },
-    {
-      'position': [-0.0025, -0.256], // WCM
-    },
-    {
       'position': [-0.005, -0.256], // 310
     },
     {
