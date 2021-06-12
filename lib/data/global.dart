@@ -36,7 +36,7 @@ abstract class Global {
       'fingerprint_R1': ['ac:f2:c5:97:33:a9', -69],
       'fingerprint_R2': ['d0:d0:fd:66:4a:65', -83],
       'fingerprint_R3': ['00:12:17:7a:bd:81', -84],
-      'corridor_position': [0.415, -0.288],
+      'corridor_position': [0.39, -0.288],
     },
     {
       'grid_id': 4,
@@ -58,7 +58,7 @@ abstract class Global {
       'fingerprint_R1': ['ac:f2:c5:97:33:a9', -63],
       'fingerprint_R2': ['50:57:a8:67:a7:73', -88],
       'fingerprint_R3': ['d4:8c:b5:67:e8:af', -89],
-      'corridor_position': [0.39, -0.288],
+      'corridor_position': [0.415, -0.288],
     },
     // ====== TEST GRID ======
     {
@@ -93,7 +93,7 @@ abstract class Global {
       'fingerprint_R1': ['ac:f2:c5:97:33:a9', -58],
       'fingerprint_R2': ['40:e3:d6:e0:13:30', -84],
       'fingerprint_R3': ['d4:8c:b5:67:e8:af', -85],
-      'corridor_position': [-0.078, -0.256],
+      'corridor_position': [0.375, -0.288],
     },
     {
       'grid_id': 7,
@@ -405,4 +405,3 @@ abstract class Global {
     },
   ];
 }
-
