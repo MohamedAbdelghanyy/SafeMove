@@ -312,6 +312,7 @@ abstract class Global {
       'corridor_position': [0.09, -0.288],
     },
     {
+      //unused
       'grid_id': 26,
       'status': true,
       'fingerprint_L1': ['ac:f2:c5:97:33:a9', -69],
