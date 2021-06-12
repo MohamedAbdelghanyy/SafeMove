@@ -433,22 +433,11 @@ abstract class Global {
       'position': [-0.329, 0.15], // 332 done
     },
     {
-      'position': [-0.329, 0.205], // 327 TA done
-    },
-    {
-      'position': [-0.329, 0.252], // 327 done
-    },
-    {
       'position': [-0.329, 0.27], // 331 done
-    },
-    {
-      'position': [-0.329, 0.325], // 328 done
     },
     {
       'position': [-0.329, 0.344], // 330 done
     },
-    {
-      'position': [-0.329, 0.399], // 329 done
-    }
+    
   ];
   */
