@@ -26,16 +26,13 @@ dependencies:
   firebase_auth: ^0.18.3
   firebase_core : ^0.5.0+1
   firebase_database: ^4.4.0
-  flutter_svg: ^0.22.0
   fluttertoast: ^7.1.6
   slimy_card: ^1.0.4
   google_fonts: ^1.0.0
   flip_card: ^0.4.4
   shared_preferences: ^0.5.12+4
-  wifi_flutter: ^0.1.0+1
   wifi_iot: ^0.3.3
   flutter_spinkit: "^4.1.2"
-  wifi_info_plugin: ^1.1.5
   webview_flutter: ^2.0.2
   provider: ^4.3.1
   dropdown_search: ^0.6.1
