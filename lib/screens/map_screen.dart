@@ -30,7 +30,7 @@ class _MapScreenState extends State<MapScreen> {
   }
 
   Future<void> startScanning() async {
-    Timer.periodic(Duration(seconds: 10), (Timer t) {
+    Timer.periodic(Duration(seconds: 5), (Timer t) {
       WiFiForIoTPlugin.isEnabled().then((val) async {
         if (val) {
           List<WifiNetwork> _scanResult;

@@ -34,7 +34,6 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           buttonTheme: ButtonThemeData(buttonColor: Global.secondaryColor),
-          primaryColor: Global.primaryColor,
         ),
         initialRoute: SplashScreen.routeName,
         routes: {

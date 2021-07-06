@@ -413,5 +413,53 @@ abstract class Global {
       'fingerprint_R3': ['40:e3:d6:e0:25:50', -50],
       'corridor_position': [0.036, -0.234],
     },
+    //311 grid 1,2
+    {
+      'grid_id': 35,
+      'status': true,
+      'fingerprint_L1': ['ac:f2:c5:97:33:1f', -68],
+      'fingerprint_L2': ['ac:f2:c5:97:33:a9', -80],
+      'fingerprint_L3': ['40:e3:d6:e0:13:30', -88],
+      'fingerprint_R1': ['ac:f2:c5:97:33:1f', -69],
+      'fingerprint_R2': ['ac:f2:c5:97:33:a9', -78],
+      'fingerprint_R3': ['40:e3:d6:e0:13:30', -90],
+      'corridor_position': [0.06, -0.33],
+    },
+    //311 grid 3,4
+    {
+      'grid_id': 36,
+      'status': true,
+      'fingerprint_L1': ['ac:f2:c5:97:33:1f', -70],
+      'fingerprint_L2': ['ac:f2:c5:97:33:a9', -82],
+      'fingerprint_L3': ['40:e3:d6:e0:13:30', -85],
+      'fingerprint_R1': ['ac:f2:c5:97:33:1f', -72],
+      'fingerprint_R2': ['ac:f2:c5:97:33:a9', -81],
+      'fingerprint_R3': ['40:e3:d6:e0:13:30', -89],
+      'corridor_position': [0.075, -0.33],
+    },
+    //311 grid 5,6
+    {
+      'grid_id': 37,
+      'status': true,
+      'fingerprint_L1': ['ac:f2:c5:97:33:1f', -69],
+      'fingerprint_L2': ['ac:f2:c5:97:33:a9', -83],
+      'fingerprint_L3': ['40:e3:d6:e0:13:30', -84],
+      'fingerprint_R1': ['ac:f2:c5:97:33:1f', -76],
+      'fingerprint_R2': ['ac:f2:c5:97:33:a9', -77],
+      'fingerprint_R3': ['40:e3:d6:e0:13:30', -89],
+      'corridor_position': [0.09, -0.33],
+    },
+    //311 grid 7,8
+    {
+      'grid_id': 38,
+      'status': true,
+      'fingerprint_L1': ['ac:f2:c5:97:33:1f', -72],
+      'fingerprint_L2': ['ac:f2:c5:97:33:a9', -84],
+      'fingerprint_L3': ['40:e3:d6:e0:13:30', -84],
+      'fingerprint_R1': ['ac:f2:c5:97:33:1f', -74],
+      'fingerprint_R2': ['ac:f2:c5:97:33:a9', -78],
+      'fingerprint_R3': ['40:e3:d6:e0:13:30', -91],
+      'corridor_position': [0.105, -0.33],
+    },
   ];
 }
