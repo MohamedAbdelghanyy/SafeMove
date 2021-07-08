@@ -463,7 +463,7 @@ abstract class Global {
     },
     //322 grid 1,2
     {
-      'grid_id': 38,
+      'grid_id': 39,
       'status': true,
       'fingerprint_L1': ['40:e3:d6:e0:25:50', -70],
       'fingerprint_L2': ['40:e3:d6:e0:13:20', -70],
@@ -475,7 +475,7 @@ abstract class Global {
     },
     //322 grid 3,4
     {
-      'grid_id': 38,
+      'grid_id': 40,
       'status': true,
       'fingerprint_L1': ['94:b4:0f:8d:29:30', -72],
       'fingerprint_L2': ['40:e3:d6:e0:25:50', -73],
@@ -487,7 +487,7 @@ abstract class Global {
     },
     //307 grid 1,2
     {
-      'grid_id': 38,
+      'grid_id': 41,
       'status': true,
       'fingerprint_L1': ['40:e3:d6:e0:13:20', -67],
       'fingerprint_L2': ['40:e3:d6:e0:13:30', -71],
@@ -499,7 +499,7 @@ abstract class Global {
     },
     //307 grid 3,4
     {
-      'grid_id': 38,
+      'grid_id': 42,
       'status': true,
       'fingerprint_L1': ['40:e3:d6:e0:13:30', -65],
       'fingerprint_L2': ['40:e3:d6:e0:13:20', -73],
