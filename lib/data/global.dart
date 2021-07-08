@@ -482,8 +482,20 @@ abstract class Global {
       'fingerprint_L3': ['40:e3:d6:e0:13:30', -75],
       'fingerprint_R1': ['94:b4:0f:8d:29:30', -81],
       'fingerprint_R2': ['94:b4:0f:8d:29:20', -71],
-      'fingerprint_R3': ['40.3:d6:e0:25:50', -77],
+      'fingerprint_R3': ['40:e3:d6:e0:25:50', -77],
       'corridor_position': [-0.15, -0.2],
+    },
+    //307 grid 1,2
+    {
+      'grid_id': 38,
+      'status': true,
+      'fingerprint_L1': ['40:e3:d6:e0:13:20', -67],
+      'fingerprint_L2': ['40:e3:d6:e0:13:30', -71],
+      'fingerprint_L3': ['ac:f2:c5:97:33:1f', -87],
+      'fingerprint_R1': ['40:e3:d6:e0:13:30', -61],
+      'fingerprint_R2': ['ac:f2:c5:97:33:1f', -85],
+      'fingerprint_R3': ['40:e3:d6:de:4f:20', -86],
+      'corridor_position': [-0.108, -0.29],
     },
   ];
 }
