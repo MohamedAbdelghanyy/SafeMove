@@ -25,7 +25,7 @@ class RoutePainter extends CustomPainter {
     canvas.drawLine(Offset(cSize * xy[0], cSize * xy[1]),
         Offset(cSize * xy[0], cSize * xy[1]), paintt);
 
-    List xx = [0.075, -0.33];
+    List xx = [-0.15, -0.2];
     print('[' + xx[0].toString() + ', ' + xx[1].toString());
     canvas.drawLine(Offset(cSize * xx[0], cSize * xx[1]),
         Offset(cSize * xx[0], cSize * xx[1]), paintt);
