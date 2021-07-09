@@ -896,5 +896,53 @@ abstract class Global {
       'fingerprint_R3': ['40:e3:d6:e0:25:50', -53],
       'corridor_position': [-0.115, -0.255],
     },
+    //corridor 2 || 85,86
+    {
+      'grid_id': 75,
+      'status': true,
+      'fingerprint_L1': ['40:e3:d6:e0:13:30', -56],
+      'fingerprint_L2': ['40:e3:d6:e0:25:40', -56],
+      'fingerprint_L3': ['40:e3:d6:e0:25:50', -53],
+      'fingerprint_R1': ['40:e3:d6:e0:13:30', -50],
+      'fingerprint_R2': ['40:e3:d6:e0:13:20', -50],
+      'fingerprint_R3': ['40:e3:d6:e0:25:50', -53],
+      'corridor_position': [-0.134, -0.255],
+    },
+    //corridor 2 || 87,88
+    {
+      'grid_id': 76,
+      'status': true,
+      'fingerprint_L1': ['40:e3:d6:e0:13:30', -64],
+      'fingerprint_L2': ['40:e3:d6:e0:25:40', -47],
+      'fingerprint_L3': ['40:e3:d6:e0:25:50', -48],
+      'fingerprint_R1': ['40:e3:d6:e0:13:30', -54],
+      'fingerprint_R2': ['40:e3:d6:e0:25:40', -57],
+      'fingerprint_R3': ['40:e3:d6:e0:25:50', -48],
+      'corridor_position': [-0.154, -0.255],
+    },
+    //corridor 2 || 89,90
+    {
+      'grid_id': 77,
+      'status': true,
+      'fingerprint_L1': ['40:e3:d6:e0:13:30', -66],
+      'fingerprint_L2': ['40:e3:d6:e0:25:40', -54],
+      'fingerprint_L3': ['40:e3:d6:e0:25:50', -48],
+      'fingerprint_R1': ['40:e3:d6:e0:13:30', -58],
+      'fingerprint_R2': ['40:e3:d6:e0:25:40', -51],
+      'fingerprint_R3': ['40:e3:d6:e0:25:50', -45],
+      'corridor_position': [-0.175, -0.255],
+    },
+    //corridor 2 || 91,92
+    {
+      'grid_id': 78,
+      'status': true,
+      'fingerprint_L1': ['40:e3:d6:e0:13:30', -62],
+      'fingerprint_L2': ['40:e3:d6:e0:25:40', -62],
+      'fingerprint_L3': ['40:e3:d6:e0:25:50', -46],
+      'fingerprint_R1': ['40:e3:d6:e0:13:30', -51],
+      'fingerprint_R2': ['40:e3:d6:e0:25:40', -58],
+      'fingerprint_R3': ['40:e3:d6:e0:25:50', -45],
+      'corridor_position': [-0.195, -0.255],
+    },
   ];
 }
