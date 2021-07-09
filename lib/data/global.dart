@@ -607,7 +607,7 @@ abstract class Global {
     },
     //315 grid 1,2
     {
-      'grid_id': 50,
+      'grid_id': 51,
       'status': true,
       'fingerprint_L1': ['ac:f2:c5:97:33:a9', -80],
       'fingerprint_L2': ['1c:df:0f:e4:94:cd', -90],
@@ -615,11 +615,11 @@ abstract class Global {
       'fingerprint_R1': ['ac:f2:c5:97:33:a9', -82],
       'fingerprint_R2': ['00:12:17:7a:bd:81', -93],
       'fingerprint_R3': ['ac:f2:c5:97:33:11', -96],
-      'corridor_position': [0.305, -0.33],
+      'corridor_position': [0.335, -0.33],
     },
     //315 grid 3,4
     {
-      'grid_id': 50,
+      'grid_id': 52,
       'status': true,
       'fingerprint_L1': ['ac:f2:c5:97:33:a9', -86],
       'fingerprint_L2': ['1a:48:ca:28:2c:6e', -93],
@@ -627,11 +627,11 @@ abstract class Global {
       'fingerprint_R1': ['ac:f2:c5:97:33:a9', -88],
       'fingerprint_R2': ['00:12:17:7a:bd:81', -92],
       'fingerprint_R3': ['d4:8c:b5:67:e8:af', -94],
-      'corridor_position': [0.305, -0.33],
+      'corridor_position': [0.35, -0.33],
     },
     //315 grid 5,6
     {
-      'grid_id': 50,
+      'grid_id': 53,
       'status': true,
       'fingerprint_L1': ['ac:f2:c5:97:33:a9', -76],
       'fingerprint_L2': ['00:12:17:7a:bd:81', -94],
@@ -639,11 +639,11 @@ abstract class Global {
       'fingerprint_R1': ['ac:f2:c5:97:33:a9', -81],
       'fingerprint_R2': ['d4:8c:b5:67:e8:af', -95],
       'fingerprint_R3': ['d0:d0:fd:66:4a:65', -96],
-      'corridor_position': [0.305, -0.33],
+      'corridor_position': [0.365, -0.33],
     },
     //315 grid 7,8
     {
-      'grid_id': 50,
+      'grid_id': 54,
       'status': true,
       'fingerprint_L1': ['ac:f2:c5:97:33:a9', -80],
       'fingerprint_L2': ['00:12:17:7a:bd:81', -96],
@@ -651,7 +651,7 @@ abstract class Global {
       'fingerprint_R1': ['ac:f2:c5:97:33:a9', -79],
       'fingerprint_R2': ['02:72:83:83:45:34', -88],
       'fingerprint_R3': ['d0:d0:fd:66:4a:65', -94],
-      'corridor_position': [0.305, -0.33],
+      'corridor_position': [0.38, -0.33],
     },
     //316 grid 1,2
     {
