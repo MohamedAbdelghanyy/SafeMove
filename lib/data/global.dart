@@ -655,7 +655,7 @@ abstract class Global {
     },
     //316 grid 1,2
     {
-      'grid_id': 50,
+      'grid_id': 55,
       'status': true,
       'fingerprint_L1': ['ac:f2:c5:97:33:a9', -78],
       'fingerprint_L2': ['1c:df:0f:e4:94:cd', -84],
@@ -663,11 +663,11 @@ abstract class Global {
       'fingerprint_R1': ['ac:f2:c5:97:33:a9', -68],
       'fingerprint_R2': ['1c:df:0f:e4:94:cd', -89],
       'fingerprint_R3': ['d0:d0:fd:66:4a:65', -93],
-      'corridor_position': [0.305, -0.33],
+      'corridor_position': [0.378, -0.245],
     },
     //316 grid 3,4
     {
-      'grid_id': 50,
+      'grid_id': 56,
       'status': true,
       'fingerprint_L1': ['ac:f2:c5:97:33:a9', -86],
       'fingerprint_L2': ['1a:48:ca:28:2c:6e', -93],
@@ -675,11 +675,11 @@ abstract class Global {
       'fingerprint_R1': ['ac:f2:c5:97:33:a9', -88],
       'fingerprint_R2': ['00:12:17:7a:bd:81', -92],
       'fingerprint_R3': ['d4:8c:b5:67:e8:af', -94],
-      'corridor_position': [0.305, -0.33],
+      'corridor_position': [0.362, -0.245],
     },
     //316 grid 5,6
     {
-      'grid_id': 50,
+      'grid_id': 57,
       'status': true,
       'fingerprint_L1': ['ac:f2:c5:97:33:a9', -76],
       'fingerprint_L2': ['00:12:17:7a:bd:81', -94],
@@ -687,11 +687,11 @@ abstract class Global {
       'fingerprint_R1': ['ac:f2:c5:97:33:a9', -81],
       'fingerprint_R2': ['d4:8c:b5:67:e8:af', -95],
       'fingerprint_R3': ['d0:d0:fd:66:4a:65', -96],
-      'corridor_position': [0.305, -0.33],
+      'corridor_position': [0.347, -0.245],
     },
     //316 grid 7,8
     {
-      'grid_id': 50,
+      'grid_id': 58,
       'status': true,
       'fingerprint_L1': ['ac:f2:c5:97:33:a9', -79],
       'fingerprint_L2': ['d0:d0:fd:66:4a:65', -94],
@@ -699,7 +699,7 @@ abstract class Global {
       'fingerprint_R1': ['ac:f2:c5:97:33:a9', -80],
       'fingerprint_R2': ['00:12:17:7a:bd:81', -96],
       'fingerprint_R3': ['d0:d0:fd:66:4a:65', -91],
-      'corridor_position': [0.305, -0.33],
+      'corridor_position': [0.33, -0.245],
     },
   ];
 }
