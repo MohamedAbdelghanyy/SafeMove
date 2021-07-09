@@ -523,7 +523,7 @@ abstract class Global {
     },
     //312 grid 3,4
     {
-      'grid_id': 43,
+      'grid_id': 44,
       'status': true,
       'fingerprint_L1': ['ac:f2:c5:97:33:a9', -82],
       'fingerprint_L2': ['ac:f2:c5:97:33:1f', -89],
@@ -535,7 +535,7 @@ abstract class Global {
     },
     //312 grid 5,6
     {
-      'grid_id': 43,
+      'grid_id': 45,
       'status': true,
       'fingerprint_L1': ['ac:f2:c5:97:33:a9', -75],
       'fingerprint_L2': ['ac:f2:c5:97:33:1f', -87],
@@ -547,7 +547,7 @@ abstract class Global {
     },
     //312 grid 7,8
     {
-      'grid_id': 43,
+      'grid_id': 46,
       'status': true,
       'fingerprint_L1': ['ac:f2:c5:97:33:a9', -74],
       'fingerprint_L2': ['ac:f2:c5:97:33:1f', -88],
@@ -559,7 +559,7 @@ abstract class Global {
     },
     //314 grid 1,2
     {
-      'grid_id': 43,
+      'grid_id': 47,
       'status': true,
       'fingerprint_L1': ['ac:f2:c5:97:33:a9', -76],
       'fingerprint_L2': ['50:57:a8:67:a7:73', -92],
@@ -571,7 +571,7 @@ abstract class Global {
     },
     //314 grid 3,4
     {
-      'grid_id': 43,
+      'grid_id': 48,
       'status': true,
       'fingerprint_L1': ['ac:f2:c5:97:33:a9', -77],
       'fingerprint_L2': ['50:57:a8:67:a7:73', -91],
@@ -583,7 +583,7 @@ abstract class Global {
     },
     //314 grid 5,6
     {
-      'grid_id': 43,
+      'grid_id': 49,
       'status': true,
       'fingerprint_L1': ['ac:f2:c5:97:33:a9', -73],
       'fingerprint_L2': ['50:57:a8:67:a7:73', -92],
@@ -595,7 +595,7 @@ abstract class Global {
     },
     //314 grid 7,8
     {
-      'grid_id': 43,
+      'grid_id': 50,
       'status': true,
       'fingerprint_L1': ['ac:f2:c5:97:33:a9', -78],
       'fingerprint_L2': ['50:57:a8:67:a7:73', -92],
@@ -605,5 +605,6 @@ abstract class Global {
       'fingerprint_R3': ['50:57:a8:67:a7:73', -93],
       'corridor_position': [0.305, -0.33],
     },
+    
   ];
 }
