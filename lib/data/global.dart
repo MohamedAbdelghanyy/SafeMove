@@ -1140,5 +1140,67 @@ abstract class Global {
       'corridor_position': [-0.272, 0.03],
     },
 
+//---------------------------------------------------------------------------
+
+    //corridor 4 || 125,126
+    {
+      'grid_id': 95,
+      'status': true,
+      'fingerprint_L1': ['94:b4:0f:8d:29:e0', -70],
+      'fingerprint_L2': ['d0:d0:fd:66:4b:3b', -73],
+      'fingerprint_L3': ['94:b4:0f:9b:0b:70', -83],
+      'fingerprint_R1': ['94:b4:0f:8d:29:e0', -66],
+      'fingerprint_R2': ['94:b4:0f:8d:29:f0', -76],
+      'fingerprint_R3': ['d0:d0:fd:66:4b:3b', -73],
+      'corridor_position': [-0.38, 0.065],
+    },
+    //corridor 4 || 127,128
+    {
+      'grid_id': 96,
+      'status': true,
+      'fingerprint_L1': ['94:b4:0f:8d:29:e0', -65],
+      'fingerprint_L2': ['d0:d0:fd:66:4b:3b', -75],
+      'fingerprint_L3': ['94:b4:0f:9b:0b:70', -72],
+      'fingerprint_R1': ['94:b4:0f:8d:29:e0', -66],
+      'fingerprint_R2': ['94:b4:0f:8d:29:f0', -76],
+      'fingerprint_R3': ['d0:d0:fd:66:4b:3b', -73],
+      'corridor_position': [-0.35, 0.065],
+    },
+    //corridor 4 || 129,130
+    {
+      'grid_id': 97,
+      'status': true,
+      'fingerprint_L1': ['94:b4:0f:8d:29:e0', -64],
+      'fingerprint_L2': ['d0:d0:fd:66:4b:3b', -73],
+      'fingerprint_L3': ['94:b4:0f:9b:0b:70', -70],
+      'fingerprint_R1': ['94:b4:0f:8d:29:e0', -66],
+      'fingerprint_R2': ['94:b4:0f:8d:29:f0', -76],
+      'fingerprint_R3': ['d0:d0:fd:66:4b:3b', -73],
+      'corridor_position': [-0.32, 0.065],
+    },
+    //corridor 4 || 131,132
+    {
+      'grid_id': 98,
+      'status': true,
+      'fingerprint_L1': ['94:b4:0f:8d:29:e0', -76],
+      'fingerprint_L2': ['94:b4:0f:9b:0b:60', -72],
+      'fingerprint_L3': ['94:b4:0f:9b:0b:70', -65],
+      'fingerprint_R1': ['94:b4:0f:8d:29:e0', -72],
+      'fingerprint_R2': ['94:b4:0f:9b:0b:70', -74],
+      'fingerprint_R3': ['d0:d0:fd:66:4b:3b', -75],
+      'corridor_position': [-0.29, 0.065],
+    },
+    //corridor 4 || 133,134
+    {
+      'grid_id': 99,
+      'status': true,
+      'fingerprint_L1': ['94:b4:0f:8d:29:e0', -79],
+      'fingerprint_L2': ['94:b4:0f:9b:0b:60', -73],
+      'fingerprint_L3': ['94:b4:0f:9b:0b:70', -70],
+      'fingerprint_R1': ['94:b4:0f:8d:29:e0', -72],
+      'fingerprint_R2': ['94:b4:0f:9b:0b:70', -74],
+      'fingerprint_R3': ['d0:d0:fd:66:4b:3b', -75],
+      'corridor_position': [-0.265, 0.065],
+    },
   ];
 }
