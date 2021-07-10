@@ -1081,7 +1081,7 @@ abstract class Global {
     },
     //corridor 3 || 115,116
     {
-      'grid_id': 89,
+      'grid_id': 90,
       'status': true,
       'fingerprint_L1': ['94:b4:0f:9b:0b:60', -57],
       'fingerprint_L2': ['40:e3:d6:e0:13:c0', -64],
@@ -1089,6 +1089,54 @@ abstract class Global {
       'fingerprint_R1': ['94:b4:0f:9b:0b:60', -56],
       'fingerprint_R2': ['94:b4:0f:9b:0b:70', -57],
       'fingerprint_R3': ['40:e3:d6:e0:13:d0', -57],
+      'corridor_position': [-0.272, -0.13],
+    },
+    //corridor 3 || 117,118
+    {
+      'grid_id': 91,
+      'status': true,
+      'fingerprint_L1': ['94:b4:0f:9b:0b:60', -55],
+      'fingerprint_L2': ['40:e3:d6:e0:13:c0', -46],
+      'fingerprint_L3': ['94:b4:0f:9b:0b:70', -59],
+      'fingerprint_R1': ['40:e3:d6:e0:13:c0', -53],
+      'fingerprint_R2': ['94:b4:0f:9b:0b:70', -67],
+      'fingerprint_R3': ['40:e3:d6:e0:13:d0', -66],
+      'corridor_position': [-0.272, -0.13],
+    },
+    //corridor 3 || 119,120
+    {
+      'grid_id': 92,
+      'status': true,
+      'fingerprint_L1': ['40:e3:d6:e0:13:c0', -79],
+      'fingerprint_L2': ['40:e3:d6:e0:13:d0', -77],
+      'fingerprint_L3': ['94:b4:0f:9b:0b:70', -72],
+      'fingerprint_R1': ['40:e3:d6:e0:13:c0', -70],
+      'fingerprint_R2': ['94:b4:0f:9b:0b:70', -80],
+      'fingerprint_R3': ['94:b4:0f:9b:0b:60', -79],
+      'corridor_position': [-0.272, -0.13],
+    },
+    //corridor 3 || 121,122
+    {
+      'grid_id': 93,
+      'status': true,
+      'fingerprint_L1': ['40:e3:d6:e0:13:c0', -80],
+      'fingerprint_L2': ['94:b4:0f:9b:0b:60', -81],
+      'fingerprint_L3': ['94:b4:0f:9b:0b:70', -84],
+      'fingerprint_R1': ['40:e3:d6:e0:13:c0', -85],
+      'fingerprint_R2': ['94:b4:0f:9b:0b:70', -78],
+      'fingerprint_R3': ['94:b4:0f:9b:0b:60', -75],
+      'corridor_position': [-0.272, -0.13],
+    },
+    //corridor 3 || 123,124
+    {
+      'grid_id': 94,
+      'status': true,
+      'fingerprint_L1': ['40:e3:d6:e0:13:c0', -83],
+      'fingerprint_L2': ['d0:d0:fd:66:4b:3b', -82],
+      'fingerprint_L3': ['94:b4:0f:9b:0b:70', -73],
+      'fingerprint_R1': ['94:b4:0f:8d:29:e0', -80],
+      'fingerprint_R2': ['94:b4:0f:9b:0b:70', -75],
+      'fingerprint_R3': ['d0:d0:fd:66:4b:3b', -82],
       'corridor_position': [-0.272, -0.13],
     },
 
