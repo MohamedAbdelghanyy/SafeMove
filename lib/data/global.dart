@@ -1053,7 +1053,7 @@ abstract class Global {
       'fingerprint_R1': ['94:b4:0f:9b:0b:60', -75],
       'fingerprint_R2': ['40:e3:d6:e0:25:40', -76],
       'fingerprint_R3': ['40:e3:d6:e0:25:50', -70],
-      'corridor_position': [-0.272, -0.22],
+      'corridor_position': [-0.272, -0.24],
     },
     //corridor 3 || 111,112
     {
@@ -1065,7 +1065,7 @@ abstract class Global {
       'fingerprint_R1': ['40:e3:d6:e0:13:d0', -76],
       'fingerprint_R2': ['94:b4:0f:9b:0b:70', -76],
       'fingerprint_R3': ['40:e3:d6:e0:13:c0', -77],
-      'corridor_position': [-0.272, -0.19],
+      'corridor_position': [-0.272, -0.21],
     },
     //corridor 3 || 113,114
     {
@@ -1077,7 +1077,7 @@ abstract class Global {
       'fingerprint_R1': ['94:b4:0f:9b:0b:60', -62],
       'fingerprint_R2': ['94:b4:0f:9b:0b:70', -63],
       'fingerprint_R3': ['40:e3:d6:e0:13:c0', -60],
-      'corridor_position': [-0.272, -0.16],
+      'corridor_position': [-0.272, -0.18],
     },
     //corridor 3 || 115,116
     {
@@ -1089,7 +1089,7 @@ abstract class Global {
       'fingerprint_R1': ['94:b4:0f:9b:0b:60', -56],
       'fingerprint_R2': ['94:b4:0f:9b:0b:70', -57],
       'fingerprint_R3': ['40:e3:d6:e0:13:d0', -57],
-      'corridor_position': [-0.272, -0.13],
+      'corridor_position': [-0.272, -0.15],
     },
     //corridor 3 || 117,118
     {
@@ -1101,7 +1101,7 @@ abstract class Global {
       'fingerprint_R1': ['40:e3:d6:e0:13:c0', -53],
       'fingerprint_R2': ['94:b4:0f:9b:0b:70', -67],
       'fingerprint_R3': ['40:e3:d6:e0:13:d0', -66],
-      'corridor_position': [-0.272, -0.13],
+      'corridor_position': [-0.272, -0.12],
     },
     //corridor 3 || 119,120
     {
@@ -1113,7 +1113,7 @@ abstract class Global {
       'fingerprint_R1': ['40:e3:d6:e0:13:c0', -70],
       'fingerprint_R2': ['94:b4:0f:9b:0b:70', -80],
       'fingerprint_R3': ['94:b4:0f:9b:0b:60', -79],
-      'corridor_position': [-0.272, -0.13],
+      'corridor_position': [-0.272, -0.07],
     },
     //corridor 3 || 121,122
     {
@@ -1125,7 +1125,7 @@ abstract class Global {
       'fingerprint_R1': ['40:e3:d6:e0:13:c0', -85],
       'fingerprint_R2': ['94:b4:0f:9b:0b:70', -78],
       'fingerprint_R3': ['94:b4:0f:9b:0b:60', -75],
-      'corridor_position': [-0.272, -0.13],
+      'corridor_position': [-0.272, -0.019],
     },
     //corridor 3 || 123,124
     {
@@ -1137,7 +1137,7 @@ abstract class Global {
       'fingerprint_R1': ['94:b4:0f:8d:29:e0', -80],
       'fingerprint_R2': ['94:b4:0f:9b:0b:70', -75],
       'fingerprint_R3': ['d0:d0:fd:66:4b:3b', -82],
-      'corridor_position': [-0.272, -0.13],
+      'corridor_position': [-0.272, 0.03],
     },
 
   ];
