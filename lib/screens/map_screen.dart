@@ -104,8 +104,8 @@ class _MapScreenState extends State<MapScreen> {
                       child: MapWidget(),
                     ),
                   ],
-                )
-                /*model.showBottomModal
+                ),
+                model.showBottomModal
                     ? Container(
                         alignment: Alignment.center,
                         width: MediaQuery.of(context).size.width,
@@ -308,7 +308,7 @@ class _MapScreenState extends State<MapScreen> {
                           ),
                         ),
                       )
-                    : SizedBox()*/
+                    : SizedBox()
               ],
             ),
           ),
