@@ -1346,5 +1346,53 @@ abstract class Global {
       'fingerprint_R3': ['d0:d0:fd:66:4b:3b', -38],
       'corridor_position': [-0.329, 0.31],
     },
+    //corridor 4 || 163,164
+    {
+      'grid_id': 112,
+      'status': true,
+      'fingerprint_L1': ['d0:d0:fd:66:4b:3b', -53],
+      'fingerprint_L2': ['ac:f2:c5:97:33:d1', -90],
+      'fingerprint_L3': ['94:b4:0f:8d:29:e0', -94],
+      'fingerprint_R1': ['ac:f2:c5:97:33:d1', -84],
+      'fingerprint_R2': ['94:b4:0f:9b:0b:70', -88],
+      'fingerprint_R3': ['d0:d0:fd:66:4b:3b', -43],
+      'corridor_position': [-0.329, 0.33],
+    },
+    //corridor 4 || 165,166
+    {
+      'grid_id': 113,
+      'status': true,
+      'fingerprint_L1': ['d0:d0:fd:66:4b:3b', -58],
+      'fingerprint_L2': ['ac:f2:c5:97:33:d1', -89],
+      'fingerprint_L3': ['94:b4:0f:9b:0b:70', -90],
+      'fingerprint_R1': ['ac:f2:c5:97:33:d1', -87],
+      'fingerprint_R2': ['94:b4:0f:9b:0b:70', -84],
+      'fingerprint_R3': ['d0:d0:fd:66:4b:3b', -44],
+      'corridor_position': [-0.329, 0.35],
+    },
+    //corridor 4 || 167,168
+    {
+      'grid_id': 114,
+      'status': true,
+      'fingerprint_L1': ['d0:d0:fd:66:4b:3b', -60],
+      'fingerprint_L2': ['ac:f2:c5:97:33:d1', -91],
+      'fingerprint_L3': ['94:b4:0f:9b:0b:60', -93],
+      'fingerprint_R1': ['ac:f2:c5:97:33:d1', -87],
+      'fingerprint_R2': ['94:b4:0f:9b:0b:70', -86],
+      'fingerprint_R3': ['d0:d0:fd:66:4b:3b', -50],
+      'corridor_position': [-0.329, 0.37],
+    },
+    //corridor 4 || 169,170
+    {
+      'grid_id': 115,
+      'status': true,
+      'fingerprint_L1': ['d0:d0:fd:66:4b:3b', -70],
+      'fingerprint_L2': ['ac:f2:c5:97:33:d1', -88],
+      'fingerprint_L3': ['94:b4:0f:9b:0b:70', -91],
+      'fingerprint_R1': ['94:b4:0f:8d:29:e0', -90],
+      'fingerprint_R2': ['94:b4:0f:9b:0b:70', -86],
+      'fingerprint_R3': ['d0:d0:fd:66:4b:3b', -59],
+      'corridor_position': [-0.329, 0.39],
+    },
   ];
 }
