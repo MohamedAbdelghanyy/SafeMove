@@ -21,7 +21,9 @@ class _SelfReportState extends State<SelfReport> {
         elevation: 0,
         title: Text(
           'Self Report',
+          style: TextStyle(color: Global.secondaryColor),
         ),
+        iconTheme: IconThemeData(color: Global.secondaryColor),
       ),
       drawer: MainDrawer(),
       body: ListView(
