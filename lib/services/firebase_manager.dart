@@ -1,11 +1,11 @@
 import 'dart:convert';
 
-import 'package:SafeMove/models/room_data_model.dart';
+import 'package:safemove/models/room_data_model.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:http/http.dart' as http;
-import 'package:SafeMove/services/data_manager.dart';
+import 'package:safemove/services/data_manager.dart';
 
 class FirebaseManager {
   static final Future<FirebaseApp> _future = Firebase.initializeApp();

@@ -1,8 +1,8 @@
-import 'package:SafeMove/data/global.dart';
-import 'package:SafeMove/models/grid_model.dart';
-import 'package:SafeMove/services/firebase_manager.dart';
+import 'package:safemove/data/global.dart';
+import 'package:safemove/models/grid_model.dart';
+import 'package:safemove/services/firebase_manager.dart';
 import 'dart:async';
-import 'package:SafeMove/services/perference_manager.dart';
+import 'package:safemove/services/perference_manager.dart';
 
 class DataManager {
   static PrefManager mPrefManager = new PrefManager();

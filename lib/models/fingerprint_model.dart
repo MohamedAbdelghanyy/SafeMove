@@ -1,5 +1,5 @@
-import 'package:SafeMove/models/grid_model.dart';
-import 'package:SafeMove/services/data_manager.dart';
+import 'package:safemove/models/grid_model.dart';
+import 'package:safemove/services/data_manager.dart';
 import 'dart:async';
 
 import 'package:wifi_iot/wifi_iot.dart';

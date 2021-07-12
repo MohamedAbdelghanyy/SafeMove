@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:SafeMove/data/global.dart';
+import 'package:safemove/data/global.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:wifi_iot/wifi_iot.dart';

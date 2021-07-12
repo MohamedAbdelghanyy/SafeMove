@@ -1,5 +1,5 @@
-import 'package:SafeMove/data/global.dart';
-import 'package:SafeMove/screens/main_drawer.dart';
+import 'package:safemove/data/global.dart';
+import 'package:safemove/screens/main_drawer.dart';
 import 'package:flutter/material.dart';
 
 class Symptoms extends StatefulWidget {

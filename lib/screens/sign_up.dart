@@ -1,7 +1,7 @@
-import 'package:SafeMove/data/global.dart';
-import 'package:SafeMove/screens/sign_in.dart';
+import 'package:safemove/data/global.dart';
+import 'package:safemove/screens/sign_in.dart';
 import 'package:flutter/material.dart';
-import 'package:SafeMove/services/auth.dart';
+import 'package:safemove/services/auth.dart';
 
 class SignUpScreen extends StatefulWidget {
   static const routeName = '/signup';

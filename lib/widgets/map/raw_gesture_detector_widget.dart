@@ -1,4 +1,4 @@
-import 'package:SafeMove/models/map_model.dart';
+import 'package:safemove/models/map_model.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

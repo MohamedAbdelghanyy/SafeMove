@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "397008259250",
+    "firebase_url": "https://safe-move-da6ea-default-rtdb.firebaseio.com",
     "project_id": "safe-move-da6ea",
     "storage_bucket": "safe-move-da6ea.appspot.com"
   },
@@ -9,7 +10,36 @@
       "client_info": {
         "mobilesdk_app_id": "1:397008259250:android:e20c908cc69d0d0b0221ab",
         "android_client_info": {
-          "package_name": "com.example.SafeMove"
+          "package_name": "app.safemove.application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "397008259250-97hnnb4t9al6sn8p418btli5e0asblj9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJ-TAIZ5FOs4A6CnaDZJXHuHss9tZzPCI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "397008259250-97hnnb4t9al6sn8p418btli5e0asblj9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:397008259250:android:6b2f49ec7051e4f20221ab",
+        "android_client_info": {
+          "package_name": "app.safemove.safemove"
         }
       },
       "oauth_client": [

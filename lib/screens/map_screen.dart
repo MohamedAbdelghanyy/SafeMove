@@ -1,13 +1,13 @@
 import 'dart:async';
 
-import 'package:SafeMove/data/global.dart';
-import 'package:SafeMove/models/fingerprint_model.dart';
-import 'package:SafeMove/models/map_model.dart';
-import 'package:SafeMove/screens/main_drawer.dart';
-import 'package:SafeMove/screens/rooms_screen.dart';
-import 'package:SafeMove/widgets/map/map_widget.dart';
-import 'package:SafeMove/widgets/map/raw_gesture_detector_widget.dart';
-import 'package:SafeMove/widgets/map/route_selection_widget.dart';
+import 'package:safemove/data/global.dart';
+import 'package:safemove/models/fingerprint_model.dart';
+import 'package:safemove/models/map_model.dart';
+import 'package:safemove/screens/main_drawer.dart';
+import 'package:safemove/screens/rooms_screen.dart';
+import 'package:safemove/widgets/map/map_widget.dart';
+import 'package:safemove/widgets/map/raw_gesture_detector_widget.dart';
+import 'package:safemove/widgets/map/route_selection_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -41,7 +41,8 @@ class _MapScreenState extends State<MapScreen> {
             if (_scanResult != null && _scanResult.length > 0) {
               print('WIFI LIST FOUND! + ' + _scanResult.length.toString());
               _scanResult.forEach((wifiNetwork) {
-                print(wifiNetwork.bssid + wifiNetwork.level.toString());
+                print(wifiNetwork.bssid.toString() +
+                    wifiNetwork.level.toString());
               });
               await FingerprintModel.findGrid(_scanResult).then(
                 (value) => {

@@ -1,7 +1,7 @@
-import 'package:SafeMove/data/global.dart';
-import 'package:SafeMove/models/map_model.dart';
-import 'package:SafeMove/widgets/map/crowding_painter.dart';
-import 'package:SafeMove/widgets/map/route_painter.dart';
+import 'package:safemove/data/global.dart';
+import 'package:safemove/models/map_model.dart';
+import 'package:safemove/widgets/map/crowding_painter.dart';
+import 'package:safemove/widgets/map/route_painter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -105,7 +105,7 @@ class _MapWidgetState extends State<MapWidget> {
               },
             ),
           ),
-         /* Container(
+          /* Container(
             child: CustomPaint(
               painter: CrowdingPainter(model, size.width),
             ),

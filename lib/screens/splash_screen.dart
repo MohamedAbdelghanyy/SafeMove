@@ -1,9 +1,9 @@
-import 'package:SafeMove/data/global.dart';
-import 'package:SafeMove/models/map_model.dart';
-import 'package:SafeMove/screens/admin_view.dart';
-import 'package:SafeMove/screens/map_screen.dart';
-import 'package:SafeMove/screens/sign_in.dart';
-import 'package:SafeMove/services/data_manager.dart';
+import 'package:safemove/data/global.dart';
+import 'package:safemove/models/map_model.dart';
+import 'package:safemove/screens/admin_view.dart';
+import 'package:safemove/screens/map_screen.dart';
+import 'package:safemove/screens/sign_in.dart';
+import 'package:safemove/services/data_manager.dart';
 import 'package:flutter/material.dart';
 
 import 'dart:async';

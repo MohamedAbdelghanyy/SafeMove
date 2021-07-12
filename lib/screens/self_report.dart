@@ -1,6 +1,6 @@
-import 'package:SafeMove/data/global.dart';
-import 'package:SafeMove/screens/main_drawer.dart';
-import 'package:SafeMove/services/data_manager.dart';
+import 'package:safemove/data/global.dart';
+import 'package:safemove/screens/main_drawer.dart';
+import 'package:safemove/services/data_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

@@ -1,8 +1,8 @@
-import 'package:SafeMove/data/global.dart';
-import 'package:SafeMove/screens/sign_up.dart';
-import 'package:SafeMove/screens/splash_screen.dart';
+import 'package:safemove/data/global.dart';
+import 'package:safemove/screens/sign_up.dart';
+import 'package:safemove/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:SafeMove/services/auth.dart';
+import 'package:safemove/services/auth.dart';
 import 'package:flutter/rendering.dart';
 
 class SignInScreen extends StatefulWidget {

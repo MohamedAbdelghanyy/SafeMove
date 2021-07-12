@@ -1,4 +1,4 @@
-# SafeMove
+# safemove
 
 Graduation Project of Misr International University Students
 

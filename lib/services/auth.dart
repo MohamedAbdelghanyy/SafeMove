@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
-import 'package:SafeMove/services/data_manager.dart';
+import 'package:safemove/services/data_manager.dart';
 
 class Auth {
   final _auth = FirebaseAuth.instance;

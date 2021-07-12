@@ -1,4 +1,4 @@
-import 'package:SafeMove/models/room_data_model.dart';
+import 'package:safemove/models/room_data_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

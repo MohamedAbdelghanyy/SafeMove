@@ -1,9 +1,9 @@
-import 'package:SafeMove/data/global.dart';
-import 'package:SafeMove/screens/profile.dart';
-import 'package:SafeMove/screens/sign_in.dart';
-import 'package:SafeMove/screens/symptoms.dart';
-import 'package:SafeMove/screens/wifi_screen.dart';
-import 'package:SafeMove/services/data_manager.dart';
+import 'package:safemove/data/global.dart';
+import 'package:safemove/screens/profile.dart';
+import 'package:safemove/screens/sign_in.dart';
+import 'package:safemove/screens/symptoms.dart';
+import 'package:safemove/screens/wifi_screen.dart';
+import 'package:safemove/services/data_manager.dart';
 import 'package:flutter/material.dart';
 import './profile.dart';
 import './wifi_screen.dart';
@@ -58,13 +58,13 @@ class MainDrawer extends StatelessWidget {
                   .pushReplacementNamed(ProfileScreen.routeName);
             },
           ),
-          buildListTitle(
+          /* buildListTitle(
             'Wifi Scan',
             Icons.wifi,
             () {
               Navigator.of(context).pushReplacementNamed(WifiScreen.routeName);
             },
-          ),
+          ), */
           buildListTitle(
             'Rooms Crowding',
             Icons.business,

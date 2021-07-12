@@ -1,7 +1,7 @@
-import 'package:SafeMove/data/global.dart';
-import 'package:SafeMove/models/map_model.dart';
-import 'package:SafeMove/models/room_data_model.dart';
-import 'package:SafeMove/services/data_manager.dart';
+import 'package:safemove/data/global.dart';
+import 'package:safemove/models/map_model.dart';
+import 'package:safemove/models/room_data_model.dart';
+import 'package:safemove/services/data_manager.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';

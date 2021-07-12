@@ -1,6 +1,6 @@
-import 'package:SafeMove/models/map_model.dart';
-import 'package:SafeMove/models/room_data_model.dart';
-import 'package:SafeMove/screens/rooms_screen.dart';
+import 'package:safemove/models/map_model.dart';
+import 'package:safemove/models/room_data_model.dart';
+import 'package:safemove/screens/rooms_screen.dart';
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
