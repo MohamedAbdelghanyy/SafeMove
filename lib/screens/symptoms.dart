@@ -16,8 +16,10 @@ class _SymptomsState extends State<Symptoms> {
         backgroundColor: Global.primaryColor,
         elevation: 0,
         title: Text(
-          'Symptoms',
+          'Symptopms',
+          style: TextStyle(color: Global.secondaryColor),
         ),
+        iconTheme: IconThemeData(color: Global.secondaryColor),
       ),
       drawer: MainDrawer(),
       body: SafeArea(
