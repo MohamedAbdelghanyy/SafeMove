@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:SafeMove/data/global.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:wifi_iot/wifi_iot.dart';
@@ -110,7 +111,13 @@ class _WifiScreenState extends State<WifiScreen> {
     return Scaffold(
       drawer: MainDrawer(),
       appBar: AppBar(
-        title: Text('Wifi Data'),
+        backgroundColor: Global.primaryColor,
+        elevation: 0,
+        title: Text(
+          'WiFi Data',
+          style: TextStyle(color: Global.secondaryColor),
+        ),
+        iconTheme: IconThemeData(color: Global.secondaryColor),
       ),
       body: ListView(
         padding: kMaterialListPadding,
