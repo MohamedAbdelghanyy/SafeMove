@@ -17,7 +17,7 @@ class CrowdingPainter extends CustomPainter {
   @override
   void paint(final Canvas canvas, final Size size) {
     for (int i = 0; i < Global.grids.length; i++) {
-      if (i == 10 || i == 14 || i == 15 || i == 16) {
+      if (i == 7 || i == 13) {
         canvas.drawLine(
           Offset(cSize * Global.grids[i]['corridor_position'][0],
               cSize * Global.grids[i]['corridor_position'][1]),
