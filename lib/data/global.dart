@@ -5,7 +5,7 @@ abstract class Global {
   static Color secondaryColor = Colors.blue[900]; //Colors.white;
 
   static const List grids = [
-    {
+    /* {
       //unused
       'grid_id': 1,
       'status': true,
@@ -16,8 +16,8 @@ abstract class Global {
       'fingerprint_R2': ['d0:d0:fd:66:4a:65', -78],
       'fingerprint_R3': ['f8:66:f2:ad:e8:bf', -90],
       'corridor_position': [-0.078, -0.256],
-    },
-    {
+    }, */
+    /* {
       //unused
       'grid_id': 2,
       'status': true,
@@ -28,7 +28,7 @@ abstract class Global {
       'fingerprint_R2': ['d0:d0:fd:66:4a:65', -81],
       'fingerprint_R3': ['00:12:17:7a:bd:81', -84],
       'corridor_position': [-0.078, -0.256],
-    },
+    }, */
     {
       'grid_id': 3,
       'status': true,
@@ -141,7 +141,7 @@ abstract class Global {
       'fingerprint_R3': ['40:e3:d6:e0:13:30', -83],
       'corridor_position': [0.283, -0.288],
     },
-    {
+    /* {
       //unused
       'grid_id': 11,
       'status': true,
@@ -152,7 +152,7 @@ abstract class Global {
       'fingerprint_R2': ['d4:8c:b5:67:e8:af', -79],
       'fingerprint_R3': ['50:57:a8:67:a7:73', -84],
       'corridor_position': [-0.078, -0.256],
-    },
+    }, */
     {
       'grid_id': 12,
       'status': true,
@@ -164,7 +164,7 @@ abstract class Global {
       'fingerprint_R3': ['50:57:a8:67:a7:73', -79],
       'corridor_position': [0.268, -0.288],
     },
-    {
+    /* {
       //unused
       'grid_id': 13,
       'status': true,
@@ -175,7 +175,7 @@ abstract class Global {
       'fingerprint_R2': ['d4:8c:b5:67:e8:af', -87],
       'fingerprint_R3': ['50:57:a8:67:a7:73', -79],
       'corridor_position': [-0.078, -0.256],
-    },
+    }, */
     {
       'grid_id': 14,
       'status': true,
@@ -187,7 +187,7 @@ abstract class Global {
       'fingerprint_R3': ['50:57:a8:67:a7:73', -77],
       'corridor_position': [0.252, -0.288],
     },
-    {
+    /* {
       //unused
       'grid_id': 15,
       'status': true,
@@ -198,8 +198,8 @@ abstract class Global {
       'fingerprint_R2': ['d4:8c:b5:67:e8:af', -84],
       'fingerprint_R3': ['50:57:a8:67:a7:73', -77],
       'corridor_position': [-0.078, -0.256],
-    },
-    {
+    }, */
+    /* {
       //unused
       'grid_id': 16,
       'status': true,
@@ -210,7 +210,7 @@ abstract class Global {
       'fingerprint_R2': ['d4:8c:b5:67:e8:af', -87],
       'fingerprint_R3': ['50:57:a8:67:a7:73', -74],
       'corridor_position': [-0.078, -0.256],
-    },
+    }, */
     {
       'grid_id': 17,
       'status': true,
@@ -222,7 +222,7 @@ abstract class Global {
       'fingerprint_R3': ['50:57:a8:67:a7:73', -79],
       'corridor_position': [0.234, -0.288],
     },
-    {
+    /* {
       //unused
       'grid_id': 18,
       'status': true,
@@ -233,7 +233,7 @@ abstract class Global {
       'fingerprint_R2': ['40:e3:d6:e0:13:30', -82],
       'fingerprint_R3': ['50:57:a8:67:a7:73', -78],
       'corridor_position': [-0.078, -0.256],
-    },
+    }, */
     {
       'grid_id': 19,
       'status': true,
@@ -311,7 +311,7 @@ abstract class Global {
       'fingerprint_R3': ['40:e3:d6:e0:25:50', -80],
       'corridor_position': [0.09, -0.288],
     },
-    {
+    /* {
       //unused
       'grid_id': 26,
       'status': true,
@@ -322,7 +322,7 @@ abstract class Global {
       'fingerprint_R2': ['40:e3:d6:e0:13:30', -71],
       'fingerprint_R3': ['40:e3:d6:e0:25:50', -78],
       'corridor_position': [-0.078, -0.256],
-    },
+    }, */
     {
       'grid_id': 27,
       'status': true,
@@ -345,7 +345,7 @@ abstract class Global {
       'fingerprint_R3': ['40:e3:d6:e0:25:50', -80],
       'corridor_position': [0.053, -0.288],
     },
-    {
+    /* {
       //unused
       'grid_id': 29,
       'status': true,
@@ -356,8 +356,8 @@ abstract class Global {
       'fingerprint_R2': ['40:e3:d6:e0:13:30', -72],
       'fingerprint_R3': ['40:e3:d6:e0:25:50', -80],
       'corridor_position': [-0.078, -0.256],
-    },
-    {
+    }, */
+    /* {
       //unused
       'grid_id': 30,
       'status': true,
@@ -368,7 +368,7 @@ abstract class Global {
       'fingerprint_R2': ['40:e3:d6:e0:13:30', -73],
       'fingerprint_R3': ['40:e3:d6:e0:25:50', -79],
       'corridor_position': [-0.078, -0.256],
-    },
+    }, */
     {
       'grid_id': 31,
       'status': true,

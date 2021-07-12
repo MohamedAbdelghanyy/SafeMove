@@ -1,5 +1,6 @@
 import 'package:SafeMove/data/global.dart';
 import 'package:SafeMove/models/map_model.dart';
+import 'package:SafeMove/widgets/map/crowding_painter.dart';
 import 'package:SafeMove/widgets/map/route_painter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -102,6 +103,11 @@ class _MapWidgetState extends State<MapWidget> {
                   return SizedBox();
                 }
               },
+            ),
+          ),
+          Container(
+            child: CustomPaint(
+              painter: CrowdingPainter(model, size.width),
             ),
           ),
           model.routeData != null

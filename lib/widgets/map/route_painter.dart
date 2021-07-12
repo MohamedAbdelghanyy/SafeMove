@@ -20,7 +20,7 @@ class RoutePainter extends CustomPainter {
 
   @override
   void paint(final Canvas canvas, final Size size) {
-      List xy = [-0.329, 0.425];
+    /*  List xy = [-0.329, 0.425];
     print('[' + xy[0].toString() + ', ' + xy[1].toString());
     canvas.drawLine(Offset(cSize * xy[0], cSize * xy[1]),
         Offset(cSize * xy[0], cSize * xy[1]), paintt);
@@ -39,6 +39,7 @@ class RoutePainter extends CustomPainter {
     print('[' + ab[0].toString() + ', ' + ab[1].toString());
     canvas.drawLine(Offset(cSize * ab[0], cSize * ab[1]),
         Offset(cSize * ab[0], cSize * ab[1]), paintt);
+    */
 
     //Draw route from door position to corridor position of ROOM X
     canvas.drawLine(
