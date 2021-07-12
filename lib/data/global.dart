@@ -62,7 +62,7 @@ abstract class Global {
       'fingerprint_R3': ['d4:8c:b5:67:e8:af', -89],
       'corridor_position': [0.415, -0.288],
     },
-    // ====== TEST GRID ======
+    /* // ====== TEST GRID ======
     {
       'grid_id': 100,
       'status': true,
@@ -85,7 +85,7 @@ abstract class Global {
       'fingerprint_R3': ['1e:d9:a0:84:46:41', -53],
       'corridor_position': [0.415, -0.288],
     },
-    // ========================
+    // ======================== */
     {
       'grid_id': 6,
       'status': true,

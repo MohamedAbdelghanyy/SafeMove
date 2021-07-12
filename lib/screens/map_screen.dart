@@ -70,7 +70,9 @@ class _MapScreenState extends State<MapScreen> {
         elevation: 0,
         title: Text(
           'MIU Map',
+          style: TextStyle(color: Global.secondaryColor),
         ),
+        iconTheme: IconThemeData(color: Global.secondaryColor),
       ),
       drawer: MainDrawer(),
       floatingActionButton:

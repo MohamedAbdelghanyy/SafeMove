@@ -58,7 +58,13 @@ class _RoomsScreenState extends State<RoomsScreen> {
     model = Provider.of<MapModel>(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text("Rooms Crowding"),
+        backgroundColor: Global.primaryColor,
+        elevation: 0,
+        title: Text(
+          'Rooms Crowding',
+          style: TextStyle(color: Global.secondaryColor),
+        ),
+        iconTheme: IconThemeData(color: Global.secondaryColor),
       ),
       drawer: MainDrawer(),
       body: roomsData == null || currRoom == null
