@@ -105,11 +105,11 @@ class _MapWidgetState extends State<MapWidget> {
               },
             ),
           ),
-          Container(
+         /* Container(
             child: CustomPaint(
               painter: CrowdingPainter(model, size.width),
             ),
-          ),
+          ), */
           model.routeData != null
               ? Container(
                   child: CustomPaint(
