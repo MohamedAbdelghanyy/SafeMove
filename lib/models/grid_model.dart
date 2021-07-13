@@ -8,6 +8,7 @@ class GridModel {
   List fingerPrintR2;
   List fingerPrintR3;
   List<double> corridorPosition;
+  int crowding = 0;
 
   GridModel.fromMap(Map data) {
     this.id = data['grid_id'] ?? 0;
