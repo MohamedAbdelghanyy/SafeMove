@@ -15,10 +15,10 @@ class FirebaseManager {
       'https://safe-move-da6ea-default-rtdb.firebaseio.com/data/';
 
   static Future<List> getRoomsData() async {
-    var path = 'locations/MIU/rooms.json';
+    var path = url + 'locations/MIU/rooms.json';
     final List<RoomDataModel> items = [];
     try {
-      final response = await http.get(url + path);
+      final response = await http.get(Uri.parse(path));
       final dbData = json.decode(response.body) as List<dynamic>;
       dbData.forEach((data) {
         items.add(RoomDataModel.fromMap(data));
@@ -31,10 +31,10 @@ class FirebaseManager {
   }
 
   static Future<Map<String, dynamic>> getCrowdingData() async {
-    var path = 'locations/MIU/crowding.json';
+    var path = url + 'locations/MIU/crowding.json';
     Map<String, dynamic> dbData;
     try {
-      final response = await http.get(url + path);
+      final response = await http.get(Uri.parse(path));
       dbData = json.decode(response.body) as Map<String, dynamic>;
     } on Exception catch (e) {
       print(e.toString());
@@ -43,43 +43,20 @@ class FirebaseManager {
     return dbData;
   }
 
-  static Future<bool> setSelfReport(int selfReportStatus) async {
-    try {
-      //WifiInfoWrapper mWifiInfo = await WifiInfoPlugin.wifiDetails;
-      var dbRef2 = databaseRef.child('data').child('reports');
-      await dbRef2.child(DataManager.mPrefManager.getId().toString()).set({
-        'user_id': DataManager.mPrefManager.getId().toString(),
-        //'address': mWifiInfo.macAddress,
-        'status': selfReportStatus,
-      }).then((value) {
-        Fluttertoast.showToast(
-          msg:
-              "Self report was successfully submitted, thank you for being honest.",
-          toastLength: Toast.LENGTH_LONG,
-        );
-      });
-      return true;
-    } catch (e) {
-      Fluttertoast.showToast(
-        msg: e.message.toString(),
-        toastLength: Toast.LENGTH_LONG,
-      );
-      return false;
-    }
-  }
-
   static Future<bool> setCurrentLocation(int gridId) async {
+    var path = url + 'locations/MIU/crowding.json';
     try {
-      //WifiInfoWrapper mWifiInfo = await WifiInfoPlugin.wifiDetails;
-      var dbRef2 = databaseRef
-          .child('data')
-          .child('locations')
-          .child('MIU')
-          .child('crowding');
-      await dbRef2.child(gridId.toString()).set({
-        DataManager.mPrefManager.getId().toString():
-            DateTime.now().millisecondsSinceEpoch
-      });
+      final response = await http.patch(
+        Uri.parse(path),
+        body: jsonEncode(
+          {
+            gridId.toString(): {
+              DataManager.mPrefManager.getId().toString():
+                  DateTime.now().millisecondsSinceEpoch
+            }
+          },
+        ),
+      );
       return true;
     } catch (e) {
       return false;
