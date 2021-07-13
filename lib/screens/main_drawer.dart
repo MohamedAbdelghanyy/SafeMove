@@ -2,11 +2,9 @@ import 'package:safemove/data/global.dart';
 import 'package:safemove/screens/profile.dart';
 import 'package:safemove/screens/sign_in.dart';
 import 'package:safemove/screens/symptoms.dart';
-import 'package:safemove/screens/wifi_screen.dart';
 import 'package:safemove/services/data_manager.dart';
 import 'package:flutter/material.dart';
 import './profile.dart';
-import './wifi_screen.dart';
 import './rooms_screen.dart';
 
 class MainDrawer extends StatelessWidget {
