@@ -1,3 +1,4 @@
+import 'package:dropdown_search/dropdown_search.dart';
 import 'package:safemove/data/global.dart';
 import 'package:safemove/models/map_model.dart';
 import 'package:safemove/models/room_data_model.dart';
@@ -49,6 +50,18 @@ class _RoomsScreenState extends State<RoomsScreen> {
     super.initState();
   }
 
+  Future<List<RoomDataModel>> getRoomData(String filter) async {
+    List<RoomDataModel> searchResult = [];
+    for (int i = 0; i < roomsData.length; i++) {
+      if ((roomsData[i].location.toString().contains(filter) ||
+              filter.contains(roomsData[i].location.toString())) &&
+          roomsData[i].name != "Turn") {
+        searchResult.add(roomsData[i]);
+      }
+    }
+    return searchResult;
+  }
+
   void roomChanged(RoomDataModel newRoom) {
     setState(() {
       currRoom = newRoom;
@@ -87,13 +100,13 @@ class _RoomsScreenState extends State<RoomsScreen> {
                     ClipPath(
                       clipper: MyClipper(),
                       child: Container(
-                        height: 350,
+                        height: 550,
                         width: double.infinity,
                         decoration: BoxDecoration(
                           gradient: LinearGradient(
                             begin: Alignment.topRight,
                             end: Alignment.bottomLeft,
-                            colors: [Color(0xFF91b3fa), Color(0xFF4f52ff)],
+                            colors: [Color(0xFF91b3fa), Global.secondaryColor],
                           ),
                           image: DecorationImage(
                             image:
@@ -104,22 +117,30 @@ class _RoomsScreenState extends State<RoomsScreen> {
                           children: [
                             Container(
                               child: Padding(
-                                padding: EdgeInsets.symmetric(
-                                    vertical: 10, horizontal: 20),
-                                child: DropdownButtonHideUnderline(
-                                  child: DropdownButton<RoomDataModel>(
-                                    onChanged: roomChanged,
-                                    value: currRoom,
-                                    items: roomsData.map((value) {
-                                      return DropdownMenuItem<RoomDataModel>(
-                                        value: value,
-                                        child: Text(
-                                          value.location,
-                                          style: TextStyle(fontSize: 16),
-                                        ),
-                                      );
-                                    }).toList(),
+                                padding: EdgeInsets.only(
+                                    top: 30, left: 15, right: 15),
+                                child: DropdownSearch<RoomDataModel>(
+                                  dropdownSearchDecoration: InputDecoration(
+                                    border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.all(
+                                        Radius.circular(25.0),
+                                      ),
+                                    ),
+                                    contentPadding: EdgeInsets.all(5),
+                                    prefixIcon: Icon(Icons.location_pin),
+                                    fillColor: Colors.white,
+                                    filled: true,
+                                    floatingLabelBehavior:
+                                        FloatingLabelBehavior.never,
                                   ),
+                                  showSearchBox: true,
+                                  mode: Mode.DIALOG,
+                                  label: currRoom.location,
+                                  onFind: (String filter) =>
+                                      getRoomData(filter),
+                                  itemAsString: (RoomDataModel room) =>
+                                      room.location,
+                                  onChanged: roomChanged,
                                 ),
                               ),
                             ),
