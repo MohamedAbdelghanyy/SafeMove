@@ -5,6 +5,7 @@ import 'package:safemove/services/data_manager.dart';
 
 class Auth {
   final _auth = FirebaseAuth.instance;
+  // ignore: unused_field
   final Future<FirebaseApp> _future = Firebase.initializeApp();
   final databaseRef = FirebaseDatabase.instance.reference().child('users');
 
