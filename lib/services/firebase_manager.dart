@@ -8,6 +8,7 @@ import 'package:http/http.dart' as http;
 import 'package:safemove/services/data_manager.dart';
 
 class FirebaseManager {
+  // ignore: unused_field
   static final Future<FirebaseApp> _future = Firebase.initializeApp();
   static final databaseRef = FirebaseDatabase.instance.reference();
   static const url =
