@@ -15,7 +15,7 @@ class CrowdingPainter extends CustomPainter {
   @override
   void paint(final Canvas canvas, final Size size) {
     for (int i = 0; i < DataManager.gridsData.length; i++) {
-      if (DataManager.gridsData[i].crowding > 1) {
+      if (DataManager.gridsData[i].crowding > 2) {
         canvas.drawLine(
           Offset(cSize * DataManager.gridsData[i].corridorPosition[0],
               cSize * DataManager.gridsData[i].corridorPosition[1]),
