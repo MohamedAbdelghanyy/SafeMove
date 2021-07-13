@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter/foundation.dart';
 import 'package:safemove/data/global.dart';
 import 'package:safemove/models/fingerprint_model.dart';
 import 'package:safemove/models/map_model.dart';
@@ -26,7 +27,9 @@ class _MapScreenState extends State<MapScreen> {
 
   @override
   void initState() {
-    startScanning();
+    if (!kIsWeb) {
+      startScanning();
+    }
     super.initState();
   }
 
@@ -104,11 +107,15 @@ class _MapScreenState extends State<MapScreen> {
             child: Stack(
               alignment: Alignment.bottomCenter,
               children: [
-                Column(
-                  children: <Widget>[
-                    RouteSelectionWidget(),
-                    RawGestureDetectorWidget(
-                      child: MapWidget(),
+                ListView(
+                  children: [
+                    Column(
+                      children: <Widget>[
+                        RouteSelectionWidget(),
+                        RawGestureDetectorWidget(
+                          child: MapWidget(),
+                        ),
+                      ],
                     ),
                   ],
                 ),
