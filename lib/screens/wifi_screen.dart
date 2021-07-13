@@ -19,7 +19,7 @@ class WifiScreen extends StatefulWidget {
 
 class _WifiScreenState extends State<WifiScreen> {
   final dbRef = FirebaseDatabase.instance.reference();
-  List<Widget> mWList = new List();
+  List<Widget> mWList = [];
 
   @override
   void initState() {
@@ -36,7 +36,7 @@ class _WifiScreenState extends State<WifiScreen> {
           _scanResult = await WiFiForIoTPlugin.loadWifiList();
           print("Loaded!");
           if (_scanResult != null && _scanResult.length > 0) {
-            List<ListTile> wifiWList = List();
+            List<ListTile> wifiWList = [];
             _scanResult.forEach((wifiNetwork) {
               wifiWList.add(
                 ListTile(
@@ -74,7 +74,7 @@ class _WifiScreenState extends State<WifiScreen> {
             _scanResult = await WiFiForIoTPlugin.loadWifiList();
             print("Loaded!");
             if (_scanResult != null && _scanResult.length > 0) {
-              List<ListTile> wifiWList = List();
+              List<ListTile> wifiWList = [];
               _scanResult.forEach((wifiNetwork) {
                 wifiWList.add(
                   ListTile(
