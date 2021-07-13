@@ -3,6 +3,7 @@ import 'package:safemove/models/grid_model.dart';
 import 'package:safemove/models/room_data_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:safemove/services/data_manager.dart';
 
 class CrowdingPainter extends CustomPainter {
   var model;
@@ -16,13 +17,13 @@ class CrowdingPainter extends CustomPainter {
 
   @override
   void paint(final Canvas canvas, final Size size) {
-    for (int i = 0; i < Global.grids.length; i++) {
-      if (i == 7 || i == 13) {
+    for (int i = 0; i < DataManager.gridsData.length; i++) {
+      if (DataManager.gridsData[i].crowding > 1) {
         canvas.drawLine(
-          Offset(cSize * Global.grids[i]['corridor_position'][0],
-              cSize * Global.grids[i]['corridor_position'][1]),
-          Offset(cSize * Global.grids[i]['corridor_position'][0],
-              cSize * Global.grids[i]['corridor_position'][1]),
+          Offset(cSize * DataManager.gridsData[i].corridorPosition[0],
+              cSize * DataManager.gridsData[i].corridorPosition[1]),
+          Offset(cSize * DataManager.gridsData[i].corridorPosition[0],
+              cSize * DataManager.gridsData[i].corridorPosition[1]),
           paintt,
         );
       }
