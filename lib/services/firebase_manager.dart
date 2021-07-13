@@ -53,4 +53,22 @@ class FirebaseManager {
       return false;
     }
   }
+
+  static Future<bool> setCurrentLocation(int gridId) async {
+    try {
+      //WifiInfoWrapper mWifiInfo = await WifiInfoPlugin.wifiDetails;
+      var dbRef2 = databaseRef
+          .child('data')
+          .child('locations')
+          .child('MIU')
+          .child('crowding');
+      await dbRef2.child(gridId.toString()).set({
+        DataManager.mPrefManager.getId().toString():
+            DateTime.now().millisecondsSinceEpoch
+      });
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
 }
