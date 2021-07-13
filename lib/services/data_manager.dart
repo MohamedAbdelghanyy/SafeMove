@@ -44,10 +44,6 @@ class DataManager {
     });
   }
 
-  static Future<void> setSelfReportData(int selfReportStatus) async {
-    await FirebaseManager.setSelfReport(selfReportStatus);
-  }
-
   static Future<void> setCurrentLocation(int gridId) async {
     await FirebaseManager.setCurrentLocation(gridId);
   }
