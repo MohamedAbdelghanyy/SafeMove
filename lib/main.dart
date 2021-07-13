@@ -2,14 +2,12 @@ import 'package:safemove/data/global.dart';
 import 'package:safemove/models/map_model.dart';
 import 'package:safemove/screens/map_screen.dart';
 import 'package:safemove/screens/sign_in.dart';
-import 'package:safemove/screens/self_report.dart';
 import 'package:safemove/screens/splash_screen.dart';
 import 'package:safemove/screens/symptoms.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'screens/wifi_screen.dart';
 import 'screens/profile.dart';
 import 'screens/rooms_screen.dart';
 import 'screens/sign_in.dart';
@@ -38,12 +36,10 @@ class MyApp extends StatelessWidget {
         routes: {
           '/': (context) => SplashScreen(),
           ProfileScreen.routeName: (context) => ProfileScreen(),
-          WifiScreen.routeName: (context) => WifiScreen(),
           RoomsScreen.routeName: (context) => RoomsScreen(),
           SignInScreen.routeName: (context) => SignInScreen(),
           SignUpScreen.routeName: (context) => SignUpScreen(),
           Symptoms.routeName: (context) => Symptoms(),
-          SelfReport.routeName: (context) => SelfReport(),
           MapScreen.routeName: (context) => MapScreen(),
         },
       ),
