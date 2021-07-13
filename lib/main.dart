@@ -2,7 +2,6 @@ import 'package:safemove/data/global.dart';
 import 'package:safemove/models/map_model.dart';
 import 'package:safemove/screens/map_screen.dart';
 import 'package:safemove/screens/sign_in.dart';
-import 'package:safemove/screens/admin_view.dart';
 import 'package:safemove/screens/self_report.dart';
 import 'package:safemove/screens/splash_screen.dart';
 import 'package:safemove/screens/symptoms.dart';
@@ -45,7 +44,6 @@ class MyApp extends StatelessWidget {
           SignUpScreen.routeName: (context) => SignUpScreen(),
           Symptoms.routeName: (context) => Symptoms(),
           SelfReport.routeName: (context) => SelfReport(),
-          AdminView.routeName: (context) => AdminView(),
           MapScreen.routeName: (context) => MapScreen(),
         },
       ),
