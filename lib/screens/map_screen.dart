@@ -5,6 +5,7 @@ import 'package:safemove/models/fingerprint_model.dart';
 import 'package:safemove/models/map_model.dart';
 import 'package:safemove/screens/main_drawer.dart';
 import 'package:safemove/screens/rooms_screen.dart';
+import 'package:safemove/services/data_manager.dart';
 import 'package:safemove/widgets/map/map_widget.dart';
 import 'package:safemove/widgets/map/raw_gesture_detector_widget.dart';
 import 'package:safemove/widgets/map/route_selection_widget.dart';
@@ -45,8 +46,11 @@ class _MapScreenState extends State<MapScreen> {
                     wifiNetwork.level.toString());
               });
               await FingerprintModel.findGrid(_scanResult).then(
-                (value) => {
-                  if (value != null) {model.setLocationGrid(value)}
+                (value) {
+                  if (value != null) {
+                    model.setLocationGrid(value);
+                    DataManager.setCurrentLocation(value.id);
+                  }
                 },
               );
             }
