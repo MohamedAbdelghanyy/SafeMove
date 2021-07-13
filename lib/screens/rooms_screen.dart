@@ -10,10 +10,12 @@ import 'package:provider/provider.dart';
 
 import './main_drawer.dart';
 
+// ignore: must_be_immutable
 class RoomsScreen extends StatefulWidget {
   static const routeName = '/rooms-screen';
   RoomDataModel roomData;
 
+  // ignore: avoid_init_to_null
   RoomsScreen({this.roomData = null});
 
   @override
@@ -22,7 +24,7 @@ class RoomsScreen extends StatefulWidget {
 
 class _RoomsScreenState extends State<RoomsScreen> {
   RoomDataModel currRoom;
-  List roomsData = List();
+  List roomsData = [];
   var model;
 
   @override
