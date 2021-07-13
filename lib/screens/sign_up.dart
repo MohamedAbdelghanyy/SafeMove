@@ -173,6 +173,7 @@ class SignUpScreenState extends State<SignUpScreen> {
                       colors: [Color(0xFF91b3fa), Color(0xFF4f52ff)],
                     ),
                     borderRadius: BorderRadius.circular(50)),
+                // ignore: deprecated_member_use
                 child: FlatButton(
                     child: Text("Sign Up",
                         style: TextStyle(fontSize: 20.0, color: Colors.white)),
