@@ -21,6 +21,7 @@ class AdminPanel extends StatelessWidget {
               ),
               ButtonTheme(
                 minWidth: 150,
+                // ignore: deprecated_member_use
                 child: RaisedButton(
                   color: Colors.white,
                   shape: RoundedRectangleBorder(
@@ -35,6 +36,7 @@ class AdminPanel extends StatelessWidget {
               ),
               ButtonTheme(
                 minWidth: 150,
+                // ignore: deprecated_member_use
                 child: RaisedButton(
                   color: Colors.white,
                   shape: RoundedRectangleBorder(
@@ -49,6 +51,7 @@ class AdminPanel extends StatelessWidget {
               ),
               ButtonTheme(
                 minWidth: 150,
+                // ignore: deprecated_member_use
                 child: RaisedButton(
                   color: Colors.white,
                   shape: RoundedRectangleBorder(
