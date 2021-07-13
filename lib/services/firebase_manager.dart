@@ -29,6 +29,19 @@ class FirebaseManager {
     return items;
   }
 
+  static Future<Map<String, dynamic>> getCrowdingData() async {
+    var path = 'locations/MIU/crowding.json';
+    Map<String, dynamic> dbData;
+    try {
+      final response = await http.get(url + path);
+      dbData = json.decode(response.body) as Map<String, dynamic>;
+    } on Exception catch (e) {
+      print(e.toString());
+      throw (e);
+    }
+    return dbData;
+  }
+
   static Future<bool> setSelfReport(int selfReportStatus) async {
     try {
       //WifiInfoWrapper mWifiInfo = await WifiInfoPlugin.wifiDetails;
